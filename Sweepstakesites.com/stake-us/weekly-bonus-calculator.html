@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stake.us Weekly Bonus Calculator</title>
+<meta name="description" content="Calculate your estimated Stake.us weekly bonus based on VIP level, 7-day wagering, game type, and win/loss status.">
+<link rel="canonical" href="https://sweepstakesites.com/stake-us/weekly-bonus-calculator.html">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../base.css">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When are Stake.us weekly bonuses paid?","acceptedAnswer":{"@type":"Answer","text":"Weekly bonuses are typically credited on Saturdays. The amount depends on your VIP tier, 7-day wagering volume, game mix, and whether you had a net winning or losing week. You must be at least Bronze VIP to receive a weekly bonus."}},
+{"@type":"Question","name":"How is the weekly bonus amount decided?","acceptedAnswer":{"@type":"Answer","text":"Stake.us uses an internal formula that considers your edge exposure (wagering times house edge), your VIP multiplier, and your profit or loss status. This calculator approximates that formula using community-sourced coefficients and a 0.22 base rate."}},
+{"@type":"Question","name":"Does game type affect my weekly bonus?","acceptedAnswer":{"@type":"Answer","text":"Yes. Games with a higher house edge generate more edge exposure per SC wagered, which increases the bonus. Slots (roughly 4% edge) produce higher edge exposure than Stake Originals (roughly 1% edge) for the same wagered amount."}},
+{"@type":"Question","name":"What if I had a winning week?","acceptedAnswer":{"@type":"Answer","text":"Winners typically receive a slightly lower bonus multiplier (approximately 0.9x) compared to break-even players (1.0x) or net losers (1.1x). This is an estimate - Stake.us may weight results differently in practice."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stake.us Weekly Bonus Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculate your estimated Stake.us weekly bonus based on VIP level, 7-day wagering, game type, and win/loss status.","url":"https://sweepstakesites.com/stake-us/weekly-bonus-calculator.html"}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://sweepstakesites.com/index.html"},{"@type":"ListItem","position":2,"name":"Stake.us","item":"https://sweepstakesites.com/stake-us/index.html"},{"@type":"ListItem","position":3,"name":"Weekly Bonus Calculator","item":"https://sweepstakesites.com/stake-us/weekly-bonus-calculator.html"}]
+}
+</script>
+<meta property="og:title" content="Stake.us Weekly Bonus Calculator">
+<meta property="og:description" content="Calculate your estimated Stake.us weekly bonus based on VIP level, 7-day wagering, game type, and win/loss status.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sweepstakesites.com/stake-us/weekly-bonus-calculator.html">
+<meta property="og:site_name" content="SweepstakeSites">
+</head>
+<body>
+
+<!-- DISCLOSURE BAR -->
+<div class="disclosure-bar">
+  This site contains promotional content. 21+ | No purchase necessary. <a href="../affiliate-disclosure.html">Affiliate Disclosure</a>
+</div>
+<header class="site-header">
+  <div class="container">
+    <a href="../index.html" class="site-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor" opacity="0.1"/><path d="M8 16L14 10L20 16L14 22Z" fill="var(--color-primary)"/><path d="M14 16L20 10L26 16L20 22Z" fill="var(--color-primary)" opacity="0.5"/></svg>
+      SweepstakeSites
+    </a>
+    <nav class="nav-desktop" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../stake-us/promo-code.html">Stake.us Promo Code</a>
+      <a href="../stake-us/news.html">News</a>
+      <a href="../stake-us/vip-calculator.html" class=active>Calculators</a>
+      <a href="../compare.html">Compare</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" class="header-cta" target="_blank" rel="noopener noreferrer">Use Code MAXBET</a>
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-nav" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a>
+  <a href="../stake-us/promo-code.html">Stake.us Promo Code</a>
+  <a href="../stake-us/news.html">News</a>
+  <a href="../stake-us/vip-calculator.html">Calculators</a>
+  <a href="../compare.html">Compare</a>
+  <a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" class="nav-cta-mobile" target="_blank" rel="noopener noreferrer">Use Code MAXBET &rarr;</a>
+</nav>
+
+<main>
+  <div class="container" style="padding-top:var(--space-8);padding-bottom:var(--space-16);">
+    <div class="content-layout content-layout--sidebar">
+      <div class="content-main">
+
+        <div class="breadcrumb" style="margin-bottom:var(--space-4);">
+          <a href="../index.html">Home</a> &rsaquo; <a href="index.html">Stake.us</a> &rsaquo; Weekly Bonus Calculator
+        </div>
+
+        <h1 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:800;letter-spacing:-0.03em;margin-bottom:var(--space-3);">Stake.us Weekly Bonus Calculator</h1>
+        <p class="page-intro" style="color:var(--color-text-muted);font-size:var(--text-base);line-height:1.7;max-width:640px;margin-bottom:var(--space-8);">Project your estimated Saturday weekly bonus on Stake.us. Enter your VIP level, 7-day wagering total, and primary game type to see an estimate. Bonuses require VIP status - Bronze tier or above.</p>
+
+        <div id="calc-warning" class="calc-warning" style="display:none"></div>
+
+        <div class="calc-card">
+          <form id="calc-form" autocomplete="off">
+            <div class="calc-field">
+              <label for="vip_rank">Your VIP Rank</label>
+              <select id="vip_rank">
+              <option value="none">No VIP Rank</option>
+              <option value="bronze">Bronze</option>
+              <option value="silver">Silver</option>
+              <option value="gold">Gold</option>
+              <option value="platinum_1">Platinum I</option>
+              <option value="platinum_2">Platinum II</option>
+              <option value="platinum_3">Platinum III</option>
+              <option value="platinum_4">Platinum IV</option>
+              <option value="platinum_5">Platinum V</option>
+              <option value="platinum_6">Platinum VI</option>
+              <option value="diamond">Diamond</option>
+              </select>
+            </div>
+            <div class="calc-row">
+              <div class="calc-field">
+                <label for="sc_wagered">SC Wagered (last 7 days)</label>
+                <input type="number" id="sc_wagered" placeholder="e.g. 5000" min="0" step="any" required>
+              </div>
+              <div class="calc-field">
+                <label for="gc_wagered">GC Wagered (optional)</label>
+                <input type="number" id="gc_wagered" placeholder="e.g. 1000000" min="0" step="any">
+              </div>
+            </div>
+            <div class="calc-row">
+              <div class="calc-field">
+                <label for="game_type">Primary Game Type</label>
+                <select id="game_type">
+              <option value="mixed">Mixed / Unsure (2.5%)</option>
+              <option value="originals_low_edge">Stake Originals (1%)</option>
+              <option value="live_table">Live Table Games (2%)</option>
+              <option value="slots">Slots (4%)</option>
+                </select>
+              </div>
+              <div class="calc-field">
+                <label for="result_status">Week Result</label>
+                <select id="result_status">
+              <option value="neutral">Break-Even / Unsure</option>
+              <option value="winner">Net Winner</option>
+              <option value="loser">Net Loser</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="calc-advanced-toggle">
+              <button type="button" id="toggle-advanced" onclick="toggleAdvanced()">Show Advanced Options</button>
+            </div>
+            <div class="calc-advanced" id="advanced-fields" style="display:none">
+              <div class="calc-field">
+                <label for="net_profit_sc">Net Profit / Loss in SC (optional)</label>
+                <input type="number" id="net_profit_sc" placeholder="e.g. -500 for a loss" step="any">
+                <span class="calc-field-hint">Overrides the Win/Loss selector with a continuous multiplier</span>
+              </div>
+              <div class="calc-field">
+                <label for="avg_house_edge_override">House Edge Override (optional, 0-0.20)</label>
+                <input type="number" id="avg_house_edge_override" placeholder="e.g. 0.015" min="0" max="0.20" step="0.001">
+                <span class="calc-field-hint">Overrides the game-type default house edge</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-4);">Calculate Weekly Estimate</button>
+          </form>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="calc-results" id="results" style="display:none">
+          <h2 style="font-family:var(--font-display);font-weight:700;margin-bottom:var(--space-4);">Your Estimated Weekly Bonus</h2>
+          <div class="calc-result-grid calc-result-grid--single">
+            <div class="calc-result-item calc-result-item--large">
+              <div class="calc-result-value" id="res-weekly">-</div>
+              <div class="calc-result-label">Estimated Saturday Bonus</div>
+            </div>
+          </div>
+          <div id="res-note" class="info-box" style="display:none;margin-top:var(--space-4);"></div>
+
+          <div class="calc-assumptions" style="margin-top:var(--space-6);">
+            <h3 style="font-family:var(--font-display);font-weight:700;font-size:var(--text-lg);margin-bottom:var(--space-3);">Assumptions Used</h3>
+            <table class="article-table">
+              <tbody>
+                <tr><td>Effective Volume</td><td id="assume-volume">-</td></tr>
+                <tr><td>House Edge</td><td id="assume-edge">-</td></tr>
+                <tr><td>Edge Exposure</td><td id="assume-exposure">-</td></tr>
+                <tr><td>Base Rate</td><td id="assume-rate">-</td></tr>
+                <tr><td>P&amp;L Multiplier</td><td id="assume-pnl">-</td></tr>
+                <tr><td>VIP Tier</td><td id="assume-vip">-</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="calc-disclaimer">
+          <p>This calculator provides estimates only. Actual bonuses can vary based on account eligibility, play history, timing, game mix, and internal Stake.us calculations. House-edge values shown are simplified defaults unless manually overridden.</p>
+        </div>
+
+        <div class="article-cta-box">
+          
+        <div class="promo-code-cutout">
+          <div class="label">Stake.us Promo Code</div>
+          <div class="code" id="promo-code-weekly">MAXBET</div>
+          <div class="code-sub">Enter this code during signup to unlock your welcome bonus</div>
+          <button class="copy-btn" data-code="MAXBET">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy Code
+          </button>
+        </div>
+          <div style="text-align:center;margin-top:var(--space-4);">
+            <a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Claim MAXBET Bonus &rarr;</a>
+          </div>
+        </div>
+
+        <div class="calc-cross-links">
+          <h3 style="font-family:var(--font-display);font-weight:700;font-size:var(--text-lg);margin-bottom:var(--space-4);">More Stake.us Calculators</h3>
+          <div class="calc-cross-grid">
+          <a href="vip-calculator.html" class="calc-cross-card">
+            <strong>VIP Calculator</strong>
+            <span>Estimate weekly, monthly &amp; rakeback rewards by VIP tier</span>
+          </a>
+          <a href="monthly-bonus-calculator.html" class="calc-cross-card">
+            <strong>Monthly Bonus Calculator</strong>
+            <span>Forecast your monthly reward from 30-day volume</span>
+          </a>
+          <a href="redemption-calculator.html" class="calc-cross-card">
+            <strong>Redemption Calculator</strong>
+            <span>Track 3x playthrough progress toward redemption</span>
+          </a>
+          </div>
+        </div>
+
+        <h2 style="font-family:var(--font-display);font-weight:700;font-size:var(--text-xl);margin-top:var(--space-10);margin-bottom:var(--space-4);padding-bottom:var(--space-2);border-bottom:2px solid var(--color-border);">Frequently Asked Questions</h2>
+        <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>When are Stake.us weekly bonuses paid?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Weekly bonuses are typically credited on Saturdays. The amount depends on your VIP tier, 7-day wagering volume, game mix, and whether you had a net winning or losing week. You must be at least Bronze VIP to receive a weekly bonus.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>How is the weekly bonus amount decided?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Stake.us uses an internal formula that considers your edge exposure (wagering times house edge), your VIP multiplier, and your profit or loss status. This calculator approximates that formula using community-sourced coefficients and a 0.22 base rate.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Does game type affect my weekly bonus?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Games with a higher house edge generate more edge exposure per SC wagered, which increases the bonus. Slots (roughly 4% edge) produce higher edge exposure than Stake Originals (roughly 1% edge) for the same wagered amount.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What if I had a winning week?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq-answer"><div class="faq-answer-inner">Winners typically receive a slightly lower bonus multiplier (approximately 0.9x) compared to break-even players (1.0x) or net losers (1.1x). This is an estimate - Stake.us may weight results differently in practice.</div></div>
+        </div>
+        </div>
+
+      </div>
+
+      <div class="content-sidebar">
+        <div class="sidebar-sticky">
+          <div class="sidebar-promo">
+            <h3>Code MAXBET</h3>
+            <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-3);">Verified March 2026</p>
+            <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&#10003;</div><div class="sidebar-promo-details"><div class="sidebar-promo-name">Up to 560,000 Gold Coins</div></div></div>
+            <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&#10003;</div><div class="sidebar-promo-details"><div class="sidebar-promo-name">56 Free Stake Cash</div></div></div>
+            <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&#10003;</div><div class="sidebar-promo-details"><div class="sidebar-promo-name">3.5% Rakeback</div></div></div>
+            <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&#10003;</div><div class="sidebar-promo-details"><div class="sidebar-promo-name">Daily Login Rewards</div></div></div>
+            <a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" class="btn btn--primary" target="_blank" rel="noopener noreferrer" style="width:100%;margin-top:var(--space-4);">Claim MAXBET &rarr;</a>
+          </div>
+          <div style="margin-top:var(--space-4);">
+            <div class="sidebar-promo">
+              <h3>Quick Links</h3>
+              <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&rarr;</div><div class="sidebar-promo-details"><a href="../stake-us/promo-code.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">Promo Code MAXBET</a></div></div>
+              <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&rarr;</div><div class="sidebar-promo-details"><a href="../stake-us/review.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">Full Review</a></div></div>
+              <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&rarr;</div><div class="sidebar-promo-details"><a href="../stake-us/bonuses.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">All Bonuses</a></div></div>
+              <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&rarr;</div><div class="sidebar-promo-details"><a href="../stake-us/faq.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">FAQ</a></div></div>
+              <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&rarr;</div><div class="sidebar-promo-details"><a href="../compare.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">Compare 30 Casinos</a></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-rg">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:32px;height:32px;flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <p>This is supposed to be fun. If it stops feeling that way, step away. Seriously.</p>
+      <a href="../responsible-gaming.html" class="btn btn--sm" style="background:rgba(255,255,255,0.15);color:inherit;white-space:nowrap;">Responsible Gaming</a>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="site-logo" style="margin-bottom:var(--space-2);">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="8" fill="currentColor" opacity="0.1"/><path d="M8 16L14 10L20 16L14 22Z" fill="var(--color-primary)"/><path d="M14 16L20 10L26 16L20 22Z" fill="var(--color-primary)" opacity="0.5"/></svg>
+          SweepstakeSites
+        </a>
+        <p>Sweepstakes casino promo codes, bonus guides, and reviews. Published by New World Gaming Limited.</p>
+        <p style="margin-top:var(--space-2);font-size:var(--text-xs);color:var(--color-text-faint);">sweepstakesites.com &middot; 6543 S Las Vegas Blvd &middot; +1 702-637-2872</p>
+      </div>
+      <div class="footer-col"><h4>Stake.us</h4>
+        <a href="../stake-us/index.html">Overview</a>
+        <a href="../stake-us/promo-code.html">Promo Code MAXBET</a>
+        <a href="../stake-us/review.html">Review</a>
+        <a href="../stake-us/bonuses.html">Bonuses</a>
+        <a href="../stake-us/games.html">Games</a>
+      </div>
+      <div class="footer-col"><h4>Calculators</h4>
+        <a href="../stake-us/vip-calculator.html">VIP Calculator</a>
+        <a href="../stake-us/weekly-bonus-calculator.html">Weekly Bonus</a>
+        <a href="../stake-us/monthly-bonus-calculator.html">Monthly Bonus</a>
+        <a href="../stake-us/redemption-calculator.html">Redemption</a>
+      </div>
+      <div class="footer-col"><h4>Resources</h4>
+        <a href="../stake-us/news.html">News &amp; Guides</a>
+        <a href="../stake-us/faq.html">FAQ</a>
+        <a href="../compare.html">Compare Casinos</a>
+        <a href="../about.html">About Us</a>
+        <a href="../contact.html">Contact</a>
+      </div>
+      <div class="footer-col"><h4>Legal</h4>
+        <a href="../affiliate-disclosure.html">Affiliate Disclosure</a>
+        <a href="../responsible-gaming.html">Responsible Gaming</a>
+        <a href="../terms.html">Terms &amp; Conditions</a>
+        <a href="../privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+        <div class="ftc-footer">
+      <p><strong>FTC Disclosure:</strong> SweepstakeSites.com is owned and operated by New World Gaming Limited. This site contains affiliate links. If you click through and sign up using our links, we may receive compensation at no additional cost to you. All opinions are our own. See our <a href="../affiliate-disclosure.html" style="color:inherit;text-decoration:underline;">Affiliate Disclosure</a>.</p>
+      <p><strong>Disclaimer:</strong> Sweepstakes casino promotions are available to eligible participants aged 21+. No purchase necessary. Void where prohibited. Bonus terms and availability may change without notice. If you or someone you know has a gambling problem, call 1-800-522-4700.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 New World Gaming Limited &middot; sweepstakesites.com. All rights reserved.</span>
+      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+    </div>
+  </div>
+</footer>
+<div class="mobile-sticky-bar"><a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Use Code MAXBET &rarr;</a></div>
+<script src="../app.js" defer></script>
+<script>
+
+const CONFIG = {
+  gc_to_sc_equiv: 2000000,
+  weekly_base_rate: 0.22,
+  monthly_base_rate: 0.3,
+  rakeback_rate: 0.035,
+  house_edge: {
+    originals_low_edge: 0.01,
+    live_table: 0.02,
+    slots: 0.04,
+    mixed: 0.025
+  },
+  vip_multiplier: {
+    none:0, bronze:0.7, silver:0.85, gold:1.0,
+    platinum_1:1.2, platinum_2:1.35, platinum_3:1.5,
+    platinum_4:1.7, platinum_5:1.9, platinum_6:2.15,
+    diamond:2.5
+  },
+  vip_labels: {
+    none:'No VIP', bronze:'Bronze', silver:'Silver', gold:'Gold',
+    platinum_1:'Platinum I', platinum_2:'Platinum II', platinum_3:'Platinum III',
+    platinum_4:'Platinum IV', platinum_5:'Platinum V', platinum_6:'Platinum VI',
+    diamond:'Diamond'
+  },
+  status_multiplier: { winner:0.9, neutral:1.0, loser:1.1 },
+  vip_thresholds_sc: {
+    bronze:10000, silver:50000, gold:100000,
+    platinum_1:250000, platinum_2:500000, platinum_3:1000000,
+    platinum_4:2500000, platinum_5:5000000, platinum_6:10000000,
+    diamond:25000000
+  }
+};
+
+function calculate(inputs) {
+  var gc_sc_equiv = (inputs.gc_wagered || 0) / CONFIG.gc_to_sc_equiv;
+  var total_volume = inputs.sc_wagered + gc_sc_equiv;
+  var avg_house_edge = inputs.avg_house_edge_override || CONFIG.house_edge[inputs.game_type] || 0.025;
+  var edge_exposure = total_volume * avg_house_edge;
+
+  var pnl_mult;
+  if (inputs.net_profit_sc !== null && inputs.net_profit_sc !== undefined && inputs.net_profit_sc !== '') {
+    var raw = 1 - 0.15 * (parseFloat(inputs.net_profit_sc) / (edge_exposure + 1));
+    pnl_mult = Math.max(0.80, Math.min(1.25, raw));
+  } else {
+    pnl_mult = CONFIG.status_multiplier[inputs.result_status] || 1.0;
+  }
+
+  var vip_mult = CONFIG.vip_multiplier[inputs.vip_rank] || 0;
+
+  return {
+    weekly_bonus: +(edge_exposure * CONFIG.weekly_base_rate * vip_mult * pnl_mult).toFixed(2),
+    monthly_bonus: +(edge_exposure * CONFIG.monthly_base_rate * vip_mult * pnl_mult).toFixed(2),
+    rakeback: +(edge_exposure * CONFIG.rakeback_rate).toFixed(2),
+    edge_exposure: +edge_exposure.toFixed(2),
+    pnl_mult: +pnl_mult.toFixed(4),
+    total_volume: +total_volume.toFixed(2),
+    avg_house_edge: avg_house_edge,
+    vip_mult: vip_mult
+  };
+}
+
+function fmt(n) {
+  if (n === null || n === undefined) return '-';
+  return n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+function fmtPct(n) {
+  return (n * 100).toFixed(1) + '%';
+}
+
+function getVal(id) {
+  var el = document.getElementById(id);
+  if (!el) return null;
+  if (el.type === 'number') return el.value === '' ? null : parseFloat(el.value);
+  return el.value;
+}
+
+function showWarning(msg) {
+  var w = document.getElementById('calc-warning');
+  if (w) { w.textContent = msg; w.style.display = msg ? 'block' : 'none'; }
+}
+
+function toggleAdvanced() {
+  var adv = document.getElementById('advanced-fields');
+  var btn = document.getElementById('toggle-advanced');
+  if (!adv) return;
+  if (adv.style.display === 'none') {
+    adv.style.display = 'block';
+    btn.textContent = 'Hide Advanced Options';
+  } else {
+    adv.style.display = 'none';
+    btn.textContent = 'Show Advanced Options';
+  }
+}
+
+document.getElementById('calc-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  showWarning('');
+
+  var sc = getVal('sc_wagered');
+  if (sc === null || sc < 0) { showWarning('Enter a valid SC wagered amount.'); return; }
+
+  var inputs = {
+    vip_rank: getVal('vip_rank'),
+    sc_wagered: sc,
+    gc_wagered: getVal('gc_wagered') || 0,
+    game_type: getVal('game_type'),
+    result_status: getVal('result_status'),
+    net_profit_sc: getVal('net_profit_sc'),
+    avg_house_edge_override: getVal('avg_house_edge_override')
+  };
+
+  if (sc > 5000000) showWarning('Very high wagered value - results are extrapolated estimates.');
+
+  var r = calculate(inputs);
+  var isVip = inputs.vip_rank !== 'none';
+
+  document.getElementById('res-weekly').textContent = isVip ? fmt(r.weekly_bonus) + ' SC' : '0.00 SC';
+  var note = document.getElementById('res-note');
+  if (!isVip) {
+    note.textContent = 'Weekly bonuses require VIP status. Sign up with code MAXBET and reach Bronze tier to qualify.';
+    note.style.display = 'block';
+  } else {
+    note.style.display = 'none';
+  }
+
+  document.getElementById('assume-volume').textContent = fmt(r.total_volume) + ' SC';
+  document.getElementById('assume-edge').textContent = fmtPct(r.avg_house_edge);
+  document.getElementById('assume-exposure').textContent = fmt(r.edge_exposure) + ' SC';
+  document.getElementById('assume-pnl').textContent = r.pnl_mult.toFixed(4);
+  document.getElementById('assume-vip').textContent = CONFIG.vip_labels[inputs.vip_rank] + ' (' + r.vip_mult.toFixed(2) + 'x)';
+  document.getElementById('assume-rate').textContent = CONFIG.weekly_base_rate;
+
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('results').scrollIntoView({behavior:'smooth', block:'start'});
+});
+
+</script>
+</body>
+</html>

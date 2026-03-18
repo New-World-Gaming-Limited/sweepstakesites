@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://sweepstakesites.com/sitemap.xml
+
+# Sweepstakesites.com
+# Operated by Raw Steak LLC
