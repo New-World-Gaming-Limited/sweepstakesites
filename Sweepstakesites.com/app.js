@@ -200,3 +200,15 @@ document.querySelectorAll('.promo-code-cutout').forEach(function(box) {
     } catch(e) {}
   });
 })();
+
+
+// --- FOOTER ACCORDION (MOBILE) ---
+(function(){
+  document.querySelectorAll('.footer-col-toggle').forEach(function(toggle){
+    toggle.addEventListener('click', function(){
+      if(window.innerWidth >= 768) return;
+      var col = this.closest('.footer-col');
+      if(col) col.classList.toggle('open');
+    });
+  });
+})();

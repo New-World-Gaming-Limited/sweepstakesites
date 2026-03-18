@@ -349,7 +349,7 @@
   transform: translate(-50%, -50%);
   width: 800px;
   height: 500px;
-  background: url('./stake-logo-bg.jpg') center / contain no-repeat;
+  background: url('./stake-logo-bg.svg') center / contain no-repeat;
   pointer-events: none;
   filter: invert(1);
   opacity: 0.06;
@@ -905,21 +905,26 @@
   border-top: 1px solid var(--color-border);
   padding: var(--space-12) 0 var(--space-8);
 }
-.footer-grid {
-  display: grid;
-  gap: var(--space-8);
-  margin-bottom: var(--space-8);
-}
-@media (min-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1.5fr repeat(3, 1fr);
-  }
+/* --- Footer Brand --- */
+.footer-brand {
+  margin-bottom: var(--space-6);
 }
 .footer-brand p {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   line-height: 1.7;
   margin-top: var(--space-3);
+}
+/* --- Footer Columns (5-col grid) --- */
+.footer-columns {
+  display: grid;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+@media (min-width: 768px) {
+  .footer-columns {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 .footer-col h4 {
   font-size: var(--text-xs);
@@ -938,6 +943,51 @@
 }
 .footer-col a:hover {
   color: var(--color-primary);
+}
+/* Footer accordion toggle (mobile) */
+.footer-col-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default;
+}
+.footer-chevron {
+  display: none;
+}
+.footer-col-links {
+  display: block;
+}
+@media (max-width: 767px) {
+  .footer-columns {
+    gap: 0;
+  }
+  .footer-col {
+    border-bottom: 1px solid var(--color-border);
+  }
+  .footer-col:last-child {
+    border-bottom: none;
+  }
+  .footer-col-toggle {
+    cursor: pointer;
+    padding: var(--space-3) 0;
+    margin-bottom: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .footer-chevron {
+    display: block;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+  }
+  .footer-col.open .footer-chevron {
+    transform: rotate(180deg);
+  }
+  .footer-col-links {
+    display: none;
+    padding-bottom: var(--space-3);
+  }
+  .footer-col.open .footer-col-links {
+    display: block;
+  }
 }
 
 .footer-rg {
