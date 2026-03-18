@@ -323,23 +323,25 @@
 
 /* --- HERO --- */
 .hero {
-  background: linear-gradient(145deg, #0a1a3e 0%, #1641B4 60%, #1e4fd0 100%);
+  background: url('./images/brand-hero.webp') center / cover no-repeat;
   color: #ffffff;
   padding: clamp(var(--space-12), 8vw, var(--space-24)) 0;
   position: relative;
   overflow: hidden;
 }
 [data-theme="dark"] .hero {
-  background: linear-gradient(145deg, #080d1a 0%, #0f2670 60%, #162e8a 100%);
+  background: url('./images/brand-hero.webp') center / cover no-repeat;
+}
+[data-theme="dark"] .hero::before {
+  background: linear-gradient(145deg, rgba(8,13,26,0.88) 0%, rgba(15,38,112,0.80) 60%, rgba(22,46,138,0.75) 100%);
 }
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.04) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.03) 0%, transparent 40%);
+  background: linear-gradient(145deg, rgba(10,26,62,0.82) 0%, rgba(22,65,180,0.75) 60%, rgba(30,79,208,0.70) 100%);
   pointer-events: none;
+  z-index: 0;
 }
 .hero::after {
   content: '';
