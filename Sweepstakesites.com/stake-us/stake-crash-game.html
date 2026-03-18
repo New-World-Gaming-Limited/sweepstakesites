@@ -90,7 +90,26 @@
     "@type": "WebPage",
     "@id": "https://sweepstakesites.com/stake-us/stake-crash-game.html"
   }
-}</script><link href="https://sweepstakesites.com/stake-us/stake-crash-game.html" rel="canonical"/><meta content="Stake Crash Game (How Does Crash Work on Stake?)" property="og:title"/><meta content="A sharper guide to Stake Crash Game. Covers how the game works, sensible bankroll rules, strategy myths, and mistakes that burn balances." property="og:description"/><meta content="article" property="og:type"/><meta content="https://sweepstakesites.com/stake-us/stake-crash-game.html" property="og:url"/><meta content="SweepstakeSites" property="og:site_name"/><meta content="summary" name="twitter:card"/><meta content="Stake Crash Game (How Does Crash Work on Stake?)" name="twitter:title"/><meta content="A sharper guide to Stake Crash Game. Covers how the game works, sensible bankroll rules, strategy myths, and mistakes that burn balances." name="twitter:description"/></head>
+}</script><link href="https://sweepstakesites.com/stake-us/stake-crash-game.html" rel="canonical"/><meta content="Stake Crash Game (How Does Crash Work on Stake?)" property="og:title"/><meta content="A sharper guide to Stake Crash Game. Covers how the game works, sensible bankroll rules, strategy myths, and mistakes that burn balances." property="og:description"/><meta content="article" property="og:type"/><meta content="https://sweepstakesites.com/stake-us/stake-crash-game.html" property="og:url"/><meta content="SweepstakeSites" property="og:site_name"/><meta content="summary" name="twitter:card"/><meta content="Stake Crash Game (How Does Crash Work on Stake?)" name="twitter:title"/><meta content="A sharper guide to Stake Crash Game. Covers how the game works, sensible bankroll rules, strategy myths, and mistakes that burn balances." name="twitter:description"/><link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:image" content="https://sweepstakesites.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<style>
+/* Sticky bottom CTA bar */
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--color-primary);transform:translateY(100%);transition:transform 0.35s cubic-bezier(.4,0,.2,1);box-shadow:0 -4px 20px rgba(0,0,0,0.2);}
+.sticky-cta.visible{transform:translateY(0);}
+.sticky-cta-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 24px;gap:12px;}
+.sticky-cta-text{color:#fff;font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.sticky-cta-text span{color:#FFD700;font-family:'JetBrains Mono',monospace;font-weight:800;letter-spacing:0.05em;}
+.sticky-cta-btn{display:inline-flex;align-items:center;gap:6px;background:#FFD700;color:#0d1117;font-weight:700;font-size:14px;padding:10px 24px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:background 0.2s,transform 0.2s;flex-shrink:0;}
+.sticky-cta-btn:hover{background:#ffe44d;transform:translateY(-1px);}
+.sticky-cta-close{background:none;border:none;color:rgba(255,255,255,0.6);cursor:pointer;padding:4px;line-height:1;font-size:18px;flex-shrink:0;}
+.sticky-cta-close:hover{color:#fff;}
+@media(max-width:600px){.sticky-cta-inner{padding:10px 16px;}.sticky-cta-text{font-size:13px;}.sticky-cta-btn{padding:8px 16px;font-size:13px;}}
+</style>
+</head>
 <body>
 <!-- DISCLOSURE BAR -->
 <div class="disclosure-bar">
@@ -103,7 +122,6 @@
       SweepstakeSites
     </a>
 <nav aria-label="Main navigation" class="nav-desktop">
-<a href="../index.html">Home</a>
 <a href="promo-code.html">Stake.us Promo Code</a>
 <a href="news.html">News</a>
 <a href="vip-calculator.html">Calculators</a>
@@ -121,7 +139,6 @@
 </div>
 </header>
 <nav aria-label="Mobile navigation" class="mobile-nav">
-<a href="../index.html">Home</a>
 <a href="promo-code.html">Stake.us Promo Code</a>
 <a href="news.html">News</a>
 <a href="vip-calculator.html">Calculators</a>
@@ -299,5 +316,25 @@
 </footer>
 <div class="mobile-sticky-bar"><a class="btn btn--primary" href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" rel="noopener noreferrer" target="_blank">Use Code MAXBET →</a></div>
 <script defer="" src="../app.js"></script>
+<div class="sticky-cta" id="stickyCta">
+<div class="sticky-cta-inner">
+<div class="sticky-cta-text">Use code <span>MAXBET</span> for 56 Free SC + 3.5% Rakeback</div>
+<a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" class="sticky-cta-btn" target="_blank" rel="noopener noreferrer">Claim Bonus &rarr;</a>
+<button class="sticky-cta-close" aria-label="Close" onclick="document.getElementById('stickyCta').remove();">&times;</button>
+</div>
+</div>
+<script>
+// --- STICKY BOTTOM CTA ---
+(function(){
+  var bar=document.getElementById('stickyCta');
+  if(!bar)return;
+  var shown=false;
+  function check(){
+    if(window.scrollY>300&&!shown){shown=true;bar.classList.add('visible');}
+  }
+  window.addEventListener('scroll',check,{passive:true});
+  check();
+})();
+</script>
 </body>
 </html>
