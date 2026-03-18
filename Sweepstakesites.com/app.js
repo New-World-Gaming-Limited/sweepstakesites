@@ -158,3 +158,45 @@ document.querySelectorAll('.promo-code-cutout').forEach(function(box) {
     }
   });
 })();
+
+// --- DYNAMIC DATES ---
+// Auto-updates all date references to current month/year/day
+(function(){
+  var now = new Date();
+  var months = ['January','February','March','April','May','June',
+                'July','August','September','October','November','December'];
+  var month = months[now.getMonth()];
+  var year = now.getFullYear();
+  var day = now.getDate();
+  var fullDate = month + ' ' + day + ', ' + year;
+  var monthYear = month + ' ' + year;
+
+  // Update all dynamic-date-full spans (e.g., "March 18, 2026")
+  document.querySelectorAll('.dynamic-date-full').forEach(function(el){
+    el.textContent = fullDate;
+  });
+
+  // Update all dynamic-month-year spans (e.g., "March 2026")
+  document.querySelectorAll('.dynamic-month-year').forEach(function(el){
+    el.textContent = monthYear;
+  });
+
+  // Update "Last Used X mins ago" with random 4-23 minutes
+  document.querySelectorAll('.dynamic-last-used').forEach(function(el){
+    el.textContent = (Math.floor(Math.random() * 20) + 4);
+  });
+
+  // Update any ld+json schema dateModified to today
+  var isoDate = now.getFullYear() + '-' + 
+    String(now.getMonth()+1).padStart(2,'0') + '-' + 
+    String(now.getDate()).padStart(2,'0');
+  document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s){
+    try {
+      var data = JSON.parse(s.textContent);
+      if (data.dateModified) {
+        data.dateModified = isoDate;
+        s.textContent = JSON.stringify(data);
+      }
+    } catch(e) {}
+  });
+})();
