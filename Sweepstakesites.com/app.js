@@ -222,19 +222,35 @@ document.querySelectorAll('.promo-code-cutout').forEach(function(box) {
   var index = null;
   var activeIdx = -1;
 
-  // Determine base path
+  // Determine base path from current page location
   var base = '';
-  var scripts = document.querySelectorAll('script[src*="app.js"]');
-  if(scripts.length){
-    var src = scripts[0].getAttribute('src');
-    base = src.replace('app.js','');
+  var path = window.location.pathname;
+  if(path.indexOf('/stake-us/') !== -1 || path.match(/\/[^\/]+\/[^\/]+\.html/)){
+    base = '../';
+  } else {
+    base = './';
   }
 
   function loadIndex(){
     if(index) return Promise.resolve(index);
     return fetch(base + 'search-index.json')
-      .then(function(r){return r.json();})
-      .then(function(data){index = data; return data;});
+      .then(function(r){
+        if(!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function(data){index = data; return data;})
+      .catch(function(){
+        // Fallback: try alternate paths
+        var paths = ['./search-index.json','../search-index.json','/search-index.json'];
+        return paths.reduce(function(p, tryPath){
+          return p.catch(function(){
+            return fetch(tryPath).then(function(r){
+              if(!r.ok) throw new Error('HTTP ' + r.status);
+              return r.json();
+            }).then(function(data){index = data; return data;});
+          });
+        }, Promise.reject());
+      });
   }
 
   function openSearch(){

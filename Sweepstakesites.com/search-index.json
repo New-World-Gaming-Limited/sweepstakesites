@@ -1042,7 +1042,9 @@
   {
     "title": "Sweepstakes Casino Quiz",
     "url": "./quiz.html",
-    "description": "Take our free quiz to find which sweepstakes casino fits your play style. 7 quick questions for a personalized recommendation.",
-    "category": "Tools"
+    "desc": "Take our free quiz to find which sweepstakes casino fits your play style. 7 quick questions for a personalized recommendation.",
+    "cat": "Tools",
+    "h1": "Which Sweepstakes Casino Fits Your Style?",
+    "h2s": "Quiz Sweepstakes Casino Recommendation Stake.us"
   }
 ]
