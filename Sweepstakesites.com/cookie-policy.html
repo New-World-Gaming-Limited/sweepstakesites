@@ -72,6 +72,9 @@
 <a href="./compare.html">Compare</a>
 </nav>
 <div class="nav-actions">
+<button class="search-btn" aria-label="Search site">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+</button>
 <button aria-label="Toggle dark mode" class="theme-toggle" data-theme-toggle="">
 <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
 </button>
@@ -151,7 +154,7 @@
 SweepstakeSites
 </a>
 <p>The most comprehensive Stake.us resource online. 89 guides, 4 calculators, and everything you need. Published by New World Gaming Limited.</p>
-<p style="margin-top:var(--space-2);font-size:var(--text-xs);color:var(--color-text-faint);">sweepstakesites.com &middot; 6543 S Las Vegas Blvd &middot; +1 702-637-2872</p>
+<p style="margin-top:var(--space-2);font-size:var(--text-xs);color:var(--color-text-faint);">sweepstakesites.com &middot; 6543 S Las Vegas Blvd &middot; +1 702-637-2872 &middot; <a href="mailto:help@sweepstakesites.com" style="color:inherit;">help@sweepstakesites.com</a></p>
 </div>
 <div class="footer-columns">
 <div class="footer-col">
@@ -162,6 +165,7 @@ SweepstakeSites
 <a href="./stake-us/bonuses.html">Bonus Guides</a>
 <a href="./compare.html">Compare Sites</a>
 <a href="./stake-us/vip-calculator.html">Calculators</a>
+<a href="./quiz.html">Quiz</a>
 <a href="./stake-us/payments.html">Payment Methods</a>
 <a href="./management-team.html">Our Authors</a>
 </div>
@@ -224,5 +228,15 @@ SweepstakeSites
 </div>
 <div class="mobile-sticky-bar"><a class="btn btn--primary" href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" target="_blank" rel="noopener noreferrer">Use Code MAXBET &rarr;</a></div>
 <script defer src="./app.js"></script>
+<div class="search-overlay" id="searchOverlay">
+<div class="search-box">
+<div class="search-input-wrap">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+<input class="search-input" type="text" placeholder="Search guides, reviews, tools..." autocomplete="off" spellcheck="false">
+<button class="search-close">ESC</button>
+</div>
+<div class="search-results"></div>
+</div>
+</div>
 </body>
 </html>

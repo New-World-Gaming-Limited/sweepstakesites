@@ -212,3 +212,122 @@ document.querySelectorAll('.promo-code-cutout').forEach(function(box) {
     });
   });
 })();
+
+// --- SITE SEARCH ---
+(function(){
+  var overlay = document.getElementById('searchOverlay');
+  if(!overlay) return;
+  var input = overlay.querySelector('.search-input');
+  var resultsDiv = overlay.querySelector('.search-results');
+  var index = null;
+  var activeIdx = -1;
+
+  // Determine base path
+  var base = '';
+  var scripts = document.querySelectorAll('script[src*="app.js"]');
+  if(scripts.length){
+    var src = scripts[0].getAttribute('src');
+    base = src.replace('app.js','');
+  }
+
+  function loadIndex(){
+    if(index) return Promise.resolve(index);
+    return fetch(base + 'search-index.json')
+      .then(function(r){return r.json();})
+      .then(function(data){index = data; return data;});
+  }
+
+  function openSearch(){
+    overlay.classList.add('open');
+    input.value = '';
+    resultsDiv.innerHTML = '<div class="search-hint">Type to search 130+ guides, reviews, and tools</div>';
+    activeIdx = -1;
+    setTimeout(function(){input.focus();},100);
+    loadIndex();
+  }
+
+  function closeSearch(){
+    overlay.classList.remove('open');
+    input.value = '';
+    activeIdx = -1;
+  }
+
+  // Open triggers
+  document.querySelectorAll('.search-btn').forEach(function(btn){
+    btn.addEventListener('click', function(e){e.preventDefault();openSearch();});
+  });
+
+  // Keyboard shortcut: Cmd/Ctrl+K
+  document.addEventListener('keydown', function(e){
+    if((e.metaKey||e.ctrlKey) && e.key === 'k'){e.preventDefault();openSearch();}
+    if(e.key === 'Escape' && overlay.classList.contains('open')){closeSearch();}
+  });
+
+  // Close on backdrop click
+  overlay.addEventListener('click', function(e){
+    if(e.target === overlay) closeSearch();
+  });
+
+  // Close button
+  overlay.querySelector('.search-close').addEventListener('click', closeSearch);
+
+  // Search logic
+  input.addEventListener('input', function(){
+    if(!index) return;
+    var q = input.value.trim().toLowerCase();
+    if(!q){
+      resultsDiv.innerHTML = '<div class="search-hint">Type to search 130+ guides, reviews, and tools</div>';
+      activeIdx = -1;
+      return;
+    }
+    var words = q.split(/\s+/);
+    var scored = index.map(function(p){
+      var hay = (p.title + ' ' + p.h1 + ' ' + p.desc + ' ' + p.h2s).toLowerCase();
+      var score = 0;
+      words.forEach(function(w){
+        if(p.title.toLowerCase().indexOf(w) !== -1) score += 10;
+        if(p.h1.toLowerCase().indexOf(w) !== -1) score += 8;
+        if(p.desc.toLowerCase().indexOf(w) !== -1) score += 3;
+        if(p.h2s.toLowerCase().indexOf(w) !== -1) score += 2;
+      });
+      return {page:p, score:score};
+    }).filter(function(s){return s.score > 0;})
+      .sort(function(a,b){return b.score - a.score;})
+      .slice(0,10);
+
+    if(!scored.length){
+      resultsDiv.innerHTML = '<div class="search-empty">No results for &ldquo;'+q+'&rdquo;</div>';
+      activeIdx = -1;
+      return;
+    }
+
+    resultsDiv.innerHTML = scored.map(function(s,i){
+      return '<a class="search-result" href="' + base + s.page.url + '" data-idx="'+i+'">' +
+        '<div class="search-result-cat">' + s.page.cat + '</div>' +
+        '<div class="search-result-title">' + s.page.title + '</div>' +
+        '<div class="search-result-desc">' + s.page.desc + '</div>' +
+        '</a>';
+    }).join('');
+    activeIdx = -1;
+  });
+
+  // Keyboard navigation in results
+  input.addEventListener('keydown', function(e){
+    var items = resultsDiv.querySelectorAll('.search-result');
+    if(!items.length) return;
+    if(e.key === 'ArrowDown'){
+      e.preventDefault();
+      activeIdx = Math.min(activeIdx + 1, items.length - 1);
+      items.forEach(function(el,i){el.classList.toggle('active', i === activeIdx);});
+      items[activeIdx].scrollIntoView({block:'nearest'});
+    } else if(e.key === 'ArrowUp'){
+      e.preventDefault();
+      activeIdx = Math.max(activeIdx - 1, 0);
+      items.forEach(function(el,i){el.classList.toggle('active', i === activeIdx);});
+      items[activeIdx].scrollIntoView({block:'nearest'});
+    } else if(e.key === 'Enter' && activeIdx >= 0){
+      e.preventDefault();
+      items[activeIdx].click();
+    }
+  });
+})();
