@@ -3,4 +3,4 @@ Allow: /
 Sitemap: https://sweepstakesites.com/sitemap.xml
 
 # sweepstakesites.com
-# Operated by New World Gaming Limited
+# Operated by NWG Ltd
