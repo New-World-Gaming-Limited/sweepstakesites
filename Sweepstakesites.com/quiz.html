@@ -225,7 +225,7 @@
       opts: [
         "Biggest free bonus on signup",
         "Widest game selection",
-        "Fastest cash-out process",
+        "Fastest redemption process",
         "Reputation and trustworthiness"
       ]
     },
@@ -236,7 +236,7 @@
         "Credit or debit card",
         "Cryptocurrency (BTC, ETH, etc.)",
         "Bank transfer or ACH",
-        "I only want free play \u2014 no deposits"
+        "I only want free play \u2014 no purchases"
       ]
     },
     {
@@ -253,7 +253,7 @@
       q: "How important is getting rakeback or cashback?",
       icon: ["🔥","👍","🤷","❓"],
       opts: [
-        "Essential \u2014 I want a cut of every wager",
+        "Essential \u2014 I want a cut of every play",
         "Nice to have but not a deal-breaker",
         "I don\u2019t really know what rakeback is",
         "I\u2019d rather have bigger one-time bonuses"
@@ -379,9 +379,9 @@
 
     // Build personalized reasons based on answers
     var reasons = [];
-    if(answers[0] === 0) reasons.push('You prioritize big free bonuses \u2014 Stake.us offers 250,000 GC + 25 SC on signup with code MAXBET, the largest no-deposit package available.');
+    if(answers[0] === 0) reasons.push('You prioritize big free bonuses \u2014 Stake.us offers 250,000 GC + 25 SC on signup with code MAXBET, the largest no-purchase package available.');
     if(answers[0] === 1) reasons.push('You want the widest game selection \u2014 Stake.us has 550+ titles including 20+ exclusive Originals no one else offers.');
-    if(answers[0] === 2) reasons.push('Fast cash-outs matter to you \u2014 Stake.us processes redemptions faster than industry average with 8+ crypto options plus fiat.');
+    if(answers[0] === 2) reasons.push('Fast redemptions matter to you \u2014 Stake.us processes redemptions faster than industry average with 8+ crypto options plus fiat.');
     if(answers[0] === 3) reasons.push('Trust is your top priority \u2014 Stake.us is one of the most established sweepstakes platforms with transparent operations.');
 
     if(answers[1] === 1) reasons.push('You prefer crypto payments \u2014 Stake.us accepts BTC, ETH, LTC, DOGE, and 4+ other cryptocurrencies.');
@@ -390,7 +390,7 @@
     if(answers[2] === 2) reasons.push('You love Crash and skill-based games \u2014 Stake.us Originals (Crash, Plinko, Mines, Dice, Limbo) are provably fair and exclusive.');
     if(answers[2] === 3) reasons.push('You play a mix of everything \u2014 Stake.us covers slots, table games, and 20+ unique Originals under one roof.');
 
-    if(answers[3] === 0) reasons.push('Rakeback is essential for you \u2014 Stake.us provides a permanent 3.5% rakeback on every single wager. Most competitors offer 0%.');
+    if(answers[3] === 0) reasons.push('Rakeback is essential for you \u2014 Stake.us provides a permanent 3.5% rakeback on every single play. Most competitors offer 0%.');
 
     if(answers[4] === 0) reasons.push('You play daily \u2014 Stake.us rewards 31 consecutive login days with 310,000 GC + 31 SC total (10,000 GC + 1 SC per day).');
 
@@ -400,7 +400,7 @@
 
     // Ensure at least 3 reasons
     if(reasons.length < 3){
-      reasons.push('Stake.us combines the best no-deposit bonus (560,000 GC + 56 SC), 550+ games, and permanent 3.5% rakeback \u2014 no other platform matches this package.');
+      reasons.push('Stake.us combines the best no-purchase bonus (560,000 GC + 56 SC), 550+ games, and permanent 3.5% rakeback \u2014 no other platform matches this package.');
       reasons.push('With code MAXBET, you unlock the full bonus instantly at signup. 21+, no purchase necessary.');
     }
     // Cap at 5

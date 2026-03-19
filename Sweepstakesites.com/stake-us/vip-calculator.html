@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stake.us VIP Calculator | SweepstakeSites</title>
-<meta name="description" content="Use our free Stake.us VIP calculator to estimate your weekly bonus, monthly bonus, and rakeback based on your VIP level, wagering, and game type.">
+<meta name="description" content="Use our free Stake.us VIP calculator to estimate your weekly bonus, monthly bonus, and rakeback based on your VIP level, playing, and game type.">
 <link rel="canonical" href="https://sweepstakesites.com/stake-us/vip-calculator.html">
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="../base.css">
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is the Stake.us weekly bonus calculated?","acceptedAnswer":{"@type":"Answer","text":"The weekly bonus is based on your edge exposure (total wagered multiplied by game house edge), your VIP tier multiplier, and whether you had a winning or losing week. Higher VIP tiers and larger volume produce larger bonuses. This calculator uses community-sourced coefficients and may not match Stake&#39;s internal formula."}},
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is the Stake.us weekly bonus calculated?","acceptedAnswer":{"@type":"Answer","text":"The weekly bonus is based on your edge exposure (total played multiplied by game house edge), your VIP tier multiplier, and whether you had a winning or losing week. Higher VIP tiers and larger volume produce larger bonuses. This calculator uses community-sourced coefficients and may not match Stake&#39;s internal formula."}},
 {"@type":"Question","name":"What VIP level do I need for weekly and monthly bonuses?","acceptedAnswer":{"@type":"Answer","text":"You need at least Bronze VIP status to qualify for weekly and monthly bonuses. Players without VIP status still receive 3.5% rakeback if they signed up with promo code MAXBET, but bonuses require VIP enrollment."}},
-{"@type":"Question","name":"How does rakeback work on Stake.us?","acceptedAnswer":{"@type":"Answer","text":"Rakeback returns a percentage of the house edge on every wager back to your account automatically. With code MAXBET, new users receive 3.5% rakeback. This is calculated on edge exposure, not total wagered amount, so a 1,000 SC wager on a 1% edge game returns roughly 0.35 SC."}},
-{"@type":"Question","name":"Can I see estimates for other VIP levels?","acceptedAnswer":{"@type":"Answer","text":"Yes. Click the Compare All Ranks button after calculating to see a breakdown of estimated bonuses at every VIP tier using your same wagering inputs. This helps you understand the value of advancing to the next level."}}]}
+{"@type":"Question","name":"How does rakeback work on Stake.us?","acceptedAnswer":{"@type":"Answer","text":"Rakeback returns a percentage of the house edge on every play back to your account automatically. With code MAXBET, new users receive 3.5% rakeback. This is calculated on edge exposure, not total play amount, so a 1,000 SC play on a 1% edge game returns roughly 0.35 SC."}},
+{"@type":"Question","name":"Can I see estimates for other VIP levels?","acceptedAnswer":{"@type":"Answer","text":"Yes. Click the Compare All Ranks button after calculating to see a breakdown of estimated bonuses at every VIP tier using your same play inputs. This helps you understand the value of advancing to the next level."}}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stake.us VIP Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Use our free Stake.us VIP calculator to estimate your weekly bonus, monthly bonus, and rakeback based on your VIP level, wagering, and game type.","url":"https://sweepstakesites.com/stake-us/vip-calculator.html"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stake.us VIP Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Use our free Stake.us VIP calculator to estimate your weekly bonus, monthly bonus, and rakeback based on your VIP level, playing, and game type.","url":"https://sweepstakesites.com/stake-us/vip-calculator.html"}
 </script>
 <script type="application/ld+json">
 {
@@ -27,7 +27,7 @@
 }
 </script>
 <meta property="og:title" content="Stake.us VIP Calculator | SweepstakeSites">
-<meta property="og:description" content="Use our free Stake.us VIP calculator to estimate your weekly bonus, monthly bonus, and rakeback based on your VIP level, wagering, and game type.">
+<meta property="og:description" content="Use our free Stake.us VIP calculator to estimate your weekly bonus, monthly bonus, and rakeback based on your VIP level, playing, and game type.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sweepstakesites.com/stake-us/vip-calculator.html">
 <meta property="og:site_name" content="SweepstakeSites">
@@ -99,7 +99,7 @@
         </div>
 
         <h1 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:800;letter-spacing:-0.03em;margin-bottom:var(--space-3);">Stake.us VIP Calculator</h1>
-        <p class="page-intro" style="color:var(--color-text-muted);font-size:var(--text-base);line-height:1.7;max-width:640px;margin-bottom:var(--space-8);">Estimate your Stake.us weekly bonus, monthly bonus, and rakeback earnings based on your VIP tier, wagering volume, and preferred game types. All figures are community-sourced estimates and may differ from what Stake.us awards.</p>
+        <p class="page-intro" style="color:var(--color-text-muted);font-size:var(--text-base);line-height:1.7;max-width:640px;margin-bottom:var(--space-8);">Estimate your Stake.us weekly bonus, monthly bonus, and rakeback earnings based on your VIP tier, play volume, and preferred game types. All figures are community-sourced estimates and may differ from what Stake.us awards.</p>
 
         <div id="calc-warning" class="calc-warning" style="display:none"></div>
 
@@ -124,12 +124,12 @@
             </div>
             <div class="calc-row">
               <div class="calc-field">
-                <label for="sc_wagered">SC Wagered (last 7 days)</label>
-                <input type="number" id="sc_wagered" placeholder="e.g. 5000" min="0" step="any" required>
+                <label for="sc_played">SC Played (last 7 days)</label>
+                <input type="number" id="sc_played" placeholder="e.g. 5000" min="0" step="any" required>
               </div>
               <div class="calc-field">
-                <label for="gc_wagered">GC Wagered (optional)</label>
-                <input type="number" id="gc_wagered" placeholder="e.g. 1000000" min="0" step="any">
+                <label for="gc_played">GC Played (optional)</label>
+                <input type="number" id="gc_played" placeholder="e.g. 1000000" min="0" step="any">
               </div>
             </div>
             <div class="calc-row">
@@ -273,7 +273,7 @@
             <span>How is the Stake.us weekly bonus calculated?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">The weekly bonus is based on your edge exposure (total wagered multiplied by game house edge), your VIP tier multiplier, and whether you had a winning or losing week. Higher VIP tiers and larger volume produce larger bonuses. This calculator uses community-sourced coefficients and may not match Stake&#39;s internal formula.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">The weekly bonus is based on your edge exposure (total played multiplied by game house edge), your VIP tier multiplier, and whether you had a winning or losing week. Higher VIP tiers and larger volume produce larger bonuses. This calculator uses community-sourced coefficients and may not match Stake&#39;s internal formula.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
@@ -287,14 +287,14 @@
             <span>How does rakeback work on Stake.us?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Rakeback returns a percentage of the house edge on every wager back to your account automatically. With code MAXBET, new users receive 3.5% rakeback. This is calculated on edge exposure, not total wagered amount, so a 1,000 SC wager on a 1% edge game returns roughly 0.35 SC.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Rakeback returns a percentage of the house edge on every play back to your account automatically. With code MAXBET, new users receive 3.5% rakeback. This is calculated on edge exposure, not total play amount, so a 1,000 SC play on a 1% edge game returns roughly 0.35 SC.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>Can I see estimates for other VIP levels?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Yes. Click the Compare All Ranks button after calculating to see a breakdown of estimated bonuses at every VIP tier using your same wagering inputs. This helps you understand the value of advancing to the next level.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Click the Compare All Ranks button after calculating to see a breakdown of estimated bonuses at every VIP tier using your same play inputs. This helps you understand the value of advancing to the next level.</div></div>
         </div>
         </div>
 

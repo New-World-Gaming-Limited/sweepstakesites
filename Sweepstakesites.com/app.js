@@ -357,3 +357,12 @@ document.querySelectorAll('.promo-code-cutout').forEach(function(box) {
   window.addEventListener('scroll', checkScroll, {passive: true});
   checkScroll();
 })();
+
+// Scroll hint for comparison table
+document.querySelectorAll('.compare-table-wrap').forEach(wrap => {
+  wrap.addEventListener('scroll', function() {
+    if (this.scrollLeft > 20) {
+      this.classList.add('scrolled');
+    }
+  }, { passive: true });
+});

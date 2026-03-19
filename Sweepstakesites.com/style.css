@@ -1926,3 +1926,146 @@ a .code-badge:hover {
 .search-result-cat{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:var(--color-primary);margin-bottom:2px;}
 .search-empty{padding:var(--space-6) var(--space-4);text-align:center;color:var(--color-text-muted);font-size:var(--text-sm);}
 .search-hint{padding:var(--space-2) var(--space-4) var(--space-3);font-size:var(--text-xs);color:var(--color-text-faint);text-align:center;}
+
+
+/* === MOBILE UX IMPROVEMENTS === */
+
+/* Scroll hint animation */
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.9; transform: translateY(-50%) translateX(0); }
+  50% { opacity: 0.6; transform: translateY(-50%) translateX(4px); }
+}
+
+/* Show scroll hint only on mobile */
+@media (max-width: 899px) {
+  .scroll-hint { display: block !important; }
+  .compare-table-wrap.scrolled .scroll-hint { display: none !important; }
+}
+
+/* Mobile header - prevent logo overflow */
+@media (max-width: 480px) {
+  .site-header .site-logo img { height: 26px !important; }
+  .header-cta { display: none; }
+}
+
+/* Mobile brand cards - more breathing room */
+@media (max-width: 899px) {
+  .brand-cards { gap: var(--space-3); }
+  .brand-card { padding: var(--space-3); }
+  .brand-card-bonus { font-size: var(--text-sm); }
+}
+
+/* Mobile trust symbols - better grid */
+@media (max-width: 599px) {
+  .trust-strip { 
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3) !important;
+    justify-items: start;
+    padding: var(--space-3) var(--space-4);
+  }
+  .trust-strip > div:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+}
+
+/* Mobile hero sub text */
+@media (max-width: 599px) {
+  .hero-sub { font-size: var(--text-sm) !important; }
+  .hero h1 { font-size: var(--text-xl) !important; }
+}
+
+/* Mobile section padding reduction */
+@media (max-width: 599px) {
+  .section { padding: var(--space-6) 0; }
+  .section-header h2 { font-size: var(--text-lg); }
+}
+
+/* Mobile FAQ touch targets */
+@media (max-width: 899px) {
+  .faq-question { 
+    padding: var(--space-4) var(--space-3); 
+    min-height: 52px;
+  }
+}
+
+/* Mobile footer columns */
+@media (max-width: 767px) {
+  .footer-col-toggle { 
+    min-height: 48px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/* Mobile steps - stack vertically */
+@media (max-width: 599px) {
+  .steps--horizontal {
+    flex-direction: column !important;
+    gap: var(--space-3);
+  }
+  .steps--horizontal .step {
+    flex-direction: row !important;
+    text-align: left !important;
+  }
+}
+
+/* Mobile page hero padding */
+@media (max-width: 599px) {
+  .page-hero { padding: var(--space-6) 0 var(--space-4) !important; }
+  .page-hero h1 { font-size: var(--text-lg) !important; }
+}
+
+/* Mobile button groups - prevent overflow */
+@media (max-width: 480px) {
+  .btn--sm {
+    padding: var(--space-2) var(--space-3);
+    font-size: 11px;
+  }
+}
+
+/* Mobile sticky bar improvements */
+@media (max-width: 899px) {
+  .mobile-sticky-bar {
+    padding: var(--space-2) var(--space-3) !important;
+    gap: var(--space-2) !important;
+  }
+  .mobile-sticky-bar .btn {
+    padding: var(--space-2) var(--space-4) !important;
+    font-size: var(--text-xs) !important;
+    min-height: 40px !important;
+  }
+}
+
+/* Sidebar - hide on mobile (content pages) */
+@media (max-width: 1023px) {
+  .sidebar { display: none; }
+  .content-layout { 
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Mobile disclosure bar */
+@media (max-width: 480px) {
+  .disclosure-bar {
+    font-size: 10px !important;
+    padding: var(--space-1) var(--space-2) !important;
+  }
+}
+
+/* Mobile related cards grid */
+@media (max-width: 599px) {
+  .related-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-2) !important;
+  }
+}
+
+/* Touch-friendly: ensure all interactive elements have min 44px target */
+@media (max-width: 899px) {
+  a.card, .card a { min-height: 44px; }
+  .breadcrumb a { padding: var(--space-1) 0; }
+  .nav-pill, .tag-pill { min-height: 36px; display: inline-flex; align-items: center; }
+}

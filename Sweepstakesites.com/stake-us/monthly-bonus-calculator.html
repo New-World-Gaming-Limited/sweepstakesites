@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stake.us Monthly Bonus Calculator</title>
-<meta name="description" content="Estimate your Stake.us monthly bonus based on VIP tier, 30-day wagering volume, preferred games, and recent results.">
+<meta name="description" content="Estimate your Stake.us monthly bonus based on VIP tier, 30-day play volume, preferred games, and recent results.">
 <link rel="canonical" href="https://sweepstakesites.com/stake-us/monthly-bonus-calculator.html">
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" rel="stylesheet">
 
@@ -13,11 +13,11 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When are Stake.us monthly bonuses issued?","acceptedAnswer":{"@type":"Answer","text":"Monthly bonuses are typically issued once per calendar month, often in the first few days of the following month. The timing can vary, and Stake.us does not publish a fixed schedule."}},
 {"@type":"Question","name":"How does VIP level affect my monthly bonus?","acceptedAnswer":{"@type":"Answer","text":"Higher VIP tiers have a larger multiplier applied to the bonus formula. A Diamond player receives approximately 2.5x the base bonus, while a Bronze player receives about 0.7x. You must be at least Bronze to qualify."}},
-{"@type":"Question","name":"Is the monthly bonus based on losses or volume?","acceptedAnswer":{"@type":"Answer","text":"It is based on edge exposure, which is your total wagered amount multiplied by the average house edge. A losing month may slightly increase the multiplier (approximately 1.1x vs 1.0x for break-even), but volume is the primary driver."}},
-{"@type":"Question","name":"Can I estimate next month&#39;s bonus?","acceptedAnswer":{"@type":"Answer","text":"You can enter your projected 30-day wagering to get a rough estimate. Keep in mind that Stake.us may adjust coefficients and the formula at any time, so treat this as a directional guide rather than a prediction."}}]}
+{"@type":"Question","name":"Is the monthly bonus based on losses or volume?","acceptedAnswer":{"@type":"Answer","text":"It is based on edge exposure, which is your total play amount multiplied by the average house edge. A losing month may slightly increase the multiplier (approximately 1.1x vs 1.0x for break-even), but volume is the primary driver."}},
+{"@type":"Question","name":"Can I estimate next month&#39;s bonus?","acceptedAnswer":{"@type":"Answer","text":"You can enter your projected 30-day play to get a rough estimate. Keep in mind that Stake.us may adjust coefficients and the formula at any time, so treat this as a directional guide rather than a prediction."}}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stake.us Monthly Bonus Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Estimate your Stake.us monthly bonus based on VIP tier, 30-day wagering volume, preferred games, and recent results.","url":"https://sweepstakesites.com/stake-us/monthly-bonus-calculator.html"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stake.us Monthly Bonus Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Estimate your Stake.us monthly bonus based on VIP tier, 30-day play volume, preferred games, and recent results.","url":"https://sweepstakesites.com/stake-us/monthly-bonus-calculator.html"}
 </script>
 <script type="application/ld+json">
 {
@@ -27,7 +27,7 @@
 }
 </script>
 <meta property="og:title" content="Stake.us Monthly Bonus Calculator">
-<meta property="og:description" content="Estimate your Stake.us monthly bonus based on VIP tier, 30-day wagering volume, preferred games, and recent results.">
+<meta property="og:description" content="Estimate your Stake.us monthly bonus based on VIP tier, 30-day play volume, preferred games, and recent results.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sweepstakesites.com/stake-us/monthly-bonus-calculator.html">
 <meta property="og:site_name" content="SweepstakeSites">
@@ -99,7 +99,7 @@
         </div>
 
         <h1 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:800;letter-spacing:-0.03em;margin-bottom:var(--space-3);">Stake.us Monthly Bonus Calculator</h1>
-        <p class="page-intro" style="color:var(--color-text-muted);font-size:var(--text-base);line-height:1.7;max-width:640px;margin-bottom:var(--space-8);">Forecast your estimated Stake.us monthly bonus. Enter your VIP rank, 30-day wagering total, and game preferences. Monthly rewards depend on the relevant period and your results may vary from these estimates.</p>
+        <p class="page-intro" style="color:var(--color-text-muted);font-size:var(--text-base);line-height:1.7;max-width:640px;margin-bottom:var(--space-8);">Forecast your estimated Stake.us monthly bonus. Enter your VIP rank, 30-day play total, and game preferences. Monthly rewards depend on the relevant period and your results may vary from these estimates.</p>
 
         <div id="calc-warning" class="calc-warning" style="display:none"></div>
 
@@ -123,12 +123,12 @@
             </div>
             <div class="calc-row">
               <div class="calc-field">
-                <label for="sc_wagered">SC Wagered (last 30 days)</label>
-                <input type="number" id="sc_wagered" placeholder="e.g. 20000" min="0" step="any" required>
+                <label for="sc_played">SC Played (last 30 days)</label>
+                <input type="number" id="sc_played" placeholder="e.g. 20000" min="0" step="any" required>
               </div>
               <div class="calc-field">
-                <label for="gc_wagered">GC Wagered (optional)</label>
-                <input type="number" id="gc_wagered" placeholder="e.g. 5000000" min="0" step="any">
+                <label for="gc_played">GC Played (optional)</label>
+                <input type="number" id="gc_played" placeholder="e.g. 5000000" min="0" step="any">
               </div>
             </div>
             <div class="calc-row">
@@ -256,14 +256,14 @@
             <span>Is the monthly bonus based on losses or volume?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">It is based on edge exposure, which is your total wagered amount multiplied by the average house edge. A losing month may slightly increase the multiplier (approximately 1.1x vs 1.0x for break-even), but volume is the primary driver.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">It is based on edge exposure, which is your total play amount multiplied by the average house edge. A losing month may slightly increase the multiplier (approximately 1.1x vs 1.0x for break-even), but volume is the primary driver.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>Can I estimate next month&#39;s bonus?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">You can enter your projected 30-day wagering to get a rough estimate. Keep in mind that Stake.us may adjust coefficients and the formula at any time, so treat this as a directional guide rather than a prediction.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">You can enter your projected 30-day play to get a rough estimate. Keep in mind that Stake.us may adjust coefficients and the formula at any time, so treat this as a directional guide rather than a prediction.</div></div>
         </div>
         </div>
 

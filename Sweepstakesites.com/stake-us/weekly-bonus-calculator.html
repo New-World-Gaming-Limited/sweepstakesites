@@ -4,20 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stake.us Weekly Bonus Calculator</title>
-<meta name="description" content="Calculate your estimated Stake.us weekly bonus based on VIP level, 7-day wagering, game type, and win/loss status.">
+<meta name="description" content="Calculate your estimated Stake.us weekly bonus based on VIP level, 7-day play, game type, and win/loss status.">
 <link rel="canonical" href="https://sweepstakesites.com/stake-us/weekly-bonus-calculator.html">
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="../base.css">
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When are Stake.us weekly bonuses paid?","acceptedAnswer":{"@type":"Answer","text":"Weekly bonuses are typically credited on Saturdays. The amount depends on your VIP tier, 7-day wagering volume, game mix, and whether you had a net winning or losing week. You must be at least Bronze VIP to receive a weekly bonus."}},
-{"@type":"Question","name":"How is the weekly bonus amount decided?","acceptedAnswer":{"@type":"Answer","text":"Stake.us uses an internal formula that considers your edge exposure (wagering times house edge), your VIP multiplier, and your profit or loss status. This calculator approximates that formula using community-sourced coefficients and a 0.22 base rate."}},
-{"@type":"Question","name":"Does game type affect my weekly bonus?","acceptedAnswer":{"@type":"Answer","text":"Yes. Games with a higher house edge generate more edge exposure per SC wagered, which increases the bonus. Slots (roughly 4% edge) produce higher edge exposure than Stake Originals (roughly 1% edge) for the same wagered amount."}},
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When are Stake.us weekly bonuses paid?","acceptedAnswer":{"@type":"Answer","text":"Weekly bonuses are typically credited on Saturdays. The amount depends on your VIP tier, 7-day play volume, game mix, and whether you had a net winning or losing week. You must be at least Bronze VIP to receive a weekly bonus."}},
+{"@type":"Question","name":"How is the weekly bonus amount decided?","acceptedAnswer":{"@type":"Answer","text":"Stake.us uses an internal formula that considers your edge exposure (playing times house edge), your VIP multiplier, and your profit or loss status. This calculator approximates that formula using community-sourced coefficients and a 0.22 base rate."}},
+{"@type":"Question","name":"Does game type affect my weekly bonus?","acceptedAnswer":{"@type":"Answer","text":"Yes. Games with a higher house edge generate more edge exposure per SC played, which increases the bonus. Slots (roughly 4% edge) produce higher edge exposure than Stake Originals (roughly 1% edge) for the same play amount."}},
 {"@type":"Question","name":"What if I had a winning week?","acceptedAnswer":{"@type":"Answer","text":"Winners typically receive a slightly lower bonus multiplier (approximately 0.9x) compared to break-even players (1.0x) or net losers (1.1x). This is an estimate - Stake.us may weight results differently in practice."}}]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stake.us Weekly Bonus Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculate your estimated Stake.us weekly bonus based on VIP level, 7-day wagering, game type, and win/loss status.","url":"https://sweepstakesites.com/stake-us/weekly-bonus-calculator.html"}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Stake.us Weekly Bonus Calculator","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculate your estimated Stake.us weekly bonus based on VIP level, 7-day play, game type, and win/loss status.","url":"https://sweepstakesites.com/stake-us/weekly-bonus-calculator.html"}
 </script>
 <script type="application/ld+json">
 {
@@ -27,7 +27,7 @@
 }
 </script>
 <meta property="og:title" content="Stake.us Weekly Bonus Calculator">
-<meta property="og:description" content="Calculate your estimated Stake.us weekly bonus based on VIP level, 7-day wagering, game type, and win/loss status.">
+<meta property="og:description" content="Calculate your estimated Stake.us weekly bonus based on VIP level, 7-day play, game type, and win/loss status.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sweepstakesites.com/stake-us/weekly-bonus-calculator.html">
 <meta property="og:site_name" content="SweepstakeSites">
@@ -99,7 +99,7 @@
         </div>
 
         <h1 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:800;letter-spacing:-0.03em;margin-bottom:var(--space-3);">Stake.us Weekly Bonus Calculator</h1>
-        <p class="page-intro" style="color:var(--color-text-muted);font-size:var(--text-base);line-height:1.7;max-width:640px;margin-bottom:var(--space-8);">Project your estimated Saturday weekly bonus on Stake.us. Enter your VIP level, 7-day wagering total, and primary game type to see an estimate. Bonuses require VIP status - Bronze tier or above.</p>
+        <p class="page-intro" style="color:var(--color-text-muted);font-size:var(--text-base);line-height:1.7;max-width:640px;margin-bottom:var(--space-8);">Project your estimated Saturday weekly bonus on Stake.us. Enter your VIP level, 7-day play total, and primary game type to see an estimate. Bonuses require VIP status - Bronze tier or above.</p>
 
         <div id="calc-warning" class="calc-warning" style="display:none"></div>
 
@@ -123,12 +123,12 @@
             </div>
             <div class="calc-row">
               <div class="calc-field">
-                <label for="sc_wagered">SC Wagered (last 7 days)</label>
-                <input type="number" id="sc_wagered" placeholder="e.g. 5000" min="0" step="any" required>
+                <label for="sc_played">SC Played (last 7 days)</label>
+                <input type="number" id="sc_played" placeholder="e.g. 5000" min="0" step="any" required>
               </div>
               <div class="calc-field">
-                <label for="gc_wagered">GC Wagered (optional)</label>
-                <input type="number" id="gc_wagered" placeholder="e.g. 1000000" min="0" step="any">
+                <label for="gc_played">GC Played (optional)</label>
+                <input type="number" id="gc_played" placeholder="e.g. 1000000" min="0" step="any">
               </div>
             </div>
             <div class="calc-row">
@@ -242,21 +242,21 @@
             <span>When are Stake.us weekly bonuses paid?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Weekly bonuses are typically credited on Saturdays. The amount depends on your VIP tier, 7-day wagering volume, game mix, and whether you had a net winning or losing week. You must be at least Bronze VIP to receive a weekly bonus.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Weekly bonuses are typically credited on Saturdays. The amount depends on your VIP tier, 7-day play volume, game mix, and whether you had a net winning or losing week. You must be at least Bronze VIP to receive a weekly bonus.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>How is the weekly bonus amount decided?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Stake.us uses an internal formula that considers your edge exposure (wagering times house edge), your VIP multiplier, and your profit or loss status. This calculator approximates that formula using community-sourced coefficients and a 0.22 base rate.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Stake.us uses an internal formula that considers your edge exposure (playing times house edge), your VIP multiplier, and your profit or loss status. This calculator approximates that formula using community-sourced coefficients and a 0.22 base rate.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>Does game type affect my weekly bonus?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">Yes. Games with a higher house edge generate more edge exposure per SC wagered, which increases the bonus. Slots (roughly 4% edge) produce higher edge exposure than Stake Originals (roughly 1% edge) for the same wagered amount.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Games with a higher house edge generate more edge exposure per SC played, which increases the bonus. Slots (roughly 4% edge) produce higher edge exposure than Stake Originals (roughly 1% edge) for the same play amount.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">

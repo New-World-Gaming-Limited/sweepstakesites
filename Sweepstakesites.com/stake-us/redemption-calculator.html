@@ -11,8 +11,8 @@
 <link rel="stylesheet" href="../base.css">
 <link rel="stylesheet" href="../style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the 3x playthrough requirement?","acceptedAnswer":{"@type":"Answer","text":"When you receive bonus Stake Cash alongside a Gold Coin purchase, that SC must be wagered 3 times before it can be redeemed. For example, 10 bonus SC requires 30 SC in total wagers before redemption is unlocked."}},
-{"@type":"Question","name":"Does playing with Gold Coins count toward the rollover?","acceptedAnswer":{"@type":"Answer","text":"No. Only Stake Cash wagers count toward the playthrough requirement. Gold Coins are a separate free-play currency with no monetary value and do not contribute to SC rollover."}},
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the 3x playthrough requirement?","acceptedAnswer":{"@type":"Answer","text":"When you receive bonus Stake Cash alongside a Gold Coin purchase, that SC must be played 3 times before it can be redeemed. For example, 10 bonus SC requires 30 SC in total plays before redemption is unlocked."}},
+{"@type":"Question","name":"Does playing with Gold Coins count toward the rollover?","acceptedAnswer":{"@type":"Answer","text":"No. Only Stake Cash plays count toward the playthrough requirement. Gold Coins are a separate free-play currency with no monetary value and do not contribute to SC rollover."}},
 {"@type":"Question","name":"When can I redeem Stake Cash for prizes?","acceptedAnswer":{"@type":"Answer","text":"You can redeem SC once you have met the 3x playthrough requirement and hold at least 50 SC in your redeemable balance. Redemptions are processed as cryptocurrency or gift cards through the Wallet section."}},
 {"@type":"Question","name":"What happens if I receive multiple bonus batches?","acceptedAnswer":{"@type":"Answer","text":"Each bonus batch carries its own playthrough requirement. If you receive 10 SC in one batch and 20 SC in another, you need 30 SC in play for the first and 60 SC for the second. Enter the combined totals in this calculator for a simplified view."}}]}
 </script>
@@ -99,7 +99,7 @@
         </div>
 
         <h1 style="font-family:var(--font-display);font-size:var(--text-2xl);font-weight:800;letter-spacing:-0.03em;margin-bottom:var(--space-3);">Stake.us Redemption Progress Calculator</h1>
-        <p class="page-intro" style="color:var(--color-text-muted);font-size:var(--text-base);line-height:1.7;max-width:640px;margin-bottom:var(--space-8);">Track how much Stake Cash playthrough you have left before your bonus SC becomes redeemable. Bonus SC received with a Gold Coin purchase requires 3x wagering before it can be redeemed for prizes.</p>
+        <p class="page-intro" style="color:var(--color-text-muted);font-size:var(--text-base);line-height:1.7;max-width:640px;margin-bottom:var(--space-8);">Track how much Stake Cash playthrough you have left before your bonus SC becomes redeemable. Bonus SC received with a Gold Coin purchase requires 3x playing before it can be redeemed for prizes.</p>
 
         <div id="calc-warning" class="calc-warning" style="display:none"></div>
 
@@ -111,9 +111,9 @@
               <span class="calc-field-hint">The promotional SC that came with your Gold Coin purchase</span>
             </div>
             <div class="calc-field">
-              <label for="sc_played">SC Already Wagered Toward Rollover</label>
+              <label for="sc_played">SC Already Played Toward Rollover</label>
               <input type="number" id="sc_played" placeholder="e.g. 50" min="0" step="any" required>
-              <span class="calc-field-hint">Total SC you have wagered since receiving the bonus</span>
+              <span class="calc-field-hint">Total SC you have played since receiving the bonus</span>
             </div>
 
             <button type="submit" class="btn btn--primary" style="width:100%;margin-top:var(--space-4);">Check Redemption Progress</button>
@@ -206,14 +206,14 @@
             <span>What is the 3x playthrough requirement?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">When you receive bonus Stake Cash alongside a Gold Coin purchase, that SC must be wagered 3 times before it can be redeemed. For example, 10 bonus SC requires 30 SC in total wagers before redemption is unlocked.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">When you receive bonus Stake Cash alongside a Gold Coin purchase, that SC must be played 3 times before it can be redeemed. For example, 10 bonus SC requires 30 SC in total plays before redemption is unlocked.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>Does playing with Gold Coins count toward the rollover?</span>
             <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
           </button>
-          <div class="faq-answer"><div class="faq-answer-inner">No. Only Stake Cash wagers count toward the playthrough requirement. Gold Coins are a separate free-play currency with no monetary value and do not contribute to SC rollover.</div></div>
+          <div class="faq-answer"><div class="faq-answer-inner">No. Only Stake Cash plays count toward the playthrough requirement. Gold Coins are a separate free-play currency with no monetary value and do not contribute to SC rollover.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
