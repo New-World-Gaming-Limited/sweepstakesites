@@ -347,3 +347,18 @@ document.querySelectorAll('.promo-code-cutout').forEach(function(box) {
     }
   });
 })();
+
+// --- STICKY CTA BAR (show on scroll past hero) ---
+(function(){
+  var cta = document.getElementById('stickyCta');
+  if (!cta) return;
+  var shown = false;
+  function checkScroll() {
+    if (window.scrollY > 400 && !shown) {
+      cta.classList.add('visible');
+      shown = true;
+    }
+  }
+  window.addEventListener('scroll', checkScroll, {passive: true});
+  checkScroll();
+})();
