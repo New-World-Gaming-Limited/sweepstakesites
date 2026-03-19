@@ -178,6 +178,9 @@
   letter-spacing: -0.02em;
 }
 .site-logo svg { flex-shrink: 0; }
+.site-logo img { flex-shrink: 0; }
+[data-theme="dark"] .site-logo img { filter: brightness(0) invert(1); }
+.site-footer .site-logo img { filter: brightness(0) invert(1); }
 
 .nav-desktop {
   display: none;
@@ -1294,6 +1297,17 @@
 }
 [data-theme="dark"] .code-badge {
   background: var(--color-primary-light);
+}
+a .code-badge,
+a:has(.code-badge) {
+  text-decoration: none;
+  color: inherit;
+}
+a .code-badge:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-style: solid;
+  transition: background 0.2s, color 0.2s;
 }
 
 /* Promo hero banner */
