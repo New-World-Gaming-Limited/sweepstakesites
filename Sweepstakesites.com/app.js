@@ -181,11 +181,6 @@ document.querySelectorAll('.promo-code-cutout').forEach(function(box) {
     el.textContent = monthYear;
   });
 
-  // Update "Last Used X mins ago" with random 4-23 minutes
-  document.querySelectorAll('.dynamic-last-used').forEach(function(el){
-    el.textContent = (Math.floor(Math.random() * 20) + 4);
-  });
-
   // Update any ld+json schema dateModified to today
   var isoDate = now.getFullYear() + '-' + 
     String(now.getMonth()+1).padStart(2,'0') + '-' + 
