@@ -42,17 +42,6 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <style>
-/* Sticky bottom CTA bar */
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--color-primary);transform:translateY(100%);transition:transform 0.35s cubic-bezier(.4,0,.2,1);box-shadow:0 -4px 20px rgba(0,0,0,0.2);}
-.sticky-cta.visible{transform:translateY(0);}
-.sticky-cta-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 24px;gap:12px;}
-.sticky-cta-text{color:#fff;font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.sticky-cta-text span{color:#FFD700;font-family:'JetBrains Mono',monospace;font-weight:800;letter-spacing:0.05em;}
-.sticky-cta-btn{display:inline-flex;align-items:center;gap:6px;background:#FFD700;color:#0d1117;font-weight:700;font-size:14px;padding:10px 24px;border-radius:999px;text-decoration:none;white-space:nowrap;transition:background 0.2s,transform 0.2s;flex-shrink:0;}
-.sticky-cta-btn:hover{background:#ffe44d;transform:translateY(-1px);}
-.sticky-cta-close{background:none;border:none;color:rgba(255,255,255,0.6);cursor:pointer;padding:4px;line-height:1;font-size:18px;flex-shrink:0;}
-.sticky-cta-close:hover{color:#fff;}
-@media(max-width:600px){.sticky-cta-inner{padding:10px 16px;}.sticky-cta-text{font-size:13px;}.sticky-cta-btn{padding:8px 16px;font-size:13px;}}@media(max-width:480px){.sticky-cta-text{display:none;}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ0LVR6BPT"></script>
@@ -76,7 +65,7 @@
     </a>
     <nav class="nav-desktop" aria-label="Main navigation">
       <a href="../stake-us/promo-code.html">Stake.us Promo Code</a>
-      <a href="../stake-us/news.html">News</a>
+      <a href="../stake-us/news.html">Guides</a>
       <a href="../stake-us/vip-calculator.html">Calculators</a>
       <a href="../compare.html">Compare</a>
     </nav>
@@ -96,7 +85,7 @@
 </header>
 <nav class="mobile-nav" aria-label="Mobile navigation">
   <a href="../stake-us/promo-code.html">Stake.us Promo Code</a>
-  <a href="../stake-us/news.html">News</a>
+  <a href="../stake-us/news.html">Guides</a>
   <a href="../stake-us/vip-calculator.html">Calculators</a>
   <a href="../compare.html">Compare</a>
   <a href="https://shuffle.us?r=MAXBET" class="nav-cta-mobile" target="_blank" rel="noopener noreferrer">Use Code MAXBET &rarr;</a>
@@ -211,7 +200,7 @@
         <div class="sidebar-sticky">
           <div class="sidebar-promo">
             <h3>Code MAXBET</h3>
-            <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-3);">Verified <span class="dynamic-month-year"></span></p>
+            <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-3);">Verified <span class="dynamic-month-year">March 2026</span></p>
             <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&#10003;</div><div class="sidebar-promo-details"><div class="sidebar-promo-name">25,000 GC + 1 SC Free</div></div></div>
             <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&#10003;</div><div class="sidebar-promo-details"><div class="sidebar-promo-name">No Deposit Required</div></div></div>
             <div class="sidebar-promo-item"><div class="sidebar-promo-rank">&#10003;</div><div class="sidebar-promo-details"><div class="sidebar-promo-name">Crypto Only (BTC, ETH, LTC)</div></div></div>
@@ -246,7 +235,7 @@
 <a class="site-logo" href="../index.html" style="margin-bottom:var(--space-2);">
 <img src="../images/sweepstakesites-logo.svg" alt="SweepstakeSites" style="height:26px;width:auto;">
 </a>
-<p>The most comprehensive Stake.us resource online. 89 guides, 4 calculators, and everything you need. Published by NWG Ltd.</p>
+<p>The most comprehensive sweepstakes casino resource online. Reviews, promo codes, and guides for Stake.us, Legendz, and Shuffle.us. Published by NWG Ltd.</p>
 <p style="margin-top:var(--space-2);font-size:var(--text-xs);color:var(--color-text-faint);">sweepstakesites.com &middot; 6543 S Las Vegas Blvd &middot; +1 702-637-2872 &middot; <a href="mailto:help@sweepstakesites.com" style="color:inherit;">help@sweepstakesites.com</a></p>
 </div>
 <div class="footer-columns">
@@ -320,15 +309,6 @@
       <button class="search-close" aria-label="Close search">ESC</button>
     </div>
     <div class="search-results"></div>
-  </div>
-</div>
-<!-- STICKY CTA -->
-<div class="sticky-cta" id="stickyCta">
-  <div class="sticky-cta-inner">
-    <span class="sticky-cta-text">Use code <span>MAXBET</span> on Shuffle.us &mdash; 25,000 GC + 1 SC Free</span>
-    <a href="https://shuffle.us?r=MAXBET" class="sticky-cta-btn" target="_blank" rel="noopener noreferrer">Claim Bonus</a>
-    <span style="color:rgba(255,255,255,0.6);font-size:10px;line-height:1.2;text-align:center;white-space:nowrap;">Over 21s.<br>T&Cs apply.</span>
-    <button class="sticky-cta-close" aria-label="Close" onclick="this.closest('.sticky-cta').remove()">&times;</button>
   </div>
 </div>
 <script src="../app.js"></script>
