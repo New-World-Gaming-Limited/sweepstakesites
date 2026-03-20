@@ -1118,6 +1118,46 @@
 }
 .page-hero .breadcrumb a:hover { text-decoration: underline; }
 
+/* --- BRAND WATERMARK (page-hero embossed) --- */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+}
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+}
+.page-hero[data-brand]::after {
+  content: attr(data-brand);
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.035);
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.6);
+  pointer-events: none;
+  z-index: 0;
+  white-space: nowrap;
+  line-height: 1;
+  user-select: none;
+}
+[data-theme="dark"] .page-hero[data-brand]::after {
+  color: rgba(255,255,255,0.03);
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.4);
+}
+@media (max-width: 899px) {
+  .page-hero[data-brand]::after {
+    font-size: clamp(2rem, 12vw, 4rem);
+    right: -5px;
+  }
+}
+
+
 
 /* --- PROS CONS --- */
 .pros-cons {
@@ -1154,14 +1194,19 @@
 
 
 /* --- SCROLL REVEALS --- */
+/* Fallback: show content if JS hasn't initialized reveal */
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+.reveal.reveal-init {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-.reveal.visible {
+.reveal.reveal-init.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* Utility */

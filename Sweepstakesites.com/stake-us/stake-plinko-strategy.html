@@ -4,16 +4,43 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="preload" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" as="style">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <title>Stake.us Plinko Strategy Guide 2026</title>
 <meta content="Plinko strategy for Stake.us. Covers ball physics, payout distribution by risk level, pin count effects, and optimal play sizing for each mode." name="description"/>
 
-<link href="../base.css" rel="stylesheet"/>
-<link href="../style.css" rel="stylesheet"/>
+<style>/* Critical CSS - inlined for fast FCP/LCP */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:none;text-size-adjust:none;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;scroll-padding-top:80px}
+body{min-height:100dvh;line-height:1.7;font-family:var(--font-body,sans-serif);font-size:var(--text-base);color:var(--color-text);background-color:var(--color-bg)}
+img,picture,svg{display:block;max-width:100%;height:auto}
+button{cursor:pointer;background:none;border:none}
+h1,h2,h3,h4,h5,h6{text-wrap:balance;line-height:1.25}
+a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),background 200ms cubic-bezier(.16,1,.3,1),border-color 200ms cubic-bezier(.16,1,.3,1)}
+:root{--text-xs:clamp(0.75rem,0.7rem + 0.25vw,0.875rem);--text-sm:clamp(0.875rem,0.8rem + 0.35vw,1rem);--text-base:clamp(1rem,0.95rem + 0.25vw,1.125rem);--text-lg:clamp(1.125rem,1rem + 0.75vw,1.5rem);--text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--text-2xl:clamp(2rem,1.2rem + 2.5vw,3.25rem);--space-1:0.25rem;--space-2:0.5rem;--space-3:0.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--space-24:6rem;--radius-sm:0.375rem;--radius-md:0.5rem;--radius-lg:0.75rem;--radius-xl:1rem;--radius-full:9999px;--transition-interactive:200ms cubic-bezier(0.16,1,0.3,1);--content-narrow:680px;--content-default:960px;--content-wide:1200px;--font-display:'General Sans','Inter',sans-serif;--font-body:'Inter','Helvetica Neue',sans-serif}
+:root,[data-theme="light"]{--color-bg:#F9FAFC;--color-surface:#FFFFFF;--color-surface-alt:#F0F2F5;--color-border:#E2E5EB;--color-border-light:#ECEEF2;--color-text:#111827;--color-text-muted:#4B5563;--color-text-faint:#9CA3AF;--color-primary:#1D4ED8;--color-primary-hover:#1e40af;--color-primary-surface:rgba(29,78,216,0.06);--color-success:#16a34a;--color-danger:#dc2626;--section-alt-bg:#F0F2F5}
+[data-theme="dark"]{--color-bg:#0d1117;--color-surface:#161b22;--color-surface-alt:#1c2333;--color-border:#30363d;--color-border-light:#21262d;--color-text:#e6edf3;--color-text-muted:#8b949e;--color-text-faint:#484f58;--color-primary:#58a6ff;--color-primary-hover:#79b8ff;--color-primary-surface:rgba(88,166,255,0.08);--color-success:#3fb950;--color-danger:#f85149;--section-alt-bg:#161b22}
+.disclosure-bar{background:var(--color-surface-alt);text-align:center;font-size:var(--text-xs);color:var(--color-text-muted);padding:var(--space-2) var(--space-4);border-bottom:1px solid var(--color-border-light)}
+.disclosure-bar a{color:var(--color-primary);text-decoration:underline}
+.site-header{position:sticky;top:0;z-index:100;background:var(--color-surface);border-bottom:1px solid var(--color-border-light);padding:0 var(--space-4)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);max-width:var(--content-wide);margin:0 auto;height:64px}
+.site-logo{display:flex;align-items:center;text-decoration:none}
+.nav-desktop{display:flex;align-items:center;gap:var(--space-1)}
+.nav-actions{display:flex;align-items:center;gap:var(--space-2)}
+.header-cta{background:var(--color-primary);color:#fff;padding:var(--space-2) var(--space-4);border-radius:var(--radius-full);font-weight:700;font-size:var(--text-sm);text-decoration:none;white-space:nowrap}
+.container{max-width:var(--content-wide);margin:0 auto;padding:0 var(--space-4)}
+.page-hero{background:var(--color-surface-alt);padding:var(--space-8) 0 var(--space-10);border-bottom:1px solid var(--color-border-light)}
+.page-hero h1{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:800;letter-spacing:-0.02em}
+.breadcrumb{font-size:var(--text-xs);color:var(--color-text-muted);margin-bottom:var(--space-3)}
+.breadcrumb a{color:var(--color-primary);text-decoration:none}
+.section{padding:var(--space-12) 0}
+.section--alt{background:var(--section-alt-bg)}
+@media(max-width:899px){.nav-desktop{display:none}.mobile-menu-btn{display:flex}}
+@media(min-width:900px){.mobile-menu-btn{display:none}}</style>
+<link href="../style.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="../style.min.css" rel="stylesheet"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -149,6 +176,7 @@
             <a href="../legendz/legendz-games.html">Games</a>
             <a href="../legendz/legendz-sportsbook.html">Sportsbook</a>
             <a href="../legendz/legendz-payments.html">Payments</a>
+            <a href="../legendz/guides.html">All Legendz Guides</a>
           </div>
           <div class="nav-dropdown-col">
             <span class="nav-dropdown-heading">Shuffle.us</span>
@@ -156,6 +184,7 @@
             <a href="../shuffle/shuffle-games.html">Games</a>
             <a href="../shuffle/shuffle-originals.html">Originals</a>
             <a href="../shuffle/shuffle-payments.html">Payments</a>
+            <a href="../shuffle/guides.html">All Shuffle.us Guides</a>
           </div>
         </div>
       </div>
@@ -167,7 +196,7 @@
 <button aria-label="Toggle dark mode" class="theme-toggle" data-theme-toggle="">
 <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
 </button>
-<a class="header-cta" href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" rel="noopener noreferrer" target="_blank">Use Code MAXBET</a>
+<a href="../best-sweepstakes-sites.html" class="header-cta">Best Sweepstakes Sites</a>
 <button aria-expanded="false" aria-label="Open menu" class="mobile-menu-btn">
 <svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
 </button>
@@ -197,17 +226,17 @@
   <div class="mobile-nav-section">
     <span class="mobile-nav-heading">Guides</span>
     <a href="../stake-us/news.html">Stake.us Guides</a>
-    <a href="../legendz/legendz-bonus-guide.html">Legendz Guides</a>
-    <a href="../shuffle/shuffle-bonus-guide.html">Shuffle.us Guides</a>
+    <a href="../legendz/guides.html">Legendz Guides</a>
+    <a href="../shuffle/guides.html">Shuffle.us Guides</a>
   </div>
   <a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" class="nav-cta-mobile" target="_blank" rel="noopener noreferrer">Use Code MAXBET &rarr;</a>
 </nav>
-<section class="page-hero">
+<section class="page-hero" data-brand="Stake.us">
 <div class="container">
 <nav aria-label="Breadcrumb" class="breadcrumb"><a href="../index.html">Home</a> / <a href="index.html">Stake.us</a> / <a href="games-guide.html">Game Guides &amp; Strategy</a> / <span>Stake Plinko Strategy</span></nav>
 <h1>Stake Plinko Strategy (Is Stake Plinko Legit?)</h1>
         <div class="author-byline" style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-4);padding:var(--space-3) 0;border-bottom:1px solid var(--color-border);">
-          <img src="../images/author-sarah.webp" alt="Sarah Chen" width="36" height="36" loading="lazy" decoding="async" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <img src="../images/author-sarah.png" alt="Sarah Chen" width="36" height="36" loading="lazy" decoding="async" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;">
           <div>
             <a href="../sarah-chen.html" style="font-weight:600;font-size:var(--text-sm);color:inherit;text-decoration:none;border-bottom:1px solid var(--color-primary);">Sarah Chen</a>
             <span style="color:var(--color-text-muted);font-size:var(--text-xs);margin-left:var(--space-1);">Senior Games Analyst</span>
@@ -309,9 +338,9 @@
 <h3>Quick Links</h3>
 <div class="sidebar-promo-item"><div class="sidebar-promo-rank">→</div><div class="sidebar-promo-details"><a href="../stake-us/promo-code.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">Promo Code MAXBET</a></div></div>
 <div class="sidebar-promo-item"><div class="sidebar-promo-rank">→</div><div class="sidebar-promo-details"><a href="../stake-us/review.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">Full Review</a></div></div>
-<div class="sidebar-promo-item"><div class="sidebar-promo-rank">→</div><div class="sidebar-promo-details"><a href="../stake-us/bonuses.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">All Bonuses</a></div></div>
+<div class="sidebar-promo-item"><div class="sidebar-promo-rank">→</div><div class="sidebar-promo-details"><a href="../stake-us/bonus-guide.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">All Bonuses</a></div></div>
 <div class="sidebar-promo-item"><div class="sidebar-promo-rank">→</div><div class="sidebar-promo-details"><a href="../stake-us/faq.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">FAQ</a></div></div>
-<div class="sidebar-promo-item"><div class="sidebar-promo-rank">→</div><div class="sidebar-promo-details"><a href="../compare.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">Compare 30 Casinos</a></div></div>
+<div class="sidebar-promo-item"><div class="sidebar-promo-rank">→</div><div class="sidebar-promo-details"><a href="../compare.html" style="color:var(--color-text);text-decoration:none;font-weight:600;font-size:var(--text-sm);">Compare 12 Casinos</a></div></div>
 </div>
 </div>
 </div>
@@ -329,7 +358,7 @@
 <a class="site-logo" href="../index.html" style="margin-bottom:var(--space-2);">
 <img src="../images/sweepstakesites-logo.svg" alt="SweepstakeSites" style="height:26px;width:auto;">
 </a>
-<p>The most comprehensive sweepstakes casino resource online. Reviews, promo codes, and guides for Stake.us, Legendz, and Shuffle.us. Published by NWG Ltd.</p>
+<p>Your sweepstakes casino resource online. Reviews, promo codes, and guides for Stake.us, Legendz, and Shuffle.us. Published by NWG Ltd.</p>
 <p style="margin-top:var(--space-2);font-size:var(--text-xs);color:var(--color-text-faint);">sweepstakesites.com &middot; 6543 S Las Vegas Blvd &middot; +1 702-637-2872 &middot; <a href="mailto:help@sweepstakesites.com" style="color:inherit;">help@sweepstakesites.com</a></p>
 </div>
 <div class="footer-columns">
@@ -338,8 +367,9 @@
 <div class="footer-col-links">
 <a href="../stake-us/promo-code.html">Promo Code</a>
 <a href="../stake-us/games-guide.html">Game Guides</a>
-<a href="../stake-us/bonuses.html">Bonus Guides</a>
+<a href="../stake-us/bonus-guide.html">Bonus Guides</a>
 <a href="../compare.html">Compare Sites</a>
+<a href="../best-sweepstakes-sites.html">Best Sweepstakes Sites</a>
 <a href="../stake-us/vip-calculator.html">Calculators</a>
 <a href="../quiz.html">Quiz</a>
 <a href="../stake-us/payments.html">Payment Methods</a>
@@ -361,7 +391,7 @@
 <div class="footer-col-links">
 <a href="../responsible-gaming.html">Responsible Gambling Policy</a>
 <a href="../self-exclusion-resources.html">Self-Exclusion Resources</a>
-<a href="../stake-us/faq.html">Support &amp; FAQ</a>
+<a href="../contact.html">Contact &amp; Support</a>
 </div>
 </div>
 <div class="footer-col">
@@ -405,6 +435,6 @@
     <div class="search-results"></div>
   </div>
 </div>
-<script src="../app.js"></script>
+<script src="../app.min.js" defer></script>
 </body>
 </html>

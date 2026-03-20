@@ -75,7 +75,10 @@ document.querySelectorAll('.faq-question').forEach(btn => {
       }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  reveals.forEach(el => observer.observe(el));
+  reveals.forEach(el => {
+    el.classList.add('reveal-init');
+    observer.observe(el);
+  });
 })();
 
 // --- SCORE BAR ANIMATION ---
