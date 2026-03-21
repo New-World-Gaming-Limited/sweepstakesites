@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" as="style">
 <title>Sweepstakes Casino Quiz | Find Your Perfect Platform | SweepstakeSites</title>
-<meta name="description" content="Take our free quiz to find out which sweepstakes casino fits your play style. Answer 7 quick questions and get a personalized recommendation.">
+<meta name="description" content="Take our free quiz to find out which sweepstakes casino fits your play style. Answer 6 quick questions and get a personalized recommendation from 8 top platforms.">
 <link rel="canonical" href="https://sweepstakesites.com/quiz">
 <meta property="og:title" content="Sweepstakes Casino Quiz | Find Your Perfect Platform | SweepstakeSites">
-<meta property="og:description" content="Take our free quiz to find out which sweepstakes casino fits your play style. Answer 7 quick questions and get a personalized recommendation.">
+<meta property="og:description" content="Take our free quiz to find out which sweepstakes casino fits your play style. Answer 6 quick questions and get a personalized recommendation.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sweepstakesites.com/quiz">
 <meta property="og:site_name" content="SweepstakeSites">
@@ -50,6 +50,38 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
   "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://sweepstakesites.com/"},{"@type":"ListItem","position":2,"name":"Quiz","item":"https://sweepstakesites.com/quiz"}]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the sweepstakes casino quiz work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Answer 6 quick questions about your preferences - play style, payment method, coverage needs, and more. Our algorithm matches you with one of 8 sweepstakes platforms based on your answers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which sweepstakes platforms can the quiz recommend?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The quiz can recommend Stake.us, Legendz, Shuffle.us, Fortune Coins, WOW Vegas, High 5, Chumba, or Pulsz based on your play style, game preferences, and feature priorities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the quiz free to take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the quiz is completely free. No signup or purchase required. You get an instant recommendation with reasons tailored to your answers."
+      }
+    }
+  ]
+}
+</script>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="icon" type="image/png" href="./favicon.png" sizes="32x32">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
@@ -67,21 +99,26 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 .quiz-question-num{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--color-primary);margin-bottom:var(--space-2);}
 .quiz-question{font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-6);line-height:1.35;}
 .quiz-options{display:grid;gap:var(--space-3);}
-.quiz-option{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4) var(--space-5);border:2px solid var(--color-border);border-radius:var(--radius-lg);cursor:pointer;transition:all 0.2s;background:var(--color-surface);text-align:left;font-size:var(--text-base);font-weight:500;line-height:1.4;}
-.quiz-option:hover{border-color:var(--color-primary);background:var(--color-primary-light);}
-.quiz-option.selected{border-color:var(--color-primary);background:var(--color-primary-light);font-weight:600;}
-.quiz-option-icon{width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.quiz-option{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-4) var(--space-5);border:2px solid var(--color-border);border-radius:var(--radius-lg);cursor:pointer;transition:all 0.2s;background:var(--color-surface);text-align:left;font-size:var(--text-base);font-weight:500;line-height:1.4;width:100%;font-family:inherit;color:inherit;}
+.quiz-option:hover{border-color:var(--color-primary);background:var(--color-primary-surface);}
+.quiz-option.selected{border-color:var(--color-primary);background:var(--color-primary-surface);font-weight:600;}
+.quiz-option-icon{width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-alt);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
 .quiz-option.selected .quiz-option-icon{background:var(--color-primary);color:#fff;}
 .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:var(--space-8);}
 .quiz-nav .btn{min-width:120px;}
-.quiz-back{background:none;border:none;color:var(--color-text-muted);font-weight:600;font-size:var(--text-sm);cursor:pointer;padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);}
-.quiz-back:hover{color:var(--color-text);background:var(--color-surface-2);}
+.quiz-back{background:none;border:none;color:var(--color-text-muted);font-weight:600;font-size:var(--text-sm);cursor:pointer;padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);font-family:inherit;}
+.quiz-back:hover{color:var(--color-text);background:var(--color-surface-alt);}
+
+/* Question step visibility */
+.quiz-step{display:none;}
+.quiz-step.is-active{display:block;}
 
 /* Results */
-.quiz-result{text-align:center;}
-.quiz-result-badge{display:inline-flex;align-items:center;gap:var(--space-2);background:var(--color-success-light,rgba(34,197,94,0.1));color:var(--color-success);padding:var(--space-2) var(--space-4);border-radius:var(--radius-full);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-4);}
+.quiz-result{display:none;text-align:center;}
+.quiz-result.is-active{display:block;}
+.quiz-result-badge{display:inline-flex;align-items:center;gap:var(--space-2);background:rgba(34,197,94,0.1);color:var(--color-success);padding:var(--space-2) var(--space-4);border-radius:var(--radius-full);font-weight:700;font-size:var(--text-sm);margin-bottom:var(--space-4);}
 .quiz-result h2{font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-2);}
-.quiz-result p{color:var(--color-text-muted);font-size:var(--text-base);max-width:540px;margin:0 auto var(--space-6);}
+.quiz-result p.quiz-result-desc{color:var(--color-text-muted);font-size:var(--text-base);max-width:540px;margin:0 auto var(--space-6);}
 .quiz-result-card{background:var(--color-surface);border:2px solid var(--color-primary);border-radius:var(--radius-lg);padding:var(--space-6);text-align:left;margin-bottom:var(--space-6);}
 .quiz-result-reasons{display:grid;gap:var(--space-3);margin:var(--space-4) 0;}
 .quiz-result-reason{display:flex;align-items:flex-start;gap:var(--space-2);font-size:var(--text-sm);}
@@ -91,8 +128,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 .quiz-score-fill div{height:100%;background:var(--color-primary);border-radius:5px;transition:width 1s ease;}
 .quiz-score-label{font-weight:800;font-size:var(--text-lg);color:var(--color-primary);min-width:50px;}
 .quiz-retake{margin-top:var(--space-4);}
-.quiz-retake button{background:none;border:none;color:var(--color-primary);font-weight:600;font-size:var(--text-sm);cursor:pointer;text-decoration:underline;}
-
+.quiz-retake button{background:none;border:none;color:var(--color-primary);font-weight:600;font-size:var(--text-sm);cursor:pointer;text-decoration:underline;font-family:inherit;}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ0LVR6BPT"></script>
@@ -120,6 +156,8 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
           <a href="./stake-us/index.html">Stake.us</a>
           <a href="./legendz/index.html">Legendz</a>
           <a href="./shuffle/index.html">Shuffle.us</a>
+          <div class="nav-dropdown-divider"></div>
+          <a href="./compare.html">All 8 Platforms</a>
         </div>
       </div>
       <div class="nav-dropdown">
@@ -217,7 +255,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
   <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./index.html">Home</a> &rsaquo; <span>Quiz</span></nav>
     <h1>Which Sweepstakes Casino Fits Your Style?</h1>
-    <p>Answer 7 quick questions. We'll match you with the right platform based on what actually matters to you.</p>
+    <p>Answer 6 quick questions. We'll match you with the right platform based on what actually matters to you.</p>
   </div>
 </section>
 
@@ -227,10 +265,187 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
     <div class="card" style="padding:var(--space-8);" id="quizCard">
 
       <!-- Progress dots -->
-      <div class="quiz-progress" id="quizProgress"></div>
+      <div class="quiz-progress" id="quizProgress">
+        <div class="quiz-progress-dot active" data-dot="0"></div>
+        <div class="quiz-progress-dot" data-dot="1"></div>
+        <div class="quiz-progress-dot" data-dot="2"></div>
+        <div class="quiz-progress-dot" data-dot="3"></div>
+        <div class="quiz-progress-dot" data-dot="4"></div>
+        <div class="quiz-progress-dot" data-dot="5"></div>
+      </div>
 
-      <!-- Question area -->
-      <div id="quizBody"></div>
+      <!-- Question 1 -->
+      <div class="quiz-step is-active" data-step="0">
+        <div class="quiz-question-num">Question 1 of 6</div>
+        <h2 class="quiz-question">What matters most to you in a sweepstakes casino?</h2>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="0">
+            <span class="quiz-option-icon">&#127873;</span>
+            <span>Biggest no-purchase bonus</span>
+          </button>
+          <button class="quiz-option" data-value="1">
+            <span class="quiz-option-icon">&#9878;&#65039;</span>
+            <span>Lowest playthrough requirements</span>
+          </button>
+          <button class="quiz-option" data-value="2">
+            <span class="quiz-option-icon">&#127918;</span>
+            <span>Largest game library</span>
+          </button>
+          <button class="quiz-option" data-value="3">
+            <span class="quiz-option-icon">&#8383;</span>
+            <span>Crypto support</span>
+          </button>
+        </div>
+        <div class="quiz-nav"><span></span></div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="quiz-step" data-step="1">
+        <div class="quiz-question-num">Question 2 of 6</div>
+        <h2 class="quiz-question">How do you prefer to play?</h2>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="0">
+            <span class="quiz-option-icon">&#128640;</span>
+            <span>Provably fair originals (Crash, Plinko, Mines)</span>
+          </button>
+          <button class="quiz-option" data-value="1">
+            <span class="quiz-option-icon">&#127920;</span>
+            <span>Slots and table games</span>
+          </button>
+          <button class="quiz-option" data-value="2">
+            <span class="quiz-option-icon">&#9917;</span>
+            <span>Sports alongside sweepstakes games</span>
+          </button>
+          <button class="quiz-option" data-value="3">
+            <span class="quiz-option-icon">&#127923;</span>
+            <span>Fish games and arcade titles</span>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-back" data-back>&larr; Back</button>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="quiz-step" data-step="2">
+        <div class="quiz-question-num">Question 3 of 6</div>
+        <h2 class="quiz-question">How many US states should the platform cover?</h2>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="0">
+            <span class="quiz-option-icon">&#127758;</span>
+            <span>45+ states (widest coverage)</span>
+          </button>
+          <button class="quiz-option" data-value="1">
+            <span class="quiz-option-icon">&#127463;</span>
+            <span>35+ states (good coverage)</span>
+          </button>
+          <button class="quiz-option" data-value="2">
+            <span class="quiz-option-icon">&#9989;</span>
+            <span>Does not matter, I already checked my state</span>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-back" data-back>&larr; Back</button>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="quiz-step" data-step="3">
+        <div class="quiz-question-num">Question 4 of 6</div>
+        <h2 class="quiz-question">Do you need crypto redemptions?</h2>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="0">
+            <span class="quiz-option-icon">&#8383;</span>
+            <span>Yes, crypto is essential</span>
+          </button>
+          <button class="quiz-option" data-value="1">
+            <span class="quiz-option-icon">&#127974;</span>
+            <span>No, bank transfer or gift cards are fine</span>
+          </button>
+          <button class="quiz-option" data-value="2">
+            <span class="quiz-option-icon">&#128260;</span>
+            <span>Either works</span>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-back" data-back>&larr; Back</button>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="quiz-step" data-step="4">
+        <div class="quiz-question-num">Question 5 of 6</div>
+        <h2 class="quiz-question">What kind of track record matters?</h2>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="0">
+            <span class="quiz-option-icon">&#127942;</span>
+            <span>Longest operating history (10+ years)</span>
+          </button>
+          <button class="quiz-option" data-value="1">
+            <span class="quiz-option-icon">&#127760;</span>
+            <span>Backed by an established international brand</span>
+          </button>
+          <button class="quiz-option" data-value="2">
+            <span class="quiz-option-icon">&#10024;</span>
+            <span>Newest platforms with modern features</span>
+          </button>
+          <button class="quiz-option" data-value="3">
+            <span class="quiz-option-icon">&#129335;</span>
+            <span>Does not matter</span>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-back" data-back>&larr; Back</button>
+        </div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="quiz-step" data-step="5">
+        <div class="quiz-question-num">Question 6 of 6</div>
+        <h2 class="quiz-question">How important is a VIP/loyalty program?</h2>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="0">
+            <span class="quiz-option-icon">&#128081;</span>
+            <span>Very important, I play regularly</span>
+          </button>
+          <button class="quiz-option" data-value="1">
+            <span class="quiz-option-icon">&#128077;</span>
+            <span>Nice to have but not a dealbreaker</span>
+          </button>
+          <button class="quiz-option" data-value="2">
+            <span class="quiz-option-icon">&#9940;</span>
+            <span>Not important</span>
+          </button>
+        </div>
+        <div class="quiz-nav">
+          <button class="quiz-back" data-back>&larr; Back</button>
+        </div>
+      </div>
+
+      <!-- Result (hidden until quiz completes) -->
+      <div class="quiz-result" id="quizResult">
+        <div class="quiz-result-badge">&#10003; Quiz Complete</div>
+        <h2 id="resultTitle">Your #1 Match: ---</h2>
+        <p class="quiz-result-desc" id="resultDesc">Based on your answers, here is the sweepstakes platform that best fits your play style.</p>
+
+        <div class="quiz-score-bar">
+          <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);">Match</span>
+          <div class="quiz-score-fill"><div id="scoreFill" style="width:0%"></div></div>
+          <span class="quiz-score-label" id="scorePct">0%</span>
+        </div>
+
+        <div class="quiz-result-card">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);flex-wrap:wrap;gap:var(--space-2);">
+            <strong style="font-size:var(--text-lg);" id="resultPlatform">---</strong>
+            <span class="code-badge" id="resultBadge" style="display:none;">MAXBET</span>
+          </div>
+          <div class="quiz-result-reasons" id="resultReasons"></div>
+          <a id="resultCTA" href="#" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer" style="width:100%;text-align:center;margin-top:var(--space-4);">Visit Platform &rarr;</a>
+        </div>
+
+        <p style="font-size:var(--text-xs);color:var(--color-text-faint);">21+ | No purchase necessary | Void where prohibited</p>
+        <div class="quiz-retake"><button id="quizRetake">Retake Quiz</button></div>
+      </div>
 
     </div>
   </div>
@@ -248,7 +463,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <a class="site-logo" href="./index.html" style="margin-bottom:var(--space-2);">
 <img src="./images/sweepstakesites-logo.svg" alt="SweepstakeSites" style="height:26px;width:auto;">
 </a>
-<p>Your sweepstakes casino resource online. Reviews, promo codes, and guides for Stake.us, Legendz, and Shuffle.us. Published by NWG Ltd.</p>
+<p>Your sweepstakes casino resource online. Reviews, promo codes, and guides for 8 sweepstakes casinos. Published by NWG Ltd.</p>
 <p style="margin-top:var(--space-2);font-size:var(--text-xs);color:var(--color-text-faint);">sweepstakesites.com &middot; 6543 S Las Vegas Blvd &middot; +1 702-637-2872 &middot; <a href="mailto:help@sweepstakesites.com" style="color:inherit;">help@sweepstakesites.com</a></p>
 </div>
 <div class="footer-columns">
@@ -274,6 +489,8 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <a href="./corrections-policy.html">Corrections Policy</a>
 <a href="./affiliate-disclosure.html">Affiliate Disclosure</a>
 <a href="./complaints-policy.html">Complaints Policy</a>
+<a href="./methodology.html">Our Methodology</a>
+<a href="./operators.html">Operator Dossiers</a>
 </div>
 </div>
 <div class="footer-col">
@@ -318,141 +535,263 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 
 <script>
 (function(){
-  var AFFILIATE = 'https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet';
-
-  var questions = [
-    {
-      q: "What matters most when you pick a sweepstakes casino?",
-      icon: ["🎁","🎰","💰","🛡️"],
-      opts: [
-        "Biggest free bonus on signup",
-        "Widest game selection",
-        "Fastest redemption process",
-        "Reputation and trustworthiness"
+  // Platform database
+  var platforms = {
+    'shuffle': {
+      name: 'Shuffle.us',
+      link: 'https://shuffle.us?r=MAXBET',
+      hasCode: true,
+      reasons: [
+        'Crypto-native platform with full cryptocurrency support for purchases and redemptions',
+        'Provably fair originals including Crash, Plinko, Mines, and Dice',
+        'Fast crypto redemptions processed within minutes',
+        'Modern interface built for players who prefer digital currencies'
       ]
     },
-    {
-      q: "How do you prefer to fund your account?",
-      icon: ["💳","₿","🏦","🆓"],
-      opts: [
-        "Credit or debit card",
-        "Cryptocurrency (BTC, ETH, etc.)",
-        "Bank transfer or ACH",
-        "I only want free play \u2014 no purchases"
+    'stake': {
+      name: 'Stake.us',
+      link: 'https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet',
+      hasCode: true,
+      reasons: [
+        'Largest no-purchase bonus package among sweepstakes platforms',
+        '550+ games including 20+ exclusive Originals',
+        'Permanent rakeback on every play session',
+        'Daily login rewards for consistent players'
       ]
     },
-    {
-      q: "What type of games do you play most?",
-      icon: ["🎰","🃏","📈","🎲"],
-      opts: [
-        "Slots and slot-style games",
-        "Table games (blackjack, roulette, poker)",
-        "Crash, Plinko, and skill-based games",
-        "A mix of everything"
+    'legendz': {
+      name: 'Legendz',
+      link: 'https://m.legendz.com/redirect.aspx?mid=37&sid=1136&cid=&pid=&affid=34&promo=MAXBET',
+      hasCode: true,
+      reasons: [
+        'Low playthrough requirements on bonus coins',
+        'Integrated sportsbook alongside sweepstakes games',
+        'Modern platform with competitive redemption speeds',
+        'Growing game library with new titles added regularly'
       ]
     },
-    {
-      q: "How important is getting rakeback or cashback?",
-      icon: ["🔥","👍","🤷","❓"],
-      opts: [
-        "Essential \u2014 I want a cut of every play",
-        "Nice to have but not a deal-breaker",
-        "I don\u2019t really know what rakeback is",
-        "I\u2019d rather have bigger one-time bonuses"
+    'fortunecoins': {
+      name: 'Fortune Coins',
+      link: 'https://www.fortunecoins.com',
+      hasCode: false,
+      reasons: [
+        'Available in 47 states, the widest coverage of any sweepstakes platform',
+        '1,900+ games, one of the largest libraries available',
+        '1x playthrough requirement on bonus coins',
+        'Diverse game selection spanning slots, table games, and more'
       ]
     },
-    {
-      q: "How often do you plan to play?",
-      icon: ["📅","📆","🗓️","⚡"],
-      opts: [
-        "Daily \u2014 I want consistent daily rewards",
-        "A few times a week",
-        "Weekends only",
-        "Whenever I feel like it"
+    'wowvegas': {
+      name: 'WOW Vegas',
+      link: 'https://www.wowvegas.com/',
+      hasCode: false,
+      reasons: [
+        '1,500+ games across multiple categories',
+        'Available in 46 states for broad accessibility',
+        '1x playthrough on bonus coins',
+        'Strong mix of slots, table games, and specialty titles'
       ]
     },
-    {
-      q: "Do you care about provably fair games?",
-      icon: ["✅","🔍","❓","⏭️"],
-      opts: [
-        "Yes \u2014 I want verifiable fairness",
-        "I\u2019d like to know the option exists",
-        "What does provably fair mean?",
-        "Doesn\u2019t matter to me"
+    'high5': {
+      name: 'High 5',
+      link: 'https://www.high5casino.com',
+      hasCode: false,
+      reasons: [
+        '1,700+ games with many exclusive slot titles',
+        'Established VIP loyalty program for regular players',
+        'Created by a well-known game developer with decades of experience',
+        '1x playthrough requirement on bonus coins'
       ]
     },
-    {
-      q: "What\u2019s your ideal playthrough requirement on bonuses?",
-      icon: ["1️⃣","3️⃣","🔢","🤷"],
-      opts: [
-        "1x \u2014 the lower the better",
-        "3x is reasonable",
-        "I\u2019ll take a higher bonus even with higher playthrough",
-        "I don\u2019t pay attention to playthrough"
+    'chumba': {
+      name: 'Chumba',
+      link: 'https://www.chumbacasino.com/',
+      hasCode: false,
+      reasons: [
+        'Longest-running sweepstakes platform, operating since 2012',
+        'Proven track record with over a decade of reliable service',
+        'Available in 43 states with established redemption processes',
+        'Trusted brand recognized across the sweepstakes space'
+      ]
+    },
+    'pulsz': {
+      name: 'Pulsz',
+      link: 'https://www.pulsz.com',
+      hasCode: false,
+      reasons: [
+        'Strong VIP and loyalty program with daily bonuses',
+        '1,000+ games including popular slot and table titles',
+        '1x playthrough requirement on bonus coins',
+        'Regular promotions and rewards for active players'
       ]
     }
-  ];
+  };
 
-  // Scoring: Each answer maps to a Stake.us match score (0-3)
-  var scoring = [
-    [3,2,3,3],  // Q1
-    [2,3,1,3],  // Q2
-    [2,2,3,3],  // Q3
-    [3,2,1,1],  // Q4
-    [3,2,2,2],  // Q5
-    [3,3,1,1],  // Q6
-    [2,3,1,1]   // Q7
-  ];
+  // Scoring matrix: each question maps answer index to platform score boosts
+  // Q1: What matters most? (bonus=0, playthrough=1, games=2, crypto=3)
+  // Q2: Play style? (originals=0, slots/table=1, sports=2, fish/arcade=3)
+  // Q3: State coverage? (45+=0, 35+=1, doesn't matter=2)
+  // Q4: Crypto redemptions? (yes=0, no=1, either=2)
+  // Q5: Track record? (longest=0, international=1, newest=2, doesn't matter=3)
+  // Q6: VIP importance? (very=0, nice=1, not=2)
+
+  function calcScores(answers) {
+    var scores = {
+      shuffle: 0, stake: 0, legendz: 0, fortunecoins: 0,
+      wowvegas: 0, high5: 0, chumba: 0, pulsz: 0
+    };
+
+    // Q1: What matters most
+    var a0 = answers[0];
+    if (a0 === 0) { scores.stake += 5; scores.legendz += 3; scores.pulsz += 2; }       // biggest bonus
+    if (a0 === 1) { scores.legendz += 5; scores.fortunecoins += 4; scores.wowvegas += 4; scores.chumba += 3; scores.high5 += 3; } // lowest playthrough
+    if (a0 === 2) { scores.fortunecoins += 5; scores.wowvegas += 4; scores.high5 += 4; scores.stake += 3; } // largest library
+    if (a0 === 3) { scores.shuffle += 5; scores.stake += 3; }                           // crypto
+
+    // Q2: Play style
+    var a1 = answers[1];
+    if (a1 === 0) { scores.shuffle += 5; scores.stake += 4; }                           // provably fair originals
+    if (a1 === 1) { scores.wowvegas += 4; scores.high5 += 4; scores.fortunecoins += 3; scores.chumba += 3; scores.pulsz += 3; } // slots & table
+    if (a1 === 2) { scores.legendz += 5; }                                              // sports
+    if (a1 === 3) { scores.fortunecoins += 3; scores.wowvegas += 4; scores.high5 += 2; } // fish/arcade
+
+    // Q3: State coverage
+    var a2 = answers[2];
+    if (a2 === 0) { scores.fortunecoins += 4; scores.wowvegas += 3; scores.chumba += 2; } // widest
+    if (a2 === 1) { scores.high5 += 2; scores.pulsz += 2; scores.stake += 2; scores.legendz += 2; }
+    // a2 === 2: doesn't matter, no boost
+
+    // Q4: Crypto redemptions
+    var a3 = answers[3];
+    if (a3 === 0) { scores.shuffle += 5; scores.stake += 3; }                           // crypto essential
+    if (a3 === 1) { scores.fortunecoins += 2; scores.wowvegas += 2; scores.chumba += 2; scores.high5 += 2; scores.pulsz += 2; }
+    // a3 === 2: either, slight boost to crypto platforms
+    if (a3 === 2) { scores.shuffle += 1; scores.stake += 1; }
+
+    // Q5: Track record
+    var a4 = answers[4];
+    if (a4 === 0) { scores.chumba += 5; scores.high5 += 2; }                            // longest history
+    if (a4 === 1) { scores.stake += 4; scores.shuffle += 3; scores.high5 += 2; }        // international brand
+    if (a4 === 2) { scores.legendz += 3; scores.shuffle += 2; scores.pulsz += 2; scores.fortunecoins += 2; } // newest/modern
+    // a4 === 3: doesn't matter
+
+    // Q6: VIP importance
+    var a5 = answers[5];
+    if (a5 === 0) { scores.pulsz += 5; scores.high5 += 4; scores.stake += 3; }         // very important
+    if (a5 === 1) { scores.pulsz += 2; scores.high5 += 2; scores.stake += 1; }         // nice to have
+    // a5 === 2: not important
+
+    return scores;
+  }
 
   var answers = [];
   var current = 0;
-  var total = questions.length;
+  var totalSteps = 6;
+  var steps = document.querySelectorAll('.quiz-step');
+  var dots = document.querySelectorAll('.quiz-progress-dot');
+  var resultEl = document.getElementById('quizResult');
 
-  var progress = document.getElementById('quizProgress');
-  var body = document.getElementById('quizBody');
-
-  function renderDots(){
-    var h = '';
-    for(var i=0;i<total;i++){
-      var cls = 'quiz-progress-dot';
-      if(i < current) cls += ' done';
-      else if(i === current) cls += ' active';
-      h += '<div class="'+cls+'"></div>';
-    }
-    progress.innerHTML = h;
+  function updateProgress() {
+    dots.forEach(function(dot, i) {
+      dot.className = 'quiz-progress-dot';
+      if (i < current) dot.classList.add('done');
+      else if (i === current) dot.classList.add('active');
+    });
   }
 
-  function renderQuestion(){
-    var q = questions[current];
-    var h = '<div class="quiz-question-num">Question '+(current+1)+' of '+total+'</div>';
-    h += '<div class="quiz-question">'+q.q+'</div>';
-    h += '<div class="quiz-options">';
-    for(var i=0;i<q.opts.length;i++){
-      var sel = (answers[current] === i) ? ' selected' : '';
-      h += '<button class="quiz-option'+sel+'" data-idx="'+i+'">';
-      h += '<span class="quiz-option-icon">'+q.icon[i]+'</span>';
-      h += '<span>'+q.opts[i]+'</span>';
-      h += '</button>';
+  function showStep(idx) {
+    steps.forEach(function(s) { s.classList.remove('is-active'); });
+    resultEl.classList.remove('is-active');
+    if (idx < totalSteps) {
+      steps[idx].classList.add('is-active');
     }
-    h += '</div>';
-    h += '<div class="quiz-nav">';
-    if(current > 0) h += '<button class="quiz-back" id="quizBack">&larr; Back</button>';
-    else h += '<span></span>';
-    h += '</div>';
-    body.innerHTML = h;
-    renderDots();
+    current = idx;
+    updateProgress();
+  }
 
-    // Bind events
-    var opts = body.querySelectorAll('.quiz-option');
-    opts.forEach(function(opt){
-      opt.addEventListener('click', function(){
-        answers[current] = parseInt(this.getAttribute('data-idx'));
-        opts.forEach(function(o){o.classList.remove('selected');});
+  function showResult() {
+    steps.forEach(function(s) { s.classList.remove('is-active'); });
+    // Mark all dots as done
+    dots.forEach(function(dot) {
+      dot.className = 'quiz-progress-dot done';
+    });
+
+    var scores = calcScores(answers);
+
+    // Find winner
+    var best = null;
+    var bestScore = -1;
+    for (var key in scores) {
+      if (scores[key] > bestScore) {
+        bestScore = scores[key];
+        best = key;
+      }
+    }
+
+    var maxPossible = 0;
+    // Calculate rough max possible score
+    for (var k in scores) {
+      if (scores[k] > maxPossible) maxPossible = scores[k];
+    }
+    // Normalize percentage into a 72-96 range for a polished feel
+    var pct = Math.min(96, Math.max(72, Math.round(72 + (bestScore / 25) * 24)));
+
+    var platform = platforms[best];
+
+    document.getElementById('resultTitle').textContent = 'Your #1 Match: ' + platform.name;
+    document.getElementById('resultDesc').textContent = 'Based on your answers, ' + platform.name + ' is the sweepstakes platform that best fits your play style.';
+    document.getElementById('resultPlatform').textContent = platform.name;
+    document.getElementById('resultCTA').href = platform.link;
+    document.getElementById('resultCTA').textContent = 'Visit ' + platform.name + ' \u2192';
+
+    var badge = document.getElementById('resultBadge');
+    if (platform.hasCode) {
+      badge.style.display = 'inline-block';
+    } else {
+      badge.style.display = 'none';
+    }
+
+    // Render reasons
+    var reasonsHTML = '';
+    var reasons = platform.reasons;
+    for (var r = 0; r < reasons.length; r++) {
+      reasonsHTML += '<div class="quiz-result-reason"><span>&#10003;</span><span>' + reasons[r] + '</span></div>';
+    }
+    document.getElementById('resultReasons').innerHTML = reasonsHTML;
+
+    resultEl.classList.add('is-active');
+
+    // Animate score
+    setTimeout(function() {
+      document.getElementById('scoreFill').style.width = pct + '%';
+      var el = document.getElementById('scorePct');
+      var c = 0;
+      var interval = setInterval(function() {
+        c += 2;
+        if (c >= pct) { c = pct; clearInterval(interval); }
+        el.textContent = c + '%';
+      }, 20);
+    }, 200);
+
+    // Track in GA
+    if (typeof gtag === 'function') {
+      gtag('event', 'quiz_complete', { event_category: 'engagement', event_label: best, value: pct });
+    }
+  }
+
+  // Bind option clicks
+  steps.forEach(function(step, stepIdx) {
+    var opts = step.querySelectorAll('.quiz-option');
+    opts.forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        answers[stepIdx] = parseInt(this.getAttribute('data-value'));
+        // Highlight selected
+        opts.forEach(function(o) { o.classList.remove('selected'); });
         this.classList.add('selected');
-        setTimeout(function(){
-          if(current < total - 1){
-            current++;
-            renderQuestion();
+        // Auto-advance after short delay
+        setTimeout(function() {
+          if (stepIdx < totalSteps - 1) {
+            showStep(stepIdx + 1);
           } else {
             showResult();
           }
@@ -460,111 +799,28 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
       });
     });
 
-    var back = document.getElementById('quizBack');
-    if(back){
-      back.addEventListener('click', function(){
-        current--;
-        renderQuestion();
+    // Back buttons
+    var backBtn = step.querySelector('[data-back]');
+    if (backBtn) {
+      backBtn.addEventListener('click', function() {
+        showStep(stepIdx - 1);
       });
     }
-  }
+  });
 
-  function showResult(){
-    var score = 0;
-    var maxScore = 0;
-    for(var i=0;i<total;i++){
-      var a = (answers[i] !== undefined) ? answers[i] : 0;
-      score += scoring[i][a];
-      maxScore += 3;
-    }
-    var pct = Math.round((score/maxScore)*100);
-
-    // Build personalized reasons based on answers
-    var reasons = [];
-    if(answers[0] === 0) reasons.push('You prioritize big free bonuses \u2014 Stake.us offers 250,000 GC + 25 SC on signup with code MAXBET, the largest no-purchase package available.');
-    if(answers[0] === 1) reasons.push('You want the widest game selection \u2014 Stake.us has 550+ titles including 20+ exclusive Originals no one else offers.');
-    if(answers[0] === 2) reasons.push('Fast redemptions matter to you \u2014 Stake.us processes redemptions faster than industry average with 8+ crypto options plus fiat.');
-    if(answers[0] === 3) reasons.push('Trust is your top priority \u2014 Stake.us is one of the most established sweepstakes platforms with transparent operations.');
-
-    if(answers[1] === 1) reasons.push('You prefer crypto payments \u2014 Stake.us accepts BTC, ETH, LTC, DOGE, and 4+ other cryptocurrencies.');
-    if(answers[1] === 3) reasons.push('You want free play only \u2014 Stake.us gives up to 560,000 GC + 56 SC without any purchase required.');
-
-    if(answers[2] === 2) reasons.push('You love Crash and skill-based games \u2014 Stake.us Originals (Crash, Plinko, Mines, Dice, Limbo) are provably fair and exclusive.');
-    if(answers[2] === 3) reasons.push('You play a mix of everything \u2014 Stake.us covers slots, table games, and 20+ unique Originals under one roof.');
-
-    if(answers[3] === 0) reasons.push('Rakeback is essential for you \u2014 Stake.us provides a permanent 3.5% rakeback on every single play. Most competitors offer 0%.');
-
-    if(answers[4] === 0) reasons.push('You play daily \u2014 Stake.us rewards 31 consecutive login days with 310,000 GC + 31 SC total (10,000 GC + 1 SC per day).');
-
-    if(answers[5] === 0 || answers[5] === 1) reasons.push('Provably fair gaming matters to you \u2014 Stake.us Originals use verifiable cryptographic seeds so you can confirm every outcome.');
-
-    if(answers[6] === 1) reasons.push('A 3x playthrough is your sweet spot \u2014 that\u2019s exactly what Stake.us offers on Stake Cash, far lower than most competitors.');
-
-    // Ensure at least 3 reasons
-    if(reasons.length < 3){
-      reasons.push('Stake.us combines the best no-purchase bonus (560,000 GC + 56 SC), 550+ games, and permanent 3.5% rakeback \u2014 no other platform matches this package.');
-      reasons.push('With code MAXBET, you unlock the full bonus instantly at signup. 21+, no purchase necessary.');
-    }
-    // Cap at 5
-    reasons = reasons.slice(0,5);
-
-    renderDots();
-
-    var h = '<div class="quiz-result">';
-    h += '<div class="quiz-result-badge">&#10003; Quiz Complete</div>';
-    h += '<h2>Your #1 Match: Stake.us</h2>';
-    h += '<p>Based on your answers, Stake.us is the sweepstakes casino that best fits your play style and priorities.</p>';
-
-    h += '<div class="quiz-score-bar">';
-    h += '<span style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);">Match</span>';
-    h += '<div class="quiz-score-fill"><div id="scoreFill" style="width:0%"></div></div>';
-    h += '<span class="quiz-score-label" id="scorePct">0%</span>';
-    h += '</div>';
-
-    h += '<div class="quiz-result-card">';
-    h += '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);flex-wrap:wrap;gap:var(--space-2);">';
-    h += '<strong style="font-size:var(--text-lg);">Stake.us</strong>';
-    h += '<a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" target="_blank" rel="noopener noreferrer"><span class="code-badge">MAXBET</span></a>';
-    h += '</div>';
-    h += '<div class="quiz-result-reasons">';
-    for(var r=0;r<reasons.length;r++){
-      h += '<div class="quiz-result-reason"><span>&#10003;</span><span>'+reasons[r]+'</span></div>';
-    }
-    h += '</div>';
-    h += '<a href="'+AFFILIATE+'" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer" style="width:100%;text-align:center;margin-top:var(--space-4);">Claim Your MAXBET Bonus &rarr;</a>';
-    h += '</div>';
-
-    h += '<p style="font-size:var(--text-xs);color:var(--color-text-faint);">21+ | No purchase necessary | Void where prohibited</p>';
-    h += '<div class="quiz-retake"><button id="quizRetake">Retake Quiz</button></div>';
-    h += '</div>';
-
-    body.innerHTML = h;
-
-    // Animate score
-    setTimeout(function(){
-      document.getElementById('scoreFill').style.width = pct+'%';
-      var el = document.getElementById('scorePct');
-      var c = 0;
-      var interval = setInterval(function(){
-        c += 2;
-        if(c >= pct){c = pct; clearInterval(interval);}
-        el.textContent = c+'%';
-      }, 20);
-    }, 200);
-
-    document.getElementById('quizRetake').addEventListener('click', function(){
-      answers = [];
-      current = 0;
-      renderQuestion();
+  // Retake
+  document.getElementById('quizRetake').addEventListener('click', function() {
+    answers = [];
+    // Clear all selections
+    document.querySelectorAll('.quiz-option.selected').forEach(function(o) {
+      o.classList.remove('selected');
     });
+    // Reset score bar
+    document.getElementById('scoreFill').style.width = '0%';
+    document.getElementById('scorePct').textContent = '0%';
+    showStep(0);
+  });
 
-    // Track completion in GA
-    if(typeof gtag === 'function'){
-      gtag('event', 'quiz_complete', {event_category:'engagement',event_label:'sweepstakes_quiz',value:pct});
-    }
-  }
-
-  renderQuestion();
 })();
 </script>
 <!-- SEARCH OVERLAY -->

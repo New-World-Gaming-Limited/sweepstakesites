@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" as="style">
-<title>Best Sweepstakes Casino 2026 | SweepstakeSites</title>
-<meta name="description" content="Compare sweepstakes casino platforms in 2026. See why Stake.us with code MAXBET outperforms every competitor on bonuses, games, and player experience.">
+<title>Compare Sweepstakes Casinos 2026 | Operator Database | SweepstakeSites</title>
+<meta name="description" content="Compare all 8 sweepstakes casino platforms side by side. Filter by games, playthrough, crypto support, state availability, and more.">
 <link rel="canonical" href="https://sweepstakesites.com/compare">
-<meta property="og:title" content="Best Sweepstakes Casino 2026 | SweepstakeSites">
-<meta property="og:description" content="Compare sweepstakes casino platforms in 2026. See why Stake.us with code MAXBET outperforms every competitor on bonuses, games, and player experience.">
+<meta property="og:title" content="Compare Sweepstakes Casinos 2026 | Operator Database | SweepstakeSites">
+<meta property="og:description" content="Compare all 8 sweepstakes casino platforms side by side. Filter by games, playthrough, crypto support, state availability, and more.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sweepstakesites.com/compare">
 <meta property="og:site_name" content="SweepstakeSites">
@@ -48,7 +48,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://sweepstakesites.com/"},{"@type":"ListItem","position":2,"name":"Compare Casinos","item":"https://sweepstakesites.com/compare"}]
+  "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://sweepstakesites.com/"},{"@type":"ListItem","position":2,"name":"Compare Sweepstakes Casinos","item":"https://sweepstakesites.com/compare"}]
 }
 </script>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
@@ -59,7 +59,43 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <style>
-@media(max-width:768px){.stake-hero-grid{grid-template-columns:1fr!important;}}
+/* Compare page styles */
+.filter-bar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--space-2);padding:var(--space-4) 0;border-bottom:1px solid var(--color-border-light)}
+.filter-btn{display:inline-flex;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-4);border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);background:var(--color-surface);border:1px solid var(--color-border);cursor:pointer;white-space:nowrap}
+.filter-btn:hover{border-color:var(--color-primary);color:var(--color-primary)}
+.filter-btn.active{background:var(--color-primary);color:#fff;border-color:var(--color-primary)}
+.filter-btn svg{width:14px;height:14px;flex-shrink:0}
+.sort-select{padding:var(--space-2) var(--space-4);padding-right:var(--space-8);border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);background:var(--color-surface);border:1px solid var(--color-border);cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 4l3 3 3-3' stroke='%234B5563' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center}
+.sort-select:focus{outline:2px solid var(--color-primary);outline-offset:2px}
+.filter-spacer{flex:1}
+.op-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4);padding:var(--space-6) 0}
+.op-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5);display:flex;flex-direction:column;gap:var(--space-3);transition:box-shadow 0.2s,border-color 0.2s}
+.op-card:hover{box-shadow:var(--shadow-md);border-color:var(--color-primary)}
+.op-card-head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-3)}
+.op-card-name{font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;margin:0;display:flex;align-items:center;gap:var(--space-2)}
+.op-score{display:inline-flex;align-items:center;gap:4px;background:var(--color-surface-alt);color:var(--color-text);padding:2px 10px;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:700;white-space:nowrap}
+.op-score.top{background:var(--color-success);color:#fff}
+.op-meta{display:flex;flex-wrap:wrap;gap:var(--space-1);font-size:var(--text-xs);color:var(--color-text-muted)}
+.op-meta-tag{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;background:var(--color-surface-alt);border-radius:var(--radius-sm);white-space:nowrap}
+.op-meta-tag.yes{color:var(--color-success)}
+.op-meta-tag.no{color:var(--color-text-faint)}
+.op-review{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.6}
+.op-card-foot{display:flex;align-items:center;gap:var(--space-3);margin-top:auto;padding-top:var(--space-3);border-top:1px solid var(--color-border-light)}
+.op-card-foot .btn{font-size:var(--text-sm);padding:var(--space-2) var(--space-4)}
+.no-results{display:none;text-align:center;padding:var(--space-12) var(--space-4);color:var(--color-text-muted);font-size:var(--text-lg)}
+.no-results.visible{display:block}
+/* Comparison table */
+.db-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:var(--space-6);border:1px solid var(--color-border);border-radius:var(--radius-lg)}
+.db-table{width:100%;border-collapse:collapse;font-size:var(--text-sm);min-width:720px}
+.db-table thead{background:var(--color-surface-alt)}
+.db-table th,.db-table td{padding:var(--space-3) var(--space-4);text-align:left;border-bottom:1px solid var(--color-border-light);white-space:nowrap}
+.db-table th{font-weight:700;font-size:var(--text-xs);text-transform:uppercase;letter-spacing:0.04em;color:var(--color-text-muted)}
+.db-table tbody tr:hover{background:var(--color-primary-surface,rgba(29,78,216,0.04))}
+.db-table tbody tr:last-child td{border-bottom:none}
+.db-table .cell-best{color:var(--color-success);font-weight:700}
+.db-table .cell-check{color:var(--color-success)}
+.db-table .cell-x{color:var(--color-text-faint)}
+@media(max-width:768px){.op-grid{grid-template-columns:1fr}.filter-bar{gap:var(--space-2)}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ0LVR6BPT"></script>
@@ -88,6 +124,8 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
           <a href="./stake-us/index.html">Stake.us</a>
           <a href="./legendz/index.html">Legendz</a>
           <a href="./shuffle/index.html">Shuffle.us</a>
+          <div class="nav-dropdown-divider"></div>
+          <a href="./compare.html">All 8 Platforms</a>
         </div>
       </div>
       <div class="nav-dropdown">
@@ -181,262 +219,353 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
   <a href="./best-sweepstakes-sites.html" class="nav-cta-mobile">Best Sweepstakes Sites &rarr;</a>
 </nav>
 
+<!-- HERO -->
 <section class="page-hero">
   <div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./index.html">Home</a> &rsaquo; <span>Compare Casinos</span></nav>
-    <h1>Sweepstakes Casino Comparison 2026</h1>
-    <p>We signed up for the major sweepstakes casinos, tested the bonuses, played the games, and went through the redemption process. Here are our honest rankings.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./index.html">Home</a> &rsaquo; <span>Compare Sweepstakes Casinos</span></nav>
+    <h1>Sweepstakes Casino Comparison</h1>
+    <p style="color:var(--color-text-muted);margin-top:var(--space-2);max-width:640px;">All 8 platforms we review, with sortable data and mini-reviews. Filter by what matters to you.</p>
   </div>
 </section>
 
 <main>
 
-<!-- TOP 3 PICKS -->
+<!-- FILTER BAR + OPERATOR CARDS -->
 <section class="section">
   <div class="container">
-    <div style="display:grid;gap:var(--space-6);">
 
-      <!-- #1 Stake.us -->
-      <div class="card" style="border:2px solid var(--color-primary);padding:var(--space-6);position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;right:0;background:var(--color-primary);color:#fff;padding:var(--space-1) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;border-radius:0 0 0 var(--radius-md);">#1 Overall</div>
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4);">
-          <h2 style="font-size:var(--text-xl);font-weight:800;margin:0;">Stake.us</h2>
-          <span style="background:var(--color-success);color:#fff;padding:2px 10px;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:700;">9.2/10</span>
+    <!-- Filter Bar -->
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn" data-filter="crypto" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        Crypto Support
+      </button>
+      <button class="filter-btn" data-filter="sportsbook" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 014 10 15 15 0 01-4 10 15 15 0 01-4-10 15 15 0 014-10z"/></svg>
+        Sportsbook
+      </button>
+      <button class="filter-btn" data-filter="promo" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+        Promo Code Available
+      </button>
+      <button class="filter-btn" data-filter="playthrough1x" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        1x Playthrough
+      </button>
+      <span class="filter-spacer"></span>
+      <select class="sort-select" id="sortSelect" aria-label="Sort operators">
+        <option value="score">Sort by: Our Score</option>
+        <option value="games">Sort by: Game Count</option>
+        <option value="states">Sort by: States Available</option>
+        <option value="year">Sort by: Year Launched</option>
+      </select>
+    </div>
+
+    <!-- Operator Cards Grid -->
+    <div class="op-grid" id="opGrid">
+
+      <!-- Stake.us -->
+      <div class="op-card" data-crypto="yes" data-sportsbook="no" data-promo="yes" data-playthrough="3" data-games="550" data-states="32" data-score="9.2" data-year="2019">
+        <div class="op-card-head">
+          <h2 class="op-card-name">Stake.us</h2>
+          <span class="op-score top">9.2/10</span>
         </div>
-        <div style="display:grid;gap:var(--space-4);grid-template-columns:1fr 1fr;" class="stake-hero-grid">
-          <div>
-            <p style="margin-bottom:var(--space-3);">The most complete sweepstakes casino in the US. Biggest no-purchase package, deepest game library, and the only platform with permanent rakeback. Use code <a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" target="_blank" rel="noopener noreferrer"><span class="code-badge">MAXBET</span></a> at signup.</p>
-            <div style="display:grid;gap:var(--space-2);font-size:var(--text-sm);margin-bottom:var(--space-4);">
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> <strong>560,000 GC + 56 SC</strong> (no purchase needed)</div>
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> <strong>3.5% rakeback</strong> permanently</div>
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> <strong>550+ games</strong> + 20 provably fair Originals</div>
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> Crypto + fiat payments</div>
-              <div style="color:var(--color-text-muted);"><span style="color:var(--color-danger,#dc2626);">&#10007;</span> 3x SC playthrough</div>
-              <div style="color:var(--color-text-muted);"><span style="color:var(--color-danger,#dc2626);">&#10007;</span> Restricted in 19 states</div>
-            </div>
-            <a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Claim MAXBET at Stake.us &rarr;</a>
-            <a href="./stake-us/review.html" style="display:inline-block;margin-left:var(--space-3);font-size:var(--text-sm);font-weight:600;">Read Review</a>
-          </div>
-          <div>
-            <table class="promo-details-table" style="font-size:var(--text-sm);">
-              <tbody>
-                <tr><th scope="row">Promo Code</th><td><a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" target="_blank" rel="noopener noreferrer"><span class="code-badge">MAXBET</span></a></td></tr>
-                <tr><th scope="row">Sign Up Bonus</th><td>250,000 GC + 25 SC</td></tr>
-                <tr><th scope="row">Full Package</th><td>560,000 GC + 56 SC + 3.5% Rakeback</td></tr>
-                <tr><th scope="row">Playthrough</th><td>3x on SC</td></tr>
-                <tr><th scope="row">Games</th><td>550+ titles</td></tr>
-                <tr><th scope="row">Payments</th><td>Crypto + credit/debit card</td></tr>
-                <tr><th scope="row">States</th><td>32+ states</td></tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="op-meta">
+          <span class="op-meta-tag">Medium Rare N.V.</span>
+          <span class="op-meta-tag">Est. 2019</span>
+          <span class="op-meta-tag">550+ Games</span>
+          <span class="op-meta-tag">3x Playthrough</span>
+          <span class="op-meta-tag">32+ States</span>
+          <span class="op-meta-tag yes">&#10003; Crypto</span>
+          <span class="op-meta-tag no">&#10007; Sportsbook</span>
+        </div>
+        <p class="op-review">Largest bonus package in the sweepstakes space with provably fair Originals and permanent rakeback. Deep game library with strong community features.</p>
+        <div class="op-card-foot">
+          <a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Visit Stake.us</a>
+          <span style="font-size:var(--text-xs);color:var(--color-text-muted);">Code: <span class="code-badge">MAXBET</span></span>
+          <a href="./stake-us/review.html" style="font-size:var(--text-sm);font-weight:600;margin-left:auto;">Full Review</a>
         </div>
       </div>
 
-      <!-- #2 Legendz -->
-      <div class="card" style="border:2px solid #2d3748;padding:var(--space-6);position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;right:0;background:#2d3748;color:#fff;padding:var(--space-1) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;border-radius:0 0 0 var(--radius-md);">#2 Best for State Coverage</div>
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4);">
-          <img src="images/legendz-logo.webp" alt="Legendz" style="height:36px;width:auto;border-radius:var(--radius-sm);" loading="lazy">
-          <h2 style="font-size:var(--text-xl);font-weight:800;margin:0;">Legendz</h2>
-          <span style="background:#2d3748;color:#fff;padding:2px 10px;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:700;">8.4/10</span>
+      <!-- Legendz -->
+      <div class="op-card" data-crypto="no" data-sportsbook="yes" data-promo="yes" data-playthrough="1" data-games="400" data-states="37" data-score="8.4" data-year="2024">
+        <div class="op-card-head">
+          <h2 class="op-card-name">Legendz</h2>
+          <span class="op-score">8.4/10</span>
         </div>
-        <div style="display:grid;gap:var(--space-4);grid-template-columns:1fr 1fr;" class="stake-hero-grid">
-          <div>
-            <p style="margin-bottom:var(--space-3);">Newer platform (2024) with a standout feature: 1x SC playthrough, the best in the industry. Also offers a social sportsbook, which Stake.us doesn't have. Available in 37 states.</p>
-            <div style="display:grid;gap:var(--space-2);font-size:var(--text-sm);margin-bottom:var(--space-4);">
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> <strong>1x SC playthrough</strong> (best in industry)</div>
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> <strong>37 states</strong> (more than Stake.us)</div>
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> Social sportsbook included</div>
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> 400+ games</div>
-              <div style="color:var(--color-text-muted);"><span style="color:var(--color-danger,#dc2626);">&#10007;</span> Small no-purchase bonus (500 GC + 3 SC)</div>
-              <div style="color:var(--color-text-muted);"><span style="color:var(--color-danger,#dc2626);">&#10007;</span> Newer operator, less proven</div>
-            </div>
-            <a href="https://m.legendz.com/redirect.aspx?mid=37&sid=1136&cid=&pid=&affid=34&promo=MAXBET" class="btn btn--primary" target="_blank" rel="noopener noreferrer" style="background:#2d3748;">Claim MAXBET at Legendz &rarr;</a>
-            <a href="./legendz/review.html" style="display:inline-block;margin-left:var(--space-3);font-size:var(--text-sm);font-weight:600;">Read Review</a>
-          </div>
-          <div>
-            <table class="promo-details-table" style="font-size:var(--text-sm);">
-              <tbody>
-                <tr><th scope="row">Promo Code</th><td><a href="https://m.legendz.com/redirect.aspx?mid=37&sid=1136&cid=&pid=&affid=34&promo=MAXBET" target="_blank" rel="noopener noreferrer"><span class="code-badge">MAXBET</span></a></td></tr>
-                <tr><th scope="row">Sign Up Bonus</th><td>500 GC + 3 SC (no purchase)</td></tr>
-                <tr><th scope="row">Full Package</th><td>20,500 GC + 103 SC</td></tr>
-                <tr><th scope="row">Playthrough</th><td>1x on SC</td></tr>
-                <tr><th scope="row">Games</th><td>400+ titles</td></tr>
-                <tr><th scope="row">Payments</th><td>Credit/debit card</td></tr>
-                <tr><th scope="row">States</th><td>37 states</td></tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="op-meta">
+          <span class="op-meta-tag">Medium Rare N.V.</span>
+          <span class="op-meta-tag">Est. 2024</span>
+          <span class="op-meta-tag">400+ Games</span>
+          <span class="op-meta-tag">1x Playthrough</span>
+          <span class="op-meta-tag">37 States</span>
+          <span class="op-meta-tag no">&#10007; Crypto</span>
+          <span class="op-meta-tag yes">&#10003; Sportsbook</span>
+        </div>
+        <p class="op-review">Industry-best 1x playthrough makes it easiest to redeem prizes. Only sweepstakes platform with a social sportsbook.</p>
+        <div class="op-card-foot">
+          <a href="https://m.legendz.com/redirect.aspx?mid=37&sid=1136&cid=&pid=&affid=34&promo=MAXBET" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Visit Legendz</a>
+          <span style="font-size:var(--text-xs);color:var(--color-text-muted);">Code: <span class="code-badge">MAXBET</span></span>
+          <a href="./legendz/review.html" style="font-size:var(--text-sm);font-weight:600;margin-left:auto;">Full Review</a>
         </div>
       </div>
 
-      <!-- #3 Shuffle.us -->
-      <div class="card" style="border:2px solid #1a1a2e;padding:var(--space-6);position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;right:0;background:#1a1a2e;color:#fff;padding:var(--space-1) var(--space-4);font-size:var(--text-xs);font-weight:700;letter-spacing:0.05em;text-transform:uppercase;border-radius:0 0 0 var(--radius-md);">#3 Best for Crypto Players</div>
-        <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4);">
-          <img src="images/shuffle-logo.webp" alt="Shuffle.us" style="height:36px;width:auto;border-radius:var(--radius-sm);" loading="lazy">
-          <h2 style="font-size:var(--text-xl);font-weight:800;margin:0;">Shuffle.us</h2>
-          <span style="background:#1a1a2e;color:#fff;padding:2px 10px;border-radius:var(--radius-full);font-size:var(--text-sm);font-weight:700;">8.0/10</span>
+      <!-- Shuffle.us -->
+      <div class="op-card" data-crypto="yes" data-sportsbook="no" data-promo="yes" data-playthrough="0" data-games="500" data-states="31" data-score="8.0" data-year="2024">
+        <div class="op-card-head">
+          <h2 class="op-card-name">Shuffle.us</h2>
+          <span class="op-score">8.0/10</span>
         </div>
-        <div style="display:grid;gap:var(--space-4);grid-template-columns:1fr 1fr;" class="stake-hero-grid">
-          <div>
-            <p style="margin-bottom:var(--space-3);">Crypto-native sweepstakes casino launched in 2025 by the team behind Shuffle.com. Massive game library and Shuffle Originals (Dice, Mines, Plinko). Best option if you're crypto-first.</p>
-            <div style="display:grid;gap:var(--space-2);font-size:var(--text-sm);margin-bottom:var(--space-4);">
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> <strong>Huge game library</strong> (500+ titles)</div>
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> Shuffle Originals (provably fair)</div>
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> Tournaments + weekly races</div>
-              <div><span style="color:var(--color-success);font-weight:700;">&#10003;</span> Fast crypto redemptions</div>
-              <div style="color:var(--color-text-muted);"><span style="color:var(--color-danger,#dc2626);">&#10007;</span> Crypto only, no fiat option</div>
-              <div style="color:var(--color-text-muted);"><span style="color:var(--color-danger,#dc2626);">&#10007;</span> Restricted in 19 states</div>
-            </div>
-            <a href="https://shuffle.us?r=MAXBET" class="btn btn--primary" target="_blank" rel="noopener noreferrer" style="background:#1a1a2e;">Claim MAXBET at Shuffle.us &rarr;</a>
-            <a href="./shuffle/review.html" style="display:inline-block;margin-left:var(--space-3);font-size:var(--text-sm);font-weight:600;">Read Review</a>
-          </div>
-          <div>
-            <table class="promo-details-table" style="font-size:var(--text-sm);">
-              <tbody>
-                <tr><th scope="row">Promo Code</th><td><a href="https://shuffle.us?r=MAXBET" target="_blank" rel="noopener noreferrer"><span class="code-badge">MAXBET</span></a></td></tr>
-                <tr><th scope="row">Sign Up Bonus</th><td>25,000 GC + 1 SC (no purchase)</td></tr>
-                <tr><th scope="row">Playthrough</th><td>Not yet disclosed</td></tr>
-                <tr><th scope="row">Games</th><td>500+ titles</td></tr>
-                <tr><th scope="row">Payments</th><td>Crypto only</td></tr>
-                <tr><th scope="row">States</th><td>31+ states</td></tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="op-meta">
+          <span class="op-meta-tag">Shuffle (Curacao)</span>
+          <span class="op-meta-tag">Est. 2024</span>
+          <span class="op-meta-tag">500+ Games</span>
+          <span class="op-meta-tag">Playthrough N/D</span>
+          <span class="op-meta-tag">31+ States</span>
+          <span class="op-meta-tag yes">&#10003; Crypto (native)</span>
+          <span class="op-meta-tag no">&#10007; Sportsbook</span>
+        </div>
+        <p class="op-review">Crypto-native platform from the Shuffle.com team. Fast crypto redemptions and unique Shuffle Originals.</p>
+        <div class="op-card-foot">
+          <a href="https://shuffle.us?r=MAXBET" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Visit Shuffle.us</a>
+          <span style="font-size:var(--text-xs);color:var(--color-text-muted);">Code: <span class="code-badge">MAXBET</span></span>
+          <a href="./shuffle/review.html" style="font-size:var(--text-sm);font-weight:600;margin-left:auto;">Full Review</a>
+        </div>
+      </div>
+
+      <!-- WOW Vegas -->
+      <div class="op-card" data-crypto="no" data-sportsbook="no" data-promo="no" data-playthrough="1" data-games="1500" data-states="46" data-score="7.8" data-year="2021">
+        <div class="op-card-head">
+          <h2 class="op-card-name">WOW Vegas</h2>
+          <span class="op-score">7.8/10</span>
+        </div>
+        <div class="op-meta">
+          <span class="op-meta-tag">MW Services Limited (Gibraltar)</span>
+          <span class="op-meta-tag">Est. 2021</span>
+          <span class="op-meta-tag">1500+ Games</span>
+          <span class="op-meta-tag">1x Playthrough</span>
+          <span class="op-meta-tag">46 States</span>
+          <span class="op-meta-tag no">&#10007; Crypto</span>
+          <span class="op-meta-tag no">&#10007; Sportsbook</span>
+        </div>
+        <p class="op-review">Massive game library with broad US availability. Generous no-purchase welcome offer of 250,000 WOW Coins + 5 SC.</p>
+        <div class="op-card-foot">
+          <a href="https://www.wowvegas.com/" class="btn btn--outline-dark btn--sm" target="_blank" rel="noopener noreferrer">Visit WOW Vegas</a>
+          <span style="font-size:var(--text-xs);color:var(--color-text-faint);margin-left:auto;">No promo code</span>
+        </div>
+      </div>
+
+      <!-- Fortune Coins -->
+      <div class="op-card" data-crypto="no" data-sportsbook="no" data-promo="no" data-playthrough="1" data-games="1900" data-states="47" data-score="7.6" data-year="2022">
+        <div class="op-card-head">
+          <h2 class="op-card-name">Fortune Coins</h2>
+          <span class="op-score">7.6/10</span>
+        </div>
+        <div class="op-meta">
+          <span class="op-meta-tag">Social Gaming LLC (Delaware)</span>
+          <span class="op-meta-tag">Est. 2022</span>
+          <span class="op-meta-tag">1900+ Games</span>
+          <span class="op-meta-tag">1x Playthrough</span>
+          <span class="op-meta-tag">47 States</span>
+          <span class="op-meta-tag no">&#10007; Crypto</span>
+          <span class="op-meta-tag no">&#10007; Sportsbook</span>
+        </div>
+        <p class="op-review">Widest state availability and largest game count including unique fish and arcade games. Strong for variety seekers.</p>
+        <div class="op-card-foot">
+          <a href="https://www.fortunecoins.com" class="btn btn--outline-dark btn--sm" target="_blank" rel="noopener noreferrer">Visit Fortune Coins</a>
+          <span style="font-size:var(--text-xs);color:var(--color-text-faint);margin-left:auto;">No promo code</span>
+        </div>
+      </div>
+
+      <!-- High 5 Casino -->
+      <div class="op-card" data-crypto="no" data-sportsbook="no" data-promo="no" data-playthrough="1" data-games="1700" data-states="37" data-score="7.5" data-year="2020">
+        <div class="op-card-head">
+          <h2 class="op-card-name">High 5 Casino</h2>
+          <span class="op-score">7.5/10</span>
+        </div>
+        <div class="op-meta">
+          <span class="op-meta-tag">High 5 Entertainment (NJ)</span>
+          <span class="op-meta-tag">Est. 2020</span>
+          <span class="op-meta-tag">1700+ Games</span>
+          <span class="op-meta-tag">1x Playthrough</span>
+          <span class="op-meta-tag">37 States</span>
+          <span class="op-meta-tag no">&#10007; Crypto</span>
+          <span class="op-meta-tag no">&#10007; Sportsbook</span>
+        </div>
+        <p class="op-review">300+ exclusive slot titles from established game developer. Native mobile apps and live dealer sweepstakes games.</p>
+        <div class="op-card-foot">
+          <a href="https://www.high5casino.com" class="btn btn--outline-dark btn--sm" target="_blank" rel="noopener noreferrer">Visit High 5 Casino</a>
+          <span style="font-size:var(--text-xs);color:var(--color-text-faint);margin-left:auto;">No promo code</span>
+        </div>
+      </div>
+
+      <!-- Chumba Casino -->
+      <div class="op-card" data-crypto="no" data-sportsbook="no" data-promo="no" data-playthrough="1" data-games="200" data-states="43" data-score="7.3" data-year="2012">
+        <div class="op-card-head">
+          <h2 class="op-card-name">Chumba Casino</h2>
+          <span class="op-score">7.3/10</span>
+        </div>
+        <div class="op-meta">
+          <span class="op-meta-tag">VGW (Perth, Australia)</span>
+          <span class="op-meta-tag">Est. 2012</span>
+          <span class="op-meta-tag">200+ Games</span>
+          <span class="op-meta-tag">1x Playthrough</span>
+          <span class="op-meta-tag">43 States</span>
+          <span class="op-meta-tag no">&#10007; Crypto</span>
+          <span class="op-meta-tag no">&#10007; Sportsbook</span>
+        </div>
+        <p class="op-review">The original sweepstakes casino, operating since 2012. Smaller library but proven track record and fast redemptions.</p>
+        <div class="op-card-foot">
+          <a href="https://www.chumbacasino.com/" class="btn btn--outline-dark btn--sm" target="_blank" rel="noopener noreferrer">Visit Chumba Casino</a>
+          <span style="font-size:var(--text-xs);color:var(--color-text-faint);margin-left:auto;">No promo code</span>
+        </div>
+      </div>
+
+      <!-- Pulsz Casino -->
+      <div class="op-card" data-crypto="no" data-sportsbook="no" data-promo="no" data-playthrough="1" data-games="1000" data-states="36" data-score="7.2" data-year="2020">
+        <div class="op-card-head">
+          <h2 class="op-card-name">Pulsz Casino</h2>
+          <span class="op-score">7.2/10</span>
+        </div>
+        <div class="op-meta">
+          <span class="op-meta-tag">Yellow Social Interactive (Gibraltar)</span>
+          <span class="op-meta-tag">Est. 2020</span>
+          <span class="op-meta-tag">1000+ Games</span>
+          <span class="op-meta-tag">1x Playthrough</span>
+          <span class="op-meta-tag">36 States</span>
+          <span class="op-meta-tag no">&#10007; Crypto</span>
+          <span class="op-meta-tag no">&#10007; Sportsbook</span>
+        </div>
+        <p class="op-review">Strong VIP loyalty program with frequent daily bonuses and giveaways. Good slot selection from top providers.</p>
+        <div class="op-card-foot">
+          <a href="https://www.pulsz.com" class="btn btn--outline-dark btn--sm" target="_blank" rel="noopener noreferrer">Visit Pulsz Casino</a>
+          <span style="font-size:var(--text-xs);color:var(--color-text-faint);margin-left:auto;">No promo code</span>
         </div>
       </div>
 
     </div>
+
+    <!-- No results message -->
+    <div class="no-results" id="noResults">
+      <p>No platforms match your current filters. Try removing a filter.</p>
+    </div>
+
   </div>
 </section>
 
-<!-- SIDE-BY-SIDE COMPARISON TABLE -->
+<!-- FULL COMPARISON TABLE -->
 <section class="section section--alt">
   <div class="container">
-    <div class="section-header">
-      <h2>Side-by-Side Comparison</h2>
-      <p>How our top 3 recommended platforms stack up across the metrics that actually matter.</p>
-    </div>
-    <div class="compare-table-wrap">
-      <table class="compare-table">
+    <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-2);">Full Comparison Table</h2>
+    <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-2);">All 8 platforms compared on key metrics. Green highlights indicate category leaders.</p>
+    <div class="db-table-wrap">
+      <table class="db-table">
         <thead>
-          <tr><th>Feature</th><th style="color:var(--color-primary);">Stake.us</th><th>Legendz</th><th>Shuffle.us</th></tr>
+          <tr>
+            <th>Platform</th>
+            <th>Score</th>
+            <th>Games</th>
+            <th>Playthrough</th>
+            <th>States</th>
+            <th>Crypto</th>
+            <th>Sportsbook</th>
+            <th>Promo Code</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td><strong>Our Score</strong></td><td><strong style="color:var(--color-success);">9.2/10</strong></td><td><strong>8.4/10</strong></td><td><strong>8.0/10</strong></td></tr>
-          <tr><td>No-Purchase Bonus</td><td>250,000 GC + 25 SC</td><td>500 GC + 3 SC</td><td>25,000 GC + 1 SC</td></tr>
-          <tr><td>Full Package</td><td>560,000 GC + 56 SC</td><td>20,500 GC + 103 SC</td><td>Not yet disclosed</td></tr>
-          <tr><td>Rakeback</td><td style="color:var(--color-success);font-weight:600;">3.5% permanent</td><td>None</td><td>Not yet disclosed</td></tr>
-          <tr><td>SC Playthrough</td><td>3x</td><td style="color:var(--color-success);font-weight:600;">1x (best)</td><td>Not yet disclosed</td></tr>
-          <tr><td>Game Count</td><td>550+</td><td>400+</td><td style="color:var(--color-success);font-weight:600;">500+</td></tr>
-          <tr><td>Original Games</td><td style="color:var(--color-success);font-weight:600;">20+ Stake Originals</td><td>No</td><td>Shuffle Originals</td></tr>
-          <tr><td>Sportsbook</td><td>No</td><td style="color:var(--color-success);font-weight:600;">Yes (social)</td><td>No</td></tr>
-          <tr><td>Available States</td><td>32+</td><td style="color:var(--color-success);font-weight:600;">37 (most)</td><td>31+</td></tr>
-          <tr><td>Payments</td><td style="color:var(--color-success);font-weight:600;">Crypto + fiat</td><td>Fiat only</td><td>Crypto only</td></tr>
-          <tr><td>VIP Program</td><td style="color:var(--color-success);font-weight:600;">Yes (tiered)</td><td>Yes</td><td>Yes</td></tr>
-          <tr><td>Mobile App</td><td>No (browser)</td><td>No (browser)</td><td>No (browser)</td></tr>
-          <tr><td>Launched</td><td>2022</td><td>2024</td><td>2025</td></tr>
+          <tr>
+            <td><strong>Stake.us</strong></td>
+            <td class="cell-best">9.2/10</td>
+            <td>550+</td>
+            <td>3x</td>
+            <td>32+</td>
+            <td class="cell-check">&#10003; Yes</td>
+            <td class="cell-x">&#10007;</td>
+            <td>MAXBET</td>
+          </tr>
+          <tr>
+            <td><strong>Legendz</strong></td>
+            <td>8.4/10</td>
+            <td>400+</td>
+            <td class="cell-best">1x</td>
+            <td>37</td>
+            <td class="cell-x">&#10007;</td>
+            <td class="cell-check">&#10003; Yes</td>
+            <td>MAXBET</td>
+          </tr>
+          <tr>
+            <td><strong>Shuffle.us</strong></td>
+            <td>8.0/10</td>
+            <td>500+</td>
+            <td>N/D</td>
+            <td>31+</td>
+            <td class="cell-check">&#10003; Yes</td>
+            <td class="cell-x">&#10007;</td>
+            <td>MAXBET</td>
+          </tr>
+          <tr>
+            <td><strong>WOW Vegas</strong></td>
+            <td>7.8/10</td>
+            <td>1500+</td>
+            <td class="cell-best">1x</td>
+            <td>46</td>
+            <td class="cell-x">&#10007;</td>
+            <td class="cell-x">&#10007;</td>
+            <td class="cell-x">&ndash;</td>
+          </tr>
+          <tr>
+            <td><strong>Fortune Coins</strong></td>
+            <td>7.6/10</td>
+            <td class="cell-best">1900+</td>
+            <td class="cell-best">1x</td>
+            <td class="cell-best">47</td>
+            <td class="cell-x">&#10007;</td>
+            <td class="cell-x">&#10007;</td>
+            <td class="cell-x">&ndash;</td>
+          </tr>
+          <tr>
+            <td><strong>High 5 Casino</strong></td>
+            <td>7.5/10</td>
+            <td>1700+</td>
+            <td class="cell-best">1x</td>
+            <td>37</td>
+            <td class="cell-x">&#10007;</td>
+            <td class="cell-x">&#10007;</td>
+            <td class="cell-x">&ndash;</td>
+          </tr>
+          <tr>
+            <td><strong>Chumba Casino</strong></td>
+            <td>7.3/10</td>
+            <td>200+</td>
+            <td class="cell-best">1x</td>
+            <td>43</td>
+            <td class="cell-x">&#10007;</td>
+            <td class="cell-x">&#10007;</td>
+            <td class="cell-x">&ndash;</td>
+          </tr>
+          <tr>
+            <td><strong>Pulsz Casino</strong></td>
+            <td>7.2/10</td>
+            <td>1000+</td>
+            <td class="cell-best">1x</td>
+            <td>36</td>
+            <td class="cell-x">&#10007;</td>
+            <td class="cell-x">&#10007;</td>
+            <td class="cell-x">&ndash;</td>
+          </tr>
         </tbody>
       </table>
     </div>
-    <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-4);text-align:center;">Bonus data verified <span class="dynamic-month-year">March 2026</span>. Offers subject to change. All platforms use promo code MAXBET.</p>
+    <p style="font-size:var(--text-xs);color:var(--color-text-faint);margin-top:var(--space-4);text-align:center;">Data verified March 2026. Offers subject to change. 21+ | No purchase necessary.</p>
   </div>
 </section>
 
-<!-- WHO SHOULD PICK WHAT -->
+<!-- METHODOLOGY -->
 <section class="section">
-  <div class="container container--default">
-    <div class="section-header">
-      <h2>Which Platform Is Right for You?</h2>
-    </div>
-    <div class="prose">
-      <h3>Choose Stake.us if...</h3>
-      <p>You want the largest free bonus, permanent rakeback, and the deepest game library with provably fair Originals. Best all-around pick for most players. The 3x SC playthrough and 19 restricted states are the main trade-offs.</p>
-
-      <h3>Choose Legendz if...</h3>
-      <p>You're in a state where Stake.us is restricted, or you want the fastest path from winning SC to redeeming. The 1x playthrough is genuinely the best in the market. The social sportsbook is a nice extra. The welcome bonus is smaller, and the game library is more limited.</p>
-
-      <h3>Choose Shuffle.us if...</h3>
-      <p>You're a crypto user who values fast redemptions and a massive game catalog. Shuffle Originals give you provably fair options similar to Stake.us. The platform is newer and unproven, and the crypto-only requirement locks out anyone who prefers traditional payments.</p>
-    </div>
-  </div>
-</section>
-
-<!-- OTHER PLATFORMS -->
-<section class="section section--alt">
-  <div class="container">
-    <div class="section-header">
-      <h2>Other Sweepstakes Casinos</h2>
-      <p>We tested these too. None made our top 3, but some may suit specific needs.</p>
-    </div>
-    <div class="compare-table-wrap">
-      <table class="compare-table">
-        <thead><tr><th>Social Casino</th><th>No-Purchase Bonus</th><th>Total Welcome Offer</th><th>Quick Take</th></tr></thead>
-        <tbody>
-          <tr><td class="casino-name">Crown Coins</td><td>100,000 CC + 2 SC</td><td>Up to 1.2M CC + 60 SC</td><td style="font-size:var(--text-xs);color:var(--color-text-muted);">Decent SC bonus but no rakeback. Limited game selection compared to top 3.</td></tr>
-          <tr><td class="casino-name">LoneStar</td><td>100,000 GC + 2.5 SC</td><td>Up to 225,000 GC + 52.5 SC</td><td style="font-size:var(--text-xs);color:var(--color-text-muted);">Small library. VIP system underdeveloped. May improve with time.</td></tr>
-          <tr><td class="casino-name">RealPrize</td><td>100,000 GC + 2 SC</td><td>Up to 2.1M GC + 82 SC</td><td style="font-size:var(--text-xs);color:var(--color-text-muted);">High GC count but most SC requires purchases. Read the fine print.</td></tr>
-          <tr><td class="casino-name">Pulsz</td><td>5,000 GC + 2.3 SC</td><td>Up to 1M GC + 77.3 SC</td><td style="font-size:var(--text-xs);color:var(--color-text-muted);">Solid competitor with a reasonable total package. No rakeback or originals.</td></tr>
-          <tr><td class="casino-name">High 5</td><td>400 GC + 3 SC</td><td>Up to 700 GC + 60 SC</td><td style="font-size:var(--text-xs);color:var(--color-text-muted);">Tiny GC bonus. No crypto support. Limited appeal.</td></tr>
-          <tr><td class="casino-name">Fortune Coins</td><td>630,000 GC + 1,000 FC</td><td>630,000 GC + 1,000 FC</td><td style="font-size:var(--text-xs);color:var(--color-text-muted);">Uses proprietary currency which makes value comparison difficult.</td></tr>
-          <tr><td class="casino-name">McLuck</td><td>7,500 GC + 2.5 SC</td><td>Up to 127,500 GC + 62.5 SC</td><td style="font-size:var(--text-xs);color:var(--color-text-muted);">Low starting GC. No original games. Average offering overall.</td></tr>
-          <tr><td class="casino-name">NoLimitCoins</td><td>110,000 GC + 1 SC</td><td>Up to 1.25M GC + 60 SC</td><td style="font-size:var(--text-xs);color:var(--color-text-muted);">Weak no-purchase SC (just 1 SC). All third-party slots.</td></tr>
-          <tr><td class="casino-name">Spree Casino</td><td>1,000,000 GC + 2.5 SC</td><td>Up to 1.03M GC + 32.5 SC</td><td style="font-size:var(--text-xs);color:var(--color-text-muted);">High GC count hides a below-average SC package. No rakeback.</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-4);text-align:center;">Bonus data verified <span class="dynamic-month-year">March 2026</span>. Offers subject to change.</p>
-  </div>
-</section>
-
-<!-- HEAD-TO-HEAD COMPARISON ARTICLES -->
-<section class="section section--alt">
-  <div class="container">
-    <div class="section-header">
-      <h2>Head-to-Head Comparisons</h2>
-      <p>We put Stake.us up against its closest competitors in detailed, side-by-side breakdowns.</p>
-    </div>
-    <div style="display:grid;gap:var(--space-3);grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));">
-      <a href="./legendz/legendz-vs-stake.html" class="card" style="text-decoration:none;color:inherit;border-left:4px solid #2d3748;padding:var(--space-4) var(--space-5);transition:transform 0.2s,box-shadow 0.2s;">
-        <h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-1);">Legendz vs Stake.us</h3>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin:0;">1x playthrough vs 3.5% rakeback, which matters more for your play style?</p>
-      </a>
-      <a href="./shuffle/shuffle-vs-stake.html" class="card" style="text-decoration:none;color:inherit;border-left:4px solid #1a1a2e;padding:var(--space-4) var(--space-5);transition:transform 0.2s,box-shadow 0.2s;">
-        <h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-1);">Shuffle.us vs Stake.us</h3>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin:0;">Crypto-native newcomer vs the established leader. Game library, bonuses, and redemption speed.</p>
-      </a>
-      <a href="./stake-us/roobet-vs-stake.html" class="card" style="text-decoration:none;color:inherit;border-left:4px solid var(--color-primary);padding:var(--space-4) var(--space-5);transition:transform 0.2s,box-shadow 0.2s;">
-        <h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-1);">Roobet vs Stake.us</h3>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin:0;">In-depth comparison of game selection, bonuses, availability, and player experience.</p>
-      </a>
-      <a href="./stake-us/modo-vs-stake-comparison.html" class="card" style="text-decoration:none;color:inherit;border-left:4px solid var(--color-primary);padding:var(--space-4) var(--space-5);transition:transform 0.2s,box-shadow 0.2s;">
-        <h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-1);">Modo vs Stake.us</h3>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin:0;">Sweepstakes model showdown, bonuses, redemption speed, and game library depth.</p>
-      </a>
-      <a href="./stake-us/stake-com-vs-stake-us.html" class="card" style="text-decoration:none;color:inherit;border-left:4px solid var(--color-primary);padding:var(--space-4) var(--space-5);transition:transform 0.2s,box-shadow 0.2s;">
-        <h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-1);">Stake.com vs Stake.us</h3>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin:0;">Same brand, different products. Real-money crypto casino vs US sweepstakes platform.</p>
-      </a>
-    </div>
-    <div style="text-align:center;margin-top:var(--space-4);">
-      <a href="./stake-us/compare-guide.html" class="btn btn--outline-dark btn--sm">View All Comparisons &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="section">
-  <div class="container" style="text-align:center;">
-    <h2>Use Code MAXBET Everywhere</h2>
-    <p style="font-size:var(--text-lg);color:var(--color-text-muted);max-width:600px;margin:0 auto var(--space-4);">One code, three platforms. MAXBET works on Stake.us, Legendz, and Shuffle.us.</p>
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-3);">
-      <a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">Stake.us &rarr;</a>
-      <a href="https://m.legendz.com/redirect.aspx?mid=37&sid=1136&cid=&pid=&affid=34&promo=MAXBET" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer" style="background:#2d3748;">Legendz &rarr;</a>
-      <a href="https://shuffle.us?r=MAXBET" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer" style="background:#1a1a2e;">Shuffle.us &rarr;</a>
-    </div>
-    <p style="font-size:var(--text-xs);color:var(--color-text-faint);margin-top:var(--space-3);">21+ | No purchase necessary | Void where prohibited</p>
+  <div class="container" style="max-width:var(--content-default);">
+    <h2 style="font-family:var(--font-display);font-size:var(--text-lg);font-weight:700;margin-bottom:var(--space-3);">How We Score</h2>
+    <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.7;">Every platform is scored on bonus value, game library, playthrough requirements, state availability, payment options, and redemption speed. We create accounts, play with real balances, and go through the full redemption process before publishing any score. Scores are updated on a weekly audit cycle.</p>
+    <p style="margin-top:var(--space-3);"><a href="./methodology.html" style="font-size:var(--text-sm);font-weight:600;">Read our full methodology &rarr;</a></p>
   </div>
 </section>
 
@@ -452,7 +581,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <a class="site-logo" href="./index.html" style="margin-bottom:var(--space-2);">
 <img src="./images/sweepstakesites-logo.svg" alt="SweepstakeSites" style="height:26px;width:auto;">
 </a>
-<p>Your sweepstakes casino resource online. Reviews, promo codes, and guides for Stake.us, Legendz, and Shuffle.us. Published by NWG Ltd.</p>
+<p>Your sweepstakes casino resource online. Reviews, promo codes, and guides for 8 sweepstakes casinos. Published by NWG Ltd.</p>
 <p style="margin-top:var(--space-2);font-size:var(--text-xs);color:var(--color-text-faint);">sweepstakesites.com &middot; 6543 S Las Vegas Blvd &middot; +1 702-637-2872 &middot; <a href="mailto:help@sweepstakesites.com" style="color:inherit;">help@sweepstakesites.com</a></p>
 </div>
 <div class="footer-columns">
@@ -529,6 +658,112 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
     <div class="search-results"></div>
   </div>
 </div>
+
+<!-- Filter/Sort JS -->
+<script>
+(function(){
+  var grid = document.getElementById('opGrid');
+  var cards = Array.from(grid.querySelectorAll('.op-card'));
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var sortSelect = document.getElementById('sortSelect');
+  var noResults = document.getElementById('noResults');
+  var activeFilters = {};
+
+  // Toggle filter buttons
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var f = btn.getAttribute('data-filter');
+      if(activeFilters[f]){
+        delete activeFilters[f];
+        btn.classList.remove('active');
+      } else {
+        activeFilters[f] = true;
+        btn.classList.add('active');
+      }
+      applyFilters();
+    });
+  });
+
+  // Sort change
+  sortSelect.addEventListener('change', function(){
+    applyFilters();
+  });
+
+  function applyFilters(){
+    var visibleCards = [];
+    cards.forEach(function(card){
+      var show = true;
+
+      // Crypto filter
+      if(activeFilters['crypto'] && card.getAttribute('data-crypto') !== 'yes'){
+        show = false;
+      }
+      // Sportsbook filter
+      if(activeFilters['sportsbook'] && card.getAttribute('data-sportsbook') !== 'yes'){
+        show = false;
+      }
+      // Promo code filter
+      if(activeFilters['promo'] && card.getAttribute('data-promo') !== 'yes'){
+        show = false;
+      }
+      // 1x playthrough filter
+      if(activeFilters['playthrough1x'] && card.getAttribute('data-playthrough') !== '1'){
+        show = false;
+      }
+
+      if(show){
+        card.style.display = '';
+        visibleCards.push(card);
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Show/hide no results
+    if(visibleCards.length === 0){
+      noResults.classList.add('visible');
+    } else {
+      noResults.classList.remove('visible');
+    }
+
+    // Sort visible cards
+    var sortBy = sortSelect.value;
+    visibleCards.sort(function(a, b){
+      var aVal, bVal;
+      if(sortBy === 'score'){
+        aVal = parseFloat(a.getAttribute('data-score'));
+        bVal = parseFloat(b.getAttribute('data-score'));
+        return bVal - aVal; // descending
+      } else if(sortBy === 'games'){
+        aVal = parseInt(a.getAttribute('data-games'));
+        bVal = parseInt(b.getAttribute('data-games'));
+        return bVal - aVal; // descending
+      } else if(sortBy === 'states'){
+        aVal = parseInt(a.getAttribute('data-states'));
+        bVal = parseInt(b.getAttribute('data-states'));
+        return bVal - aVal; // descending
+      } else if(sortBy === 'year'){
+        aVal = parseInt(a.getAttribute('data-year'));
+        bVal = parseInt(b.getAttribute('data-year'));
+        return aVal - bVal; // ascending (oldest first)
+      }
+      return 0;
+    });
+
+    // Re-order in DOM
+    visibleCards.forEach(function(card){
+      grid.appendChild(card);
+    });
+
+    // Also append hidden cards at the end so DOM order is stable
+    cards.forEach(function(card){
+      if(card.style.display === 'none'){
+        grid.appendChild(card);
+      }
+    });
+  }
+})();
+</script>
 <script src="./app.min.js" defer></script>
 </body>
 </html>

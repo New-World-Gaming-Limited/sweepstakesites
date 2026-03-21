@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" as="style">
-<title>Accessibility Statement | SweepstakeSites</title>
+<title>Accessibility | SweepstakeSites</title>
 <meta name="description" content="SweepstakeSites accessibility commitment. How we design for all users and how to report barriers.">
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="canonical" href="https://sweepstakesites.com/accessibility">
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
 <style>/* Critical CSS - inlined for fast FCP/LCP */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:none;text-size-adjust:none;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;scroll-behavior:smooth;scroll-padding-top:80px}
@@ -39,19 +39,27 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 @media(min-width:900px){.mobile-menu-btn{display:none}}</style>
 <link href="./style.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="./style.min.css" rel="stylesheet"></noscript>
-<link rel="canonical" href="https://sweepstakesites.com/accessibility">
-<meta property="og:title" content="Accessibility Statement | SweepstakeSites">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://sweepstakesites.com/"},{"@type":"ListItem","position":2,"name":"Accessibility","item":"https://sweepstakesites.com/accessibility"}]
+}
+</script>
+<meta property="og:title" content="Accessibility | SweepstakeSites">
 <meta property="og:description" content="SweepstakeSites accessibility commitment. How we design for all users and how to report barriers.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://sweepstakesites.com/og-image.png">
+<meta property="og:url" content="https://sweepstakesites.com/accessibility">
 <meta property="og:site_name" content="SweepstakeSites">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Accessibility Statement | SweepstakeSites">
-<meta name="twitter:description" content="SweepstakeSites accessibility commitment. How we design for all users and how to report barriers.">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="icon" type="image/png" href="./favicon.png" sizes="32x32">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-
+<meta property="og:image" content="https://sweepstakesites.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+</style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ0LVR6BPT"></script>
 <script>
@@ -63,21 +71,24 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 </script>
 </head>
 <body>
+<!-- DISCLOSURE BAR -->
 <div class="disclosure-bar">
   This site contains promotional content. 21+ | No purchase necessary. <a href="./affiliate-disclosure.html">Affiliate Disclosure</a>
 </div>
 <header class="site-header">
-<div class="container">
-<a class="site-logo" href="./index.html">
-<img src="./images/sweepstakesites-logo.svg" alt="SweepstakeSites" style="height:32px;width:auto;">
+  <div class="container">
+    <a href="./index.html" class="site-logo">
+      <img src="./images/sweepstakesites-logo.svg" alt="SweepstakeSites" style="height:32px;width:auto;">
     </a>
-<nav class="nav-desktop" aria-label="Main navigation">
+    <nav class="nav-desktop" aria-label="Main navigation">
       <div class="nav-dropdown">
         <button class="nav-dropdown-trigger">Brands <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
         <div class="nav-dropdown-menu">
           <a href="./stake-us/index.html">Stake.us</a>
           <a href="./legendz/index.html">Legendz</a>
           <a href="./shuffle/index.html">Shuffle.us</a>
+          <div class="nav-dropdown-divider"></div>
+          <a href="./compare.html">All 8 Platforms</a>
         </div>
       </div>
       <div class="nav-dropdown">
@@ -128,19 +139,19 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
         </div>
       </div>
     </nav>
-<div class="nav-actions">
-<button class="search-btn" aria-label="Search site">
+    <div class="nav-actions">
+      <button class="search-btn" aria-label="Search site">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
 </button>
-<button aria-label="Toggle dark mode" class="theme-toggle" data-theme-toggle="">
-<svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-</button>
-<a href="./best-sweepstakes-sites.html" class="header-cta">Best Sweepstakes Sites</a>
-<button aria-expanded="false" aria-label="Open menu" class="mobile-menu-btn">
-<svg fill="none" height="24" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="24"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
-</button>
-</div>
-</div>
+<button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="./best-sweepstakes-sites.html" class="header-cta">Best Sweepstakes Sites</a>
+      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
 </header>
 <nav class="mobile-nav" aria-label="Mobile navigation">
   <div class="mobile-nav-section">
@@ -170,53 +181,52 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
   </div>
   <a href="./best-sweepstakes-sites.html" class="nav-cta-mobile">Best Sweepstakes Sites &rarr;</a>
 </nav>
-<main>
 <section class="page-hero">
-<div class="container">
-<nav aria-label="Breadcrumb" class="breadcrumb"><a href="./index.html">Home</a> / <span>Accessibility Statement</span></nav>
-<h1>Accessibility Statement</h1>
-<div class="author-byline" style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-4);padding:var(--space-3) 0;border-bottom:1px solid var(--color-border);">
-  <img src="images/author-marcus.webp" alt="Marcus Rivera" width="36" height="36" loading="lazy" decoding="async" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;">
-  <div>
-    <a href="./marcus-rivera.html" style="font-weight:600;font-size:var(--text-sm);color:inherit;text-decoration:none;border-bottom:1px solid var(--color-primary);">Marcus Rivera</a>
-    <span style="color:var(--color-text-muted);font-size:var(--text-xs);margin-left:var(--space-1);">Compliance & Payments Editor</span>
-  </div>
-</div>
-<p>SweepstakeSites accessibility commitment. How we design for all users and how to report barriers.</p>
-</div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./index.html">Home</a> &rsaquo; <span>Accessibility</span></nav><h1>Accessibility Statement</h1></div>
 </section>
+<main>
 <section class="section">
-<div class="container container--default">
-<div class="prose">
+  <div class="container container--default">
+    <div class="prose">
 
-<h2>Our Commitment</h2>
-<p>SweepstakeSites.com is committed to making our content accessible to all users, including those with disabilities. We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA.</p>
+    <h2>Our Commitment</h2>
+    <p>SweepstakeSites.com is committed to providing an accessible experience for all visitors, including people with disabilities. We aim to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA, and we continuously work to improve the usability of our site for everyone.</p>
 
-<h2>What We Do</h2>
-<ul>
-<li><strong>Semantic HTML:</strong> We use proper heading structure, landmarks, and ARIA labels throughout the site.</li>
-<li><strong>Keyboard navigation:</strong> All interactive elements are accessible via keyboard.</li>
-<li><strong>Color contrast:</strong> Text meets WCAG AA contrast ratios against background colors in both light and dark modes.</li>
-<li><strong>Alt text:</strong> Images include descriptive alternative text.</li>
-<li><strong>Responsive design:</strong> The site works across screen sizes and zoom levels up to 200%.</li>
-<li><strong>No auto-playing media:</strong> We do not auto-play videos or audio.</li>
-</ul>
+    <h2>What We Have Implemented</h2>
+    <ul>
+    <li><strong>Semantic HTML:</strong> We use proper heading hierarchy, landmark regions, and ARIA labels throughout every page to support assistive technologies.</li>
+    <li><strong>Keyboard navigation:</strong> All interactive elements, including menus, dropdowns, search, and links, are fully accessible via keyboard.</li>
+    <li><strong>ARIA labels:</strong> Buttons, toggles, and navigation elements include descriptive ARIA attributes for screen reader users.</li>
+    <li><strong>Color contrast:</strong> Text and interactive elements meet WCAG AA contrast ratios in both light and dark modes.</li>
+    <li><strong>Responsive design:</strong> The site adapts to all screen sizes and supports browser zoom up to 200% without loss of content or functionality.</li>
+    <li><strong>Dark mode support:</strong> A theme toggle allows users to switch between light and dark modes, with the preference stored locally.</li>
+    <li><strong>Alt text on images:</strong> All meaningful images include descriptive alternative text. Decorative images are marked appropriately.</li>
+    <li><strong>Focus indicators:</strong> Visible focus outlines appear on all interactive elements during keyboard navigation.</li>
+    <li><strong>No auto-playing media:</strong> We do not auto-play videos, audio, or animations that could be disorienting.</li>
+    </ul>
 
-<h2>Known Limitations</h2>
-<p>Some interactive calculators may have limited screen reader support. We are working to improve these. Third-party content linked from our site (such as Stake.us) is governed by their own accessibility practices.</p>
+    <h2>Known Limitations</h2>
+    <p>Some interactive calculators on our site may have limited screen reader support. We are actively working to improve these tools with proper ARIA roles and live region announcements. If you encounter difficulty using any calculator, please contact us and we will provide the information in an alternative format.</p>
 
-<h2>Report a Barrier</h2>
-<p>If you encounter an accessibility barrier on our site, please contact us through our <a href="./contact.html">contact page</a>. Include:</p>
-<ul>
-<li>The page URL where you encountered the issue</li>
-<li>A description of the barrier</li>
-<li>The assistive technology you were using (if applicable)</li>
-</ul>
-<p>We will respond within 5 business days and work to resolve the issue.</p>
+    <h2>Third-Party Content</h2>
+    <p>Sweepstakes casino platforms linked from our site have their own accessibility practices, which we do not control. If you experience accessibility issues on a linked platform, we encourage you to contact that platform directly.</p>
 
-</div>
-</div>
+    <h2>Report an Accessibility Issue</h2>
+    <p>If you encounter a barrier on our site, we want to hear about it. Please contact us with the following details:</p>
+    <ul>
+    <li>The page URL where you encountered the issue</li>
+    <li>A description of the barrier</li>
+    <li>The assistive technology you were using, if applicable</li>
+    </ul>
+    <p>You can reach us at <a href="mailto:help@sweepstakesites.com">help@sweepstakesites.com</a> or by phone at +1 702-637-2872. We will respond within 5 business days and work to resolve the issue as quickly as possible.</p>
+
+    <p style="margin-top:var(--space-8);font-size:var(--text-sm);color:var(--color-text-muted);">Last reviewed: March 2026</p>
+
+    </div>
+  </div>
 </section>
+<section class="section"><div class="container container--default" style="text-align:center;"><p><strong> - Jake Morrison, Managing Editor</strong></p></div></section>
 </main>
 <footer class="site-footer">
 <div class="container">
@@ -229,7 +239,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <a class="site-logo" href="./index.html" style="margin-bottom:var(--space-2);">
 <img src="./images/sweepstakesites-logo.svg" alt="SweepstakeSites" style="height:26px;width:auto;">
 </a>
-<p>Your sweepstakes casino resource online. Reviews, promo codes, and guides for Stake.us, Legendz, and Shuffle.us. Published by NWG Ltd.</p>
+<p>Your sweepstakes casino resource online. Reviews, promo codes, and guides for 8 sweepstakes casinos. Published by NWG Ltd.</p>
 <p style="margin-top:var(--space-2);font-size:var(--text-xs);color:var(--color-text-faint);">sweepstakesites.com &middot; 6543 S Las Vegas Blvd &middot; +1 702-637-2872 &middot; <a href="mailto:help@sweepstakesites.com" style="color:inherit;">help@sweepstakesites.com</a></p>
 </div>
 <div class="footer-columns">
@@ -255,6 +265,8 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <a href="./corrections-policy.html">Corrections Policy</a>
 <a href="./affiliate-disclosure.html">Affiliate Disclosure</a>
 <a href="./complaints-policy.html">Complaints Policy</a>
+<a href="./methodology.html">Our Methodology</a>
+<a href="./operators.html">Operator Dossiers</a>
 </div>
 </div>
 <div class="footer-col">
@@ -296,6 +308,16 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 </div>
 </div>
 </footer>
+<!-- SEARCH OVERLAY -->
+<div id="searchOverlay" class="search-overlay">
+  <div class="search-box">
+    <div class="search-input-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" class="search-input" placeholder="Search guides, games, bonuses..." autocomplete="off">
+      <button class="search-close" aria-label="Close search"><span aria-hidden="true">&#x2715;</span></button>
+    </div>
+    <div class="search-results"></div>
+  </div>
+</div>
 <script src="./app.min.js" defer></script>
 </body>
 </html>
