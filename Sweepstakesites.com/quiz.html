@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,600,700&display=swap" as="style">
 <title>Sweepstakes Casino Quiz | Find Your Perfect Platform | SweepstakeSites</title>
-<meta name="description" content="Take our free quiz to find out which sweepstakes casino fits your play style. Answer 6 quick questions and get a personalized recommendation from 8 top platforms.">
+<meta name="description" content="Take our free quiz to find out which sweepstakes casino fits your play style. Answer 6 quick questions and get a personalized recommendation from 9 top platforms.">
 <link rel="canonical" href="https://sweepstakesites.com/quiz">
 <meta property="og:title" content="Sweepstakes Casino Quiz | Find Your Perfect Platform | SweepstakeSites">
-<meta property="og:description" content="Take our free quiz to find out which sweepstakes casino fits your play style. Answer 6 quick questions and get a personalized recommendation.">
+<meta property="og:description" content="Take our free quiz to find out which sweepstakes casino fits your play style. Answer 6 quick questions and get a personalized recommendation from 9 top platforms.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sweepstakesites.com/quiz">
 <meta property="og:site_name" content="SweepstakeSites">
@@ -60,7 +60,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
       "name": "How does the sweepstakes casino quiz work?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Answer 6 quick questions about your preferences - play style, payment method, coverage needs, and more. Our algorithm matches you with one of 8 sweepstakes platforms based on your answers."
+        "text": "Answer 6 quick questions about your preferences - play style, payment method, coverage needs, and more. Our algorithm matches you with one of 9 sweepstakes platforms based on your answers."
       }
     },
     {
@@ -68,7 +68,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
       "name": "Which sweepstakes platforms can the quiz recommend?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The quiz can recommend Stake.us, Legendz, Shuffle.us, Fortune Coins, WOW Vegas, High 5, Chumba, or Pulsz based on your play style, game preferences, and feature priorities."
+        "text": "The quiz can recommend Stake.us, Legendz, Shuffle.us, Fortune Coins, WOW Vegas, High 5, Chumba, Pulsz, or Rolla based on your play style, game preferences, and feature priorities."
       }
     },
     {
@@ -477,6 +477,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <a href="./best-sweepstakes-sites.html">Best Sweepstakes Sites</a>
 <a href="./stake-us/vip-calculator.html">Calculators</a>
 <a href="./quiz.html">Quiz</a>
+<a href="./bonus-browser.html">Bonus Browser</a>
 <a href="./stake-us/payments.html">Payment Methods</a>
 <a href="./management-team.html">Our Authors</a>
 </div>
@@ -541,6 +542,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
       name: 'Shuffle.us',
       link: 'https://shuffle.us?r=MAXBET',
       hasCode: true,
+      code: 'MAXBET',
       reasons: [
         'Crypto-native platform with full cryptocurrency support for purchases and redemptions',
         'Provably fair originals including Crash, Plinko, Mines, and Dice',
@@ -552,6 +554,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
       name: 'Stake.us',
       link: 'https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet',
       hasCode: true,
+      code: 'MAXBET',
       reasons: [
         'Largest no-purchase bonus package among sweepstakes platforms',
         '550+ games including 20+ exclusive Originals',
@@ -563,6 +566,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
       name: 'Legendz',
       link: 'https://m.legendz.com/redirect.aspx?mid=37&sid=1136&cid=&pid=&affid=34&promo=MAXBET',
       hasCode: true,
+      code: 'MAXBET',
       reasons: [
         'Low playthrough requirements on bonus coins',
         'Integrated sportsbook alongside sweepstakes games',
@@ -624,6 +628,18 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
         '1x playthrough requirement on bonus coins',
         'Regular promotions and rewards for active players'
       ]
+    },
+    'rolla': {
+      name: 'Rolla',
+      link: 'https://www.rolla.com?promo=NEWBONUS',
+      hasCode: true,
+      code: 'NEWBONUS',
+      reasons: [
+        '1,800+ games with a slots-first focus and Rolla Originals',
+        'VIP program with daily rewards tailored for dedicated players',
+        'Massive game library rivaling the largest sweepstakes platforms',
+        'Ideal for players who want a slots-heavy experience with loyalty perks'
+      ]
     }
   };
 
@@ -638,20 +654,20 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
   function calcScores(answers) {
     var scores = {
       shuffle: 0, stake: 0, legendz: 0, fortunecoins: 0,
-      wowvegas: 0, high5: 0, chumba: 0, pulsz: 0
+      wowvegas: 0, high5: 0, chumba: 0, pulsz: 0, rolla: 0
     };
 
     // Q1: What matters most
     var a0 = answers[0];
     if (a0 === 0) { scores.stake += 5; scores.legendz += 3; scores.pulsz += 2; }       // biggest bonus
     if (a0 === 1) { scores.legendz += 5; scores.fortunecoins += 4; scores.wowvegas += 4; scores.chumba += 3; scores.high5 += 3; } // lowest playthrough
-    if (a0 === 2) { scores.fortunecoins += 5; scores.wowvegas += 4; scores.high5 += 4; scores.stake += 3; } // largest library
+    if (a0 === 2) { scores.fortunecoins += 5; scores.wowvegas += 4; scores.high5 += 4; scores.rolla += 4; scores.stake += 3; } // largest library
     if (a0 === 3) { scores.shuffle += 5; scores.stake += 3; }                           // crypto
 
     // Q2: Play style
     var a1 = answers[1];
     if (a1 === 0) { scores.shuffle += 5; scores.stake += 4; }                           // provably fair originals
-    if (a1 === 1) { scores.wowvegas += 4; scores.high5 += 4; scores.fortunecoins += 3; scores.chumba += 3; scores.pulsz += 3; } // slots & table
+    if (a1 === 1) { scores.wowvegas += 4; scores.high5 += 4; scores.rolla += 5; scores.fortunecoins += 3; scores.chumba += 3; scores.pulsz += 3; } // slots & table
     if (a1 === 2) { scores.legendz += 5; }                                              // sports
     if (a1 === 3) { scores.fortunecoins += 3; scores.wowvegas += 4; scores.high5 += 2; } // fish/arcade
 
@@ -664,7 +680,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
     // Q4: Crypto redemptions
     var a3 = answers[3];
     if (a3 === 0) { scores.shuffle += 5; scores.stake += 3; }                           // crypto essential
-    if (a3 === 1) { scores.fortunecoins += 2; scores.wowvegas += 2; scores.chumba += 2; scores.high5 += 2; scores.pulsz += 2; }
+    if (a3 === 1) { scores.fortunecoins += 2; scores.wowvegas += 2; scores.chumba += 2; scores.high5 += 2; scores.pulsz += 2; scores.rolla += 3; }
     // a3 === 2: either, slight boost to crypto platforms
     if (a3 === 2) { scores.shuffle += 1; scores.stake += 1; }
 
@@ -672,13 +688,13 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
     var a4 = answers[4];
     if (a4 === 0) { scores.chumba += 5; scores.high5 += 2; }                            // longest history
     if (a4 === 1) { scores.stake += 4; scores.shuffle += 3; scores.high5 += 2; }        // international brand
-    if (a4 === 2) { scores.legendz += 3; scores.shuffle += 2; scores.pulsz += 2; scores.fortunecoins += 2; } // newest/modern
+    if (a4 === 2) { scores.legendz += 3; scores.shuffle += 2; scores.pulsz += 2; scores.fortunecoins += 2; scores.rolla += 2; } // newest/modern
     // a4 === 3: doesn't matter
 
     // Q6: VIP importance
     var a5 = answers[5];
-    if (a5 === 0) { scores.pulsz += 5; scores.high5 += 4; scores.stake += 3; }         // very important
-    if (a5 === 1) { scores.pulsz += 2; scores.high5 += 2; scores.stake += 1; }         // nice to have
+    if (a5 === 0) { scores.pulsz += 5; scores.high5 += 4; scores.rolla += 4; scores.stake += 3; }         // very important
+    if (a5 === 1) { scores.pulsz += 2; scores.high5 += 2; scores.rolla += 2; scores.stake += 1; }         // nice to have
     // a5 === 2: not important
 
     return scores;
@@ -746,6 +762,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 
     var badge = document.getElementById('resultBadge');
     if (platform.hasCode) {
+      badge.textContent = platform.code;
       badge.style.display = 'inline-block';
     } else {
       badge.style.display = 'none';

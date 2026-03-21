@@ -2,18 +2,22 @@
    STAKE.US GUIDE - Shared JavaScript
    ============================================ */
 
-// --- THEME TOGGLE ---
+// --- THEME TOGGLE (persisted via localStorage) ---
 (function(){
-  const toggle = document.querySelector('[data-theme-toggle]');
-  const html = document.documentElement;
-  let theme = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+  var STORAGE_KEY = 'ss-theme';
+  var toggle = document.querySelector('[data-theme-toggle]');
+  var html = document.documentElement;
+  var saved = null;
+  try { saved = localStorage.getItem(STORAGE_KEY); } catch(e) {}
+  var theme = saved || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
   html.setAttribute('data-theme', theme);
   updateToggleIcon();
 
   if (toggle) {
-    toggle.addEventListener('click', () => {
+    toggle.addEventListener('click', function() {
       theme = theme === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', theme);
+      try { localStorage.setItem(STORAGE_KEY, theme); } catch(e) {}
       toggle.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
       updateToggleIcon();
     });
