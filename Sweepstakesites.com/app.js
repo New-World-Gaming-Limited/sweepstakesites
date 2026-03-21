@@ -85,7 +85,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
   });
 })();
 
-// --- SCORE BAR ANIMATION ---
+// --- SCORE BAR ANIMATION (composited: uses scaleX) ---
 (function(){
   const bars = document.querySelectorAll('.score-bar-fill');
   if (!bars.length) return;
@@ -93,13 +93,13 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const width = entry.target.getAttribute('data-width');
-        entry.target.style.width = width + '%';
+        entry.target.style.transform = 'scaleX(' + (width / 100) + ')';
         observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.3 });
   bars.forEach(bar => {
-    bar.style.width = '0';
+    bar.style.transform = 'scaleX(0)';
     observer.observe(bar);
   });
 })();

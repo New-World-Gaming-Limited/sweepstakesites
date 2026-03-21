@@ -712,7 +712,9 @@
   height: 100%;
   background: var(--color-primary);
   border-radius: var(--radius-full);
-  transition: width 0.8s ease;
+  transform-origin: left center;
+  transition: transform 0.8s ease;
+  will-change: transform;
 }
 .score-value {
   font-weight: 700;
@@ -1289,7 +1291,7 @@
   font-weight: 700;
   font-size: var(--text-sm);
   cursor: pointer;
-  transition: all 200ms ease;
+  transition: transform 200ms ease, filter 200ms ease, background 200ms ease, color 200ms ease;
 }
 .promo-code-cutout .copy-btn:hover {
   filter: brightness(1.1);
@@ -1841,7 +1843,9 @@ a .code-badge:hover {
   height: 100%;
   background: var(--color-primary);
   border-radius: var(--radius-full);
-  transition: width 0.6s ease;
+  transform-origin: left center;
+  transition: transform 0.6s ease;
+  will-change: transform;
 }
 .calc-progress-bar-label {
   font-weight: 700;
