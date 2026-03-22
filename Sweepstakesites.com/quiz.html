@@ -27,7 +27,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 .disclosure-bar{background:var(--color-surface-alt);text-align:center;font-size:var(--text-xs);color:var(--color-text-muted);padding:var(--space-2) var(--space-4);border-bottom:1px solid var(--color-border-light)}
 .disclosure-bar a{color:var(--color-primary);text-decoration:underline}
 .site-header{position:sticky;top:0;z-index:100;background:var(--color-surface);border-bottom:1px solid var(--color-border-light);padding:0 var(--space-4)}
-.site-header .container{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);max-width:var(--content-wide);margin:0 auto;height:64px}
+.site-header.container{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);max-width:var(--content-wide);margin:0 auto;height:64px}
 .site-logo{display:flex;align-items:center;text-decoration:none}
 .nav-desktop{display:flex;align-items:center;gap:var(--space-1)}
 .nav-actions{display:flex;align-items:center;gap:var(--space-2)}
@@ -45,41 +45,41 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <noscript><link href="./style.min.css" rel="stylesheet"></noscript>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://sweepstakesites.com/"},{"@type":"ListItem","position":2,"name":"Quiz","item":"https://sweepstakesites.com/quiz"}]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://sweepstakesites.com/"},{"@type":"ListItem","position":2,"name":"Quiz","item":"https://sweepstakesites.com/quiz"}]
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How does the sweepstakes casino quiz work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Answer 6 quick questions about your preferences - play style, payment method, coverage needs, and more. Our algorithm matches you with one of 11 sweepstakes platforms based on your answers."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which sweepstakes platforms can the quiz recommend?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The quiz can recommend Stake.us, Legendz, Shuffle.us, Fortune Coins, WOW Vegas, High 5, Chumba, Pulsz, Rolla, Zula Casino, or American Luck based on your play style, game preferences, and feature priorities."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the quiz free to take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, the quiz is completely free. No signup or purchase required. You get an instant recommendation with reasons tailored to your answers."
-      }
-    }
-  ]
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+ {
+ "@type": "Question",
+ "name": "How does the sweepstakes casino quiz work?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Answer 6 quick questions about your preferences - play style, payment method, coverage needs, and more. Our algorithm matches you with one of 11 sweepstakes platforms based on your answers."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Which sweepstakes platforms can the quiz recommend?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "The quiz can recommend Stake.us, Legendz, Shuffle.us, Fortune Coins, WOW Vegas, High 5, Chumba, Pulsz, Rolla, Zula Casino, or American Luck based on your play style, game preferences, and feature priorities."
+ }
+ },
+ {
+ "@type": "Question",
+ "name": "Is the quiz free to take?",
+ "acceptedAnswer": {
+ "@type": "Answer",
+ "text": "Yes, the quiz is completely free. No signup or purchase required. You get an instant recommendation with reasons tailored to your answers."
+ }
+ }
+ ]
 }
 </script>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
@@ -103,9 +103,9 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 .quiz-option:hover{border-color:var(--color-primary);background:var(--color-primary-surface);}
 .quiz-option.selected{border-color:var(--color-primary);background:var(--color-primary-surface);font-weight:600;}
 .quiz-option-icon{width:36px;height:36px;border-radius:var(--radius-md);background:var(--color-surface-alt);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
-.quiz-option.selected .quiz-option-icon{background:var(--color-primary);color:#fff;}
+.quiz-option.selected.quiz-option-icon{background:var(--color-primary);color:#fff;}
 .quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:var(--space-8);}
-.quiz-nav .btn{min-width:120px;}
+.quiz-nav.btn{min-width:120px;}
 .quiz-back{background:none;border:none;color:var(--color-text-muted);font-weight:600;font-size:var(--text-sm);cursor:pointer;padding:var(--space-2) var(--space-3);border-radius:var(--radius-md);font-family:inherit;}
 .quiz-back:hover{color:var(--color-text);background:var(--color-surface-alt);}
 
@@ -133,10 +133,10 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <!-- Google tag (gtag.js) -->
 <script defer src="https://www.googletagmanager.com/gtag/js?id=G-QZ0LVR6BPT"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-QZ0LVR6BPT');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-QZ0LVR6BPT');
 </script>
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
@@ -144,313 +144,313 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <body>
 
 <div class="disclosure-bar">
-  This site contains promotional content. <a href="./affiliate-disclosure.html">Affiliate Disclosure</a> &middot; 21+ &middot; No purchase necessary &middot; Void where prohibited
+ This site contains promotional content. <a href="./affiliate-disclosure.html">Affiliate Disclosure</a> &middot; 21+ &middot; No purchase necessary &middot; Void where prohibited
 </div>
 <header class="site-header">
-  <div class="container">
-    <a href="./index.html" class="site-logo">
-      <img width="32" height="32" decoding="async" src="./images/sweepstakesites-logo.svg" alt="SweepstakeSites" style="height:32px;width:auto;">
-    </a>
-    <nav class="nav-desktop" aria-label="Main navigation">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger">Brands <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
-        <div class="nav-dropdown-menu">
-          <a href="./stake-us/index.html">Stake.us</a>
-          <a href="./legendz/index.html">Legendz</a>
-          <a href="./shuffle/index.html">Shuffle.us</a>
-          <div class="nav-dropdown-divider"></div>
-          <a href="./compare.html">All 11 Platforms</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger">Reviews <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
-        <div class="nav-dropdown-menu">
-          <a href="./stake-us/review.html">Stake.us Review</a>
-          <a href="./legendz/review.html">Legendz Review</a>
-          <a href="./shuffle/review.html">Shuffle.us Review</a>
-          <div class="nav-dropdown-divider"></div>
-          <a href="./compare.html">Compare All</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger">Promo Codes <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
-        <div class="nav-dropdown-menu">
-          <a href="./stake-us/promo-code.html">Stake.us Promo Code</a>
-          <a href="./legendz/promo-code.html">Legendz Promo Code</a>
-          <a href="./shuffle/promo-code.html">Shuffle.us Promo Code</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger">Guides <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
-        <div class="nav-dropdown-menu nav-dropdown-menu--wide">
-          <div class="nav-dropdown-col">
-            <span class="nav-dropdown-heading">Stake.us</span>
-            <a href="./stake-us/bonus-guide.html">Bonus Guide</a>
-            <a href="./stake-us/games-guide.html">Games Guide</a>
-            <a href="./stake-us/stake-us-vip-program.html">VIP Program</a>
-            <a href="./stake-us/payments.html">Payments</a>
-            <a href="./stake-us/news.html">All Stake.us Guides</a>
-          </div>
-          <div class="nav-dropdown-col">
-            <span class="nav-dropdown-heading">Legendz</span>
-            <a href="./legendz/legendz-bonus-guide.html">Bonus Guide</a>
-            <a href="./legendz/legendz-games.html">Games</a>
-            <a href="./legendz/legendz-sportsbook.html">Sportsbook</a>
-            <a href="./legendz/legendz-payments.html">Payments</a>
-            <a href="./legendz/guides.html">All Legendz Guides</a>
-          </div>
-          <div class="nav-dropdown-col">
-            <span class="nav-dropdown-heading">Shuffle.us</span>
-            <a href="./shuffle/shuffle-bonus-guide.html">Bonus Guide</a>
-            <a href="./shuffle/shuffle-games.html">Games</a>
-            <a href="./shuffle/shuffle-originals.html">Originals</a>
-            <a href="./shuffle/shuffle-payments.html">Payments</a>
-            <a href="./shuffle/guides.html">All Shuffle.us Guides</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div class="nav-actions">
-      <button class="search-btn" aria-label="Search site">
+ <div class="container">
+ <a href="./index.html" class="site-logo">
+ <img width="32" height="32" decoding="async" src="./images/sweepstakesites-logo.svg" alt="SweepstakeSites" style="height:32px;width:auto;">
+ </a>
+ <nav class="nav-desktop" aria-label="Main navigation">
+ <div class="nav-dropdown">
+ <button class="nav-dropdown-trigger">Brands <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
+ <div class="nav-dropdown-menu">
+ <a href="./stake-us/index.html">Stake.us</a>
+ <a href="./legendz/index.html">Legendz</a>
+ <a href="./shuffle/index.html">Shuffle.us</a>
+ <div class="nav-dropdown-divider"></div>
+ <a href="./compare.html">All 11 Platforms</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown-trigger">Reviews <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
+ <div class="nav-dropdown-menu">
+ <a href="./stake-us/review.html">Stake.us Review</a>
+ <a href="./legendz/review.html">Legendz Review</a>
+ <a href="./shuffle/review.html">Shuffle.us Review</a>
+ <div class="nav-dropdown-divider"></div>
+ <a href="./compare.html">Compare All</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown-trigger">Promo Codes <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
+ <div class="nav-dropdown-menu">
+ <a href="./stake-us/promo-code.html">Stake.us Promo Code</a>
+ <a href="./legendz/promo-code.html">Legendz Promo Code</a>
+ <a href="./shuffle/promo-code.html">Shuffle.us Promo Code</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown-trigger">Guides <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
+ <div class="nav-dropdown-menu nav-dropdown-menu--wide">
+ <div class="nav-dropdown-col">
+ <span class="nav-dropdown-heading">Stake.us</span>
+ <a href="./stake-us/bonus-guide.html">Bonus Guide</a>
+ <a href="./stake-us/games-guide.html">Games Guide</a>
+ <a href="./stake-us/stake-us-vip-program.html">VIP Program</a>
+ <a href="./stake-us/payments.html">Payments</a>
+ <a href="./stake-us/news.html">All Stake.us Guides</a>
+ </div>
+ <div class="nav-dropdown-col">
+ <span class="nav-dropdown-heading">Legendz</span>
+ <a href="./legendz/legendz-bonus-guide.html">Bonus Guide</a>
+ <a href="./legendz/legendz-games.html">Games</a>
+ <a href="./legendz/legendz-sportsbook.html">Sportsbook</a>
+ <a href="./legendz/legendz-payments.html">Payments</a>
+ <a href="./legendz/guides.html">All Legendz Guides</a>
+ </div>
+ <div class="nav-dropdown-col">
+ <span class="nav-dropdown-heading">Shuffle.us</span>
+ <a href="./shuffle/shuffle-bonus-guide.html">Bonus Guide</a>
+ <a href="./shuffle/shuffle-games.html">Games</a>
+ <a href="./shuffle/shuffle-originals.html">Originals</a>
+ <a href="./shuffle/shuffle-payments.html">Payments</a>
+ <a href="./shuffle/guides.html">All Shuffle.us Guides</a>
+ </div>
+ </div>
+ </div>
+ </nav>
+ <div class="nav-actions">
+ <button class="search-btn" aria-label="Search site">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
 </button>
 <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <a href="./best-sweepstakes-sites.html" class="header-cta">Best Sweepstakes Sites</a>
-      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
-    </div>
-  </div>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+ </button>
+ <a href="./best-sweepstakes-sites.html" class="header-cta">Best Sweepstakes Sites</a>
+ <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+ </button>
+ </div>
+ </div>
 </header>
 <nav class="mobile-nav" aria-label="Mobile navigation">
-  <div class="mobile-nav-section">
-    <span class="mobile-nav-heading">Brands</span>
-    <a href="./stake-us/index.html">Stake.us</a>
-    <a href="./legendz/index.html">Legendz</a>
-    <a href="./shuffle/index.html">Shuffle.us</a>
-  </div>
-  <div class="mobile-nav-section">
-    <span class="mobile-nav-heading">Reviews</span>
-    <a href="./stake-us/review.html">Stake.us Review</a>
-    <a href="./legendz/review.html">Legendz Review</a>
-    <a href="./shuffle/review.html">Shuffle.us Review</a>
-    <a href="./compare.html">Compare All</a>
-  </div>
-  <div class="mobile-nav-section">
-    <span class="mobile-nav-heading">Promo Codes</span>
-    <a href="./stake-us/promo-code.html">Stake.us Promo Code</a>
-    <a href="./legendz/promo-code.html">Legendz Promo Code</a>
-    <a href="./shuffle/promo-code.html">Shuffle.us Promo Code</a>
-  </div>
-  <div class="mobile-nav-section">
-    <span class="mobile-nav-heading">Guides</span>
-    <a href="./stake-us/news.html">Stake.us Guides</a>
-    <a href="./legendz/guides.html">Legendz Guides</a>
-    <a href="./shuffle/guides.html">Shuffle.us Guides</a>
-  </div>
-  <a href="./best-sweepstakes-sites.html" class="nav-cta-mobile">Best Sweepstakes Sites &rarr;</a>
+ <div class="mobile-nav-section">
+ <span class="mobile-nav-heading">Brands</span>
+ <a href="./stake-us/index.html">Stake.us</a>
+ <a href="./legendz/index.html">Legendz</a>
+ <a href="./shuffle/index.html">Shuffle.us</a>
+ </div>
+ <div class="mobile-nav-section">
+ <span class="mobile-nav-heading">Reviews</span>
+ <a href="./stake-us/review.html">Stake.us Review</a>
+ <a href="./legendz/review.html">Legendz Review</a>
+ <a href="./shuffle/review.html">Shuffle.us Review</a>
+ <a href="./compare.html">Compare All</a>
+ </div>
+ <div class="mobile-nav-section">
+ <span class="mobile-nav-heading">Promo Codes</span>
+ <a href="./stake-us/promo-code.html">Stake.us Promo Code</a>
+ <a href="./legendz/promo-code.html">Legendz Promo Code</a>
+ <a href="./shuffle/promo-code.html">Shuffle.us Promo Code</a>
+ </div>
+ <div class="mobile-nav-section">
+ <span class="mobile-nav-heading">Guides</span>
+ <a href="./stake-us/news.html">Stake.us Guides</a>
+ <a href="./legendz/guides.html">Legendz Guides</a>
+ <a href="./shuffle/guides.html">Shuffle.us Guides</a>
+ </div>
+ <a href="./best-sweepstakes-sites.html" class="nav-cta-mobile">Best Sweepstakes Sites &rarr;</a>
 </nav>
 
 <section class="page-hero">
-  <div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./index.html">Home</a> &rsaquo; <span>Quiz</span></nav>
-    <h1>Which Sweepstakes Casino Fits Your Style?</h1>
-    <p>Answer 6 quick questions. We'll match you with the right platform based on what actually matters to you.</p>
-  </div>
+ <div class="container">
+ <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./index.html">Home</a> &rsaquo; <span>Quiz</span></nav>
+ <h1>Which Sweepstakes Casino Fits Your Style?</h1>
+ <p>Answer 6 quick questions. We'll match you with the right platform based on what actually matters to you.</p>
+ </div>
 </section>
 
 <main>
 <section class="section">
-  <div class="container quiz-container">
-    <div class="card" style="padding:var(--space-8);" id="quizCard">
+ <div class="container quiz-container">
+ <div class="card" style="padding:var(--space-8);" id="quizCard">
 
-      <!-- Progress dots -->
-      <div class="quiz-progress" id="quizProgress">
-        <div class="quiz-progress-dot active" data-dot="0"></div>
-        <div class="quiz-progress-dot" data-dot="1"></div>
-        <div class="quiz-progress-dot" data-dot="2"></div>
-        <div class="quiz-progress-dot" data-dot="3"></div>
-        <div class="quiz-progress-dot" data-dot="4"></div>
-        <div class="quiz-progress-dot" data-dot="5"></div>
-      </div>
+ <!-- Progress dots -->
+ <div class="quiz-progress" id="quizProgress">
+ <div class="quiz-progress-dot active" data-dot="0"></div>
+ <div class="quiz-progress-dot" data-dot="1"></div>
+ <div class="quiz-progress-dot" data-dot="2"></div>
+ <div class="quiz-progress-dot" data-dot="3"></div>
+ <div class="quiz-progress-dot" data-dot="4"></div>
+ <div class="quiz-progress-dot" data-dot="5"></div>
+ </div>
 
-      <!-- Question 1 -->
-      <div class="quiz-step is-active" data-step="0">
-        <div class="quiz-question-num">Question 1 of 6</div>
-        <h2 class="quiz-question">What matters most to you in a sweepstakes casino?</h2>
-        <div class="quiz-options">
-          <button class="quiz-option" data-value="0">
-            <span class="quiz-option-icon">&#127873;</span>
-            <span>Biggest no-purchase bonus</span>
-          </button>
-          <button class="quiz-option" data-value="1">
-            <span class="quiz-option-icon">&#9878;&#65039;</span>
-            <span>Lowest playthrough requirements</span>
-          </button>
-          <button class="quiz-option" data-value="2">
-            <span class="quiz-option-icon">&#127918;</span>
-            <span>Largest game library</span>
-          </button>
-          <button class="quiz-option" data-value="3">
-            <span class="quiz-option-icon">&#8383;</span>
-            <span>Crypto support</span>
-          </button>
-        </div>
-        <div class="quiz-nav"><span></span></div>
-      </div>
+ <!-- Question 1 -->
+ <div class="quiz-step is-active" data-step="0">
+ <div class="quiz-question-num">Question 1 of 6</div>
+ <h2 class="quiz-question">What matters most to you in a sweepstakes casino?</h2>
+ <div class="quiz-options">
+ <button class="quiz-option" data-value="0">
+ <span class="quiz-option-icon">&#127873;</span>
+ <span>Biggest no-purchase bonus</span>
+ </button>
+ <button class="quiz-option" data-value="1">
+ <span class="quiz-option-icon">&#9878;&#65039;</span>
+ <span>Lowest playthrough requirements</span>
+ </button>
+ <button class="quiz-option" data-value="2">
+ <span class="quiz-option-icon">&#127918;</span>
+ <span>Largest game library</span>
+ </button>
+ <button class="quiz-option" data-value="3">
+ <span class="quiz-option-icon">&#8383;</span>
+ <span>Crypto support</span>
+ </button>
+ </div>
+ <div class="quiz-nav"><span></span></div>
+ </div>
 
-      <!-- Question 2 -->
-      <div class="quiz-step" data-step="1">
-        <div class="quiz-question-num">Question 2 of 6</div>
-        <h2 class="quiz-question">How do you prefer to play?</h2>
-        <div class="quiz-options">
-          <button class="quiz-option" data-value="0">
-            <span class="quiz-option-icon">&#128640;</span>
-            <span>Provably fair originals (Crash, Plinko, Mines)</span>
-          </button>
-          <button class="quiz-option" data-value="1">
-            <span class="quiz-option-icon">&#127920;</span>
-            <span>Slots and table games</span>
-          </button>
-          <button class="quiz-option" data-value="2">
-            <span class="quiz-option-icon">&#9917;</span>
-            <span>Sports alongside sweepstakes games</span>
-          </button>
-          <button class="quiz-option" data-value="3">
-            <span class="quiz-option-icon">&#127923;</span>
-            <span>Fish games and arcade titles</span>
-          </button>
-        </div>
-        <div class="quiz-nav">
-          <button class="quiz-back" data-back>&larr; Back</button>
-        </div>
-      </div>
+ <!-- Question 2 -->
+ <div class="quiz-step" data-step="1">
+ <div class="quiz-question-num">Question 2 of 6</div>
+ <h2 class="quiz-question">How do you prefer to play?</h2>
+ <div class="quiz-options">
+ <button class="quiz-option" data-value="0">
+ <span class="quiz-option-icon">&#128640;</span>
+ <span>Provably fair originals (Crash, Plinko, Mines)</span>
+ </button>
+ <button class="quiz-option" data-value="1">
+ <span class="quiz-option-icon">&#127920;</span>
+ <span>Slots and table games</span>
+ </button>
+ <button class="quiz-option" data-value="2">
+ <span class="quiz-option-icon">&#9917;</span>
+ <span>Sports alongside sweepstakes games</span>
+ </button>
+ <button class="quiz-option" data-value="3">
+ <span class="quiz-option-icon">&#127923;</span>
+ <span>Fish games and arcade titles</span>
+ </button>
+ </div>
+ <div class="quiz-nav">
+ <button class="quiz-back" data-back>&larr; Back</button>
+ </div>
+ </div>
 
-      <!-- Question 3 -->
-      <div class="quiz-step" data-step="2">
-        <div class="quiz-question-num">Question 3 of 6</div>
-        <h2 class="quiz-question">How many US states should the platform cover?</h2>
-        <div class="quiz-options">
-          <button class="quiz-option" data-value="0">
-            <span class="quiz-option-icon">&#127758;</span>
-            <span>45+ states (widest coverage)</span>
-          </button>
-          <button class="quiz-option" data-value="1">
-            <span class="quiz-option-icon">&#127463;</span>
-            <span>35+ states (good coverage)</span>
-          </button>
-          <button class="quiz-option" data-value="2">
-            <span class="quiz-option-icon">&#9989;</span>
-            <span>Does not matter, I already checked my state</span>
-          </button>
-        </div>
-        <div class="quiz-nav">
-          <button class="quiz-back" data-back>&larr; Back</button>
-        </div>
-      </div>
+ <!-- Question 3 -->
+ <div class="quiz-step" data-step="2">
+ <div class="quiz-question-num">Question 3 of 6</div>
+ <h2 class="quiz-question">How many US states should the platform cover?</h2>
+ <div class="quiz-options">
+ <button class="quiz-option" data-value="0">
+ <span class="quiz-option-icon">&#127758;</span>
+ <span>45+ states (widest coverage)</span>
+ </button>
+ <button class="quiz-option" data-value="1">
+ <span class="quiz-option-icon">&#127463;</span>
+ <span>35+ states (good coverage)</span>
+ </button>
+ <button class="quiz-option" data-value="2">
+ <span class="quiz-option-icon">&#9989;</span>
+ <span>Does not matter, I already checked my state</span>
+ </button>
+ </div>
+ <div class="quiz-nav">
+ <button class="quiz-back" data-back>&larr; Back</button>
+ </div>
+ </div>
 
-      <!-- Question 4 -->
-      <div class="quiz-step" data-step="3">
-        <div class="quiz-question-num">Question 4 of 6</div>
-        <h2 class="quiz-question">Do you need crypto redemptions?</h2>
-        <div class="quiz-options">
-          <button class="quiz-option" data-value="0">
-            <span class="quiz-option-icon">&#8383;</span>
-            <span>Yes, crypto is essential</span>
-          </button>
-          <button class="quiz-option" data-value="1">
-            <span class="quiz-option-icon">&#127974;</span>
-            <span>No, bank transfer or gift cards are fine</span>
-          </button>
-          <button class="quiz-option" data-value="2">
-            <span class="quiz-option-icon">&#128260;</span>
-            <span>Either works</span>
-          </button>
-        </div>
-        <div class="quiz-nav">
-          <button class="quiz-back" data-back>&larr; Back</button>
-        </div>
-      </div>
+ <!-- Question 4 -->
+ <div class="quiz-step" data-step="3">
+ <div class="quiz-question-num">Question 4 of 6</div>
+ <h2 class="quiz-question">Do you need crypto redemptions?</h2>
+ <div class="quiz-options">
+ <button class="quiz-option" data-value="0">
+ <span class="quiz-option-icon">&#8383;</span>
+ <span>Yes, crypto is essential</span>
+ </button>
+ <button class="quiz-option" data-value="1">
+ <span class="quiz-option-icon">&#127974;</span>
+ <span>No, bank transfer or gift cards are fine</span>
+ </button>
+ <button class="quiz-option" data-value="2">
+ <span class="quiz-option-icon">&#128260;</span>
+ <span>Either works</span>
+ </button>
+ </div>
+ <div class="quiz-nav">
+ <button class="quiz-back" data-back>&larr; Back</button>
+ </div>
+ </div>
 
-      <!-- Question 5 -->
-      <div class="quiz-step" data-step="4">
-        <div class="quiz-question-num">Question 5 of 6</div>
-        <h2 class="quiz-question">What kind of track record matters?</h2>
-        <div class="quiz-options">
-          <button class="quiz-option" data-value="0">
-            <span class="quiz-option-icon">&#127942;</span>
-            <span>Longest operating history (10+ years)</span>
-          </button>
-          <button class="quiz-option" data-value="1">
-            <span class="quiz-option-icon">&#127760;</span>
-            <span>Backed by an established international brand</span>
-          </button>
-          <button class="quiz-option" data-value="2">
-            <span class="quiz-option-icon">&#10024;</span>
-            <span>Newest platforms with modern features</span>
-          </button>
-          <button class="quiz-option" data-value="3">
-            <span class="quiz-option-icon">&#129335;</span>
-            <span>Does not matter</span>
-          </button>
-        </div>
-        <div class="quiz-nav">
-          <button class="quiz-back" data-back>&larr; Back</button>
-        </div>
-      </div>
+ <!-- Question 5 -->
+ <div class="quiz-step" data-step="4">
+ <div class="quiz-question-num">Question 5 of 6</div>
+ <h2 class="quiz-question">What kind of track record matters?</h2>
+ <div class="quiz-options">
+ <button class="quiz-option" data-value="0">
+ <span class="quiz-option-icon">&#127942;</span>
+ <span>Longest operating history (10+ years)</span>
+ </button>
+ <button class="quiz-option" data-value="1">
+ <span class="quiz-option-icon">&#127760;</span>
+ <span>Backed by an established international brand</span>
+ </button>
+ <button class="quiz-option" data-value="2">
+ <span class="quiz-option-icon">&#10024;</span>
+ <span>Newest platforms with modern features</span>
+ </button>
+ <button class="quiz-option" data-value="3">
+ <span class="quiz-option-icon">&#129335;</span>
+ <span>Does not matter</span>
+ </button>
+ </div>
+ <div class="quiz-nav">
+ <button class="quiz-back" data-back>&larr; Back</button>
+ </div>
+ </div>
 
-      <!-- Question 6 -->
-      <div class="quiz-step" data-step="5">
-        <div class="quiz-question-num">Question 6 of 6</div>
-        <h2 class="quiz-question">How important is a VIP/loyalty program?</h2>
-        <div class="quiz-options">
-          <button class="quiz-option" data-value="0">
-            <span class="quiz-option-icon">&#128081;</span>
-            <span>Very important, I play regularly</span>
-          </button>
-          <button class="quiz-option" data-value="1">
-            <span class="quiz-option-icon">&#128077;</span>
-            <span>Nice to have but not a dealbreaker</span>
-          </button>
-          <button class="quiz-option" data-value="2">
-            <span class="quiz-option-icon">&#9940;</span>
-            <span>Not important</span>
-          </button>
-        </div>
-        <div class="quiz-nav">
-          <button class="quiz-back" data-back>&larr; Back</button>
-        </div>
-      </div>
+ <!-- Question 6 -->
+ <div class="quiz-step" data-step="5">
+ <div class="quiz-question-num">Question 6 of 6</div>
+ <h2 class="quiz-question">How important is a VIP/loyalty program?</h2>
+ <div class="quiz-options">
+ <button class="quiz-option" data-value="0">
+ <span class="quiz-option-icon">&#128081;</span>
+ <span>Very important, I play regularly</span>
+ </button>
+ <button class="quiz-option" data-value="1">
+ <span class="quiz-option-icon">&#128077;</span>
+ <span>Nice to have but not a dealbreaker</span>
+ </button>
+ <button class="quiz-option" data-value="2">
+ <span class="quiz-option-icon">&#9940;</span>
+ <span>Not important</span>
+ </button>
+ </div>
+ <div class="quiz-nav">
+ <button class="quiz-back" data-back>&larr; Back</button>
+ </div>
+ </div>
 
-      <!-- Result (hidden until quiz completes) -->
-      <div class="quiz-result" id="quizResult">
-        <div class="quiz-result-badge">&#10003; Quiz Complete</div>
-        <h2 id="resultTitle">Your #1 Match: ---</h2>
-        <p class="quiz-result-desc" id="resultDesc">Based on your answers, here is the sweepstakes platform that best fits your play style.</p>
+ <!-- Result (hidden until quiz completes) -->
+ <div class="quiz-result" id="quizResult">
+ <div class="quiz-result-badge">&#10003; Quiz Complete</div>
+ <h2 id="resultTitle">Your #1 Match: ---</h2>
+ <p class="quiz-result-desc" id="resultDesc">Based on your answers, here is the sweepstakes platform that best fits your play style.</p>
 
-        <div class="quiz-score-bar">
-          <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);">Match</span>
-          <div class="quiz-score-fill"><div id="scoreFill" style="width:0%"></div></div>
-          <span class="quiz-score-label" id="scorePct">0%</span>
-        </div>
+ <div class="quiz-score-bar">
+ <span style="font-size:var(--text-sm);font-weight:600;color:var(--color-text-muted);">Match</span>
+ <div class="quiz-score-fill"><div id="scoreFill" style="width:0%"></div></div>
+ <span class="quiz-score-label" id="scorePct">0%</span>
+ </div>
 
-        <div class="quiz-result-card">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);flex-wrap:wrap;gap:var(--space-2);">
-            <strong style="font-size:var(--text-lg);" id="resultPlatform">---</strong>
-            <span class="code-badge" id="resultBadge" style="display:none;">MAXBET</span>
-          </div>
-          <div class="quiz-result-reasons" id="resultReasons"></div>
-          <a id="resultCTA" href="#" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer" style="width:100%;text-align:center;margin-top:var(--space-4);">Visit Platform &rarr;</a>
-        </div>
+ <div class="quiz-result-card">
+ <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);flex-wrap:wrap;gap:var(--space-2);">
+ <strong style="font-size:var(--text-lg);" id="resultPlatform">---</strong>
+ <span class="code-badge" id="resultBadge" style="display:none;">MAXBET</span>
+ </div>
+ <div class="quiz-result-reasons" id="resultReasons"></div>
+ <a id="resultCTA" href="#" class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer" style="width:100%;text-align:center;margin-top:var(--space-4);">Visit Platform &rarr;</a>
+ </div>
 
-        <p style="font-size:var(--text-xs);color:var(--color-text-faint);">21+ | No purchase necessary | Void where prohibited</p>
-        <div class="quiz-retake"><button id="quizRetake">Retake Quiz</button></div>
-      </div>
+ <p style="font-size:var(--text-xs);color:var(--color-text-faint);">21+ | No purchase necessary | Void where prohibited</p>
+ <div class="quiz-retake"><button id="quizRetake">Retake Quiz</button></div>
+ </div>
 
-    </div>
-  </div>
+ </div>
+ </div>
 </section>
 </main>
 
@@ -538,345 +538,345 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 
 <script>
 (function(){
-  // Platform database
-  var platforms = {
-    'shuffle': {
-      name: 'Shuffle.us',
-      link: 'https://shuffle.us?r=MAXBET',
-      hasCode: true,
-      code: 'MAXBET',
-      reasons: [
-        'Crypto-native platform with full cryptocurrency support for purchases and redemptions',
-        'Provably fair originals including Crash, Plinko, Mines, and Dice',
-        'Fast crypto redemptions processed within minutes',
-        'Modern interface built for players who prefer digital currencies'
-      ]
-    },
-    'stake': {
-      name: 'Stake.us',
-      link: 'https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet',
-      hasCode: true,
-      code: 'MAXBET',
-      reasons: [
-        'Largest no-purchase bonus package among sweepstakes platforms',
-        '550+ games including 20+ exclusive Originals',
-        'Permanent rakeback on every play session',
-        'Daily login rewards for consistent players'
-      ]
-    },
-    'legendz': {
-      name: 'Legendz',
-      link: 'https://m.legendz.com/redirect.aspx?mid=37&sid=1136&cid=&pid=&affid=34&promo=MAXBET',
-      hasCode: true,
-      code: 'MAXBET',
-      reasons: [
-        'Low playthrough requirements on bonus coins',
-        'Integrated sportsbook alongside sweepstakes games',
-        'Modern platform with competitive redemption speeds',
-        'Growing game library with new titles added regularly'
-      ]
-    },
-    'fortunecoins': {
-      name: 'Fortune Coins',
-      link: 'https://fortunecoins.com/?promo=NEWBONUS',
-      hasCode: true,
-      code: 'NEWBONUS',
-      reasons: [
-        'Available in 47 states, the widest coverage of any sweepstakes platform',
-        '1,900+ games, one of the largest libraries available',
-        '1x playthrough requirement on bonus coins',
-        'Diverse game selection spanning slots, table games, and more'
-      ]
-    },
-    'wowvegas': {
-      name: 'WOW Vegas',
-      link: 'https://www.wowvegas.com/',
-      hasCode: false,
-      reasons: [
-        '1,500+ games across multiple categories',
-        'Available in 46 states for broad accessibility',
-        '1x playthrough on bonus coins',
-        'Strong mix of slots, table games, and specialty titles'
-      ]
-    },
-    'high5': {
-      name: 'High 5',
-      link: 'https://www.high5casino.com',
-      hasCode: false,
-      reasons: [
-        '1,700+ games with many exclusive slot titles',
-        'Established VIP loyalty program for regular players',
-        'Created by a well-known game developer with decades of experience',
-        '1x playthrough requirement on bonus coins'
-      ]
-    },
-    'chumba': {
-      name: 'Chumba',
-      link: 'https://www.chumbacasino.com/',
-      hasCode: false,
-      reasons: [
-        'Longest-running sweepstakes platform, operating since 2012',
-        'Proven track record with over a decade of reliable service',
-        'Available in 43 states with established redemption processes',
-        'Trusted brand recognized across the sweepstakes space'
-      ]
-    },
-    'pulsz': {
-      name: 'Pulsz',
-      link: 'https://www.pulsz.com',
-      hasCode: false,
-      reasons: [
-        'Strong VIP and loyalty program with daily bonuses',
-        '1,000+ games including popular slot and table titles',
-        '1x playthrough requirement on bonus coins',
-        'Regular promotions and rewards for active players'
-      ]
-    },
-    'rolla': {
-      name: 'Rolla',
-      link: 'https://www.rolla.com?promo=NEWBONUS',
-      hasCode: true,
-      code: 'NEWBONUS',
-      reasons: [
-        '1,800+ games with a slots-first focus and Rolla Originals',
-        'VIP program with daily rewards tailored for dedicated players',
-        'Massive game library rivaling the largest sweepstakes platforms',
-        'Ideal for players who want a slots-heavy experience with loyalty perks'
-      ]
-    },
-    'zula': {
-      name: 'Zula Casino',
-      link: 'https://zulacasino.com/?promo=NEWBONUS',
-      hasCode: true,
-      code: 'NEWBONUS',
-      reasons: [
-        'Strong provider lineup with Pragmatic Play and Hacksaw Gaming',
-        'Daily login bonus of 10,000 GC + 1 SC rewards consistent play',
-        '1,500+ games with 1x playthrough on Sweeps Coins',
-        'Available in 46+ states with broad accessibility'
-      ]
-    },
-    'americanluck': {
-      name: 'American Luck',
-      link: 'https://americanluck.com/?promo=NEWBONUS',
-      hasCode: true,
-      code: 'NEWBONUS',
-      reasons: [
-        '40 progressive jackpot slots for players who want to chase big prizes',
-        'Budget-friendly first purchase at just $4.99',
-        '1,500+ games from 26 providers with 1x playthrough',
-        'Newest Blazesoft platform with a slots-focused experience'
-      ]
-    }
-  };
+ // Platform database
+ var platforms = {
+ 'shuffle': {
+ name: 'Shuffle.us',
+ link: 'https://shuffle.us?r=MAXBET',
+ hasCode: true,
+ code: 'MAXBET',
+ reasons: [
+ 'Crypto-native platform with full cryptocurrency support for purchases and redemptions',
+ 'Provably fair originals including Crash, Plinko, Mines, and Dice',
+ 'Fast crypto redemptions processed within minutes',
+ 'Modern interface built for players who prefer digital currencies'
+ ]
+ },
+ 'stake': {
+ name: 'Stake.us',
+ link: 'https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet',
+ hasCode: true,
+ code: 'MAXBET',
+ reasons: [
+ 'Largest no-purchase bonus package among sweepstakes platforms',
+ '550+ games including 20+ exclusive Originals',
+ 'Permanent rakeback on every play session',
+ 'Daily login rewards for consistent players'
+ ]
+ },
+ 'legendz': {
+ name: 'Legendz',
+ link: 'https://m.legendz.com/redirect.aspx?mid=37&sid=1136&cid=&pid=&affid=34&promo=MAXBET',
+ hasCode: true,
+ code: 'MAXBET',
+ reasons: [
+ 'Low playthrough requirements on bonus coins',
+ 'Integrated sportsbook alongside sweepstakes games',
+ 'Modern platform with competitive redemption speeds',
+ 'Growing game library with new titles added regularly'
+ ]
+ },
+ 'fortunecoins': {
+ name: 'Fortune Coins',
+ link: 'https://fortunecoins.com/',
+ hasCode: true,
+ code: '',
+ reasons: [
+ 'Available in 47 states, the widest coverage of any sweepstakes platform',
+ '1,900+ games, one of the largest libraries available',
+ '1x playthrough requirement on bonus coins',
+ 'Diverse game selection spanning slots, table games, and more'
+ ]
+ },
+ 'wowvegas': {
+ name: 'WOW Vegas',
+ link: 'https://www.wowvegas.com/',
+ hasCode: false,
+ reasons: [
+ '1,500+ games across multiple categories',
+ 'Available in 46 states for broad accessibility',
+ '1x playthrough on bonus coins',
+ 'Strong mix of slots, table games, and specialty titles'
+ ]
+ },
+ 'high5': {
+ name: 'High 5',
+ link: 'https://www.high5casino.com',
+ hasCode: false,
+ reasons: [
+ '1,700+ games with many exclusive slot titles',
+ 'Established VIP loyalty program for regular players',
+ 'Created by a well-known game developer with decades of experience',
+ '1x playthrough requirement on bonus coins'
+ ]
+ },
+ 'chumba': {
+ name: 'Chumba',
+ link: 'https://www.chumbacasino.com/',
+ hasCode: false,
+ reasons: [
+ 'Longest-running sweepstakes platform, operating since 2012',
+ 'Proven track record with over a decade of reliable service',
+ 'Available in 43 states with established redemption processes',
+ 'Trusted brand recognized across the sweepstakes space'
+ ]
+ },
+ 'pulsz': {
+ name: 'Pulsz',
+ link: 'https://www.pulsz.com',
+ hasCode: false,
+ reasons: [
+ 'Strong VIP and loyalty program with daily bonuses',
+ '1,000+ games including popular slot and table titles',
+ '1x playthrough requirement on bonus coins',
+ 'Regular promotions and rewards for active players'
+ ]
+ },
+ 'rolla': {
+ name: 'Rolla',
+ link: 'https://www.rolla.com',
+ hasCode: true,
+ code: '',
+ reasons: [
+ '1,800+ games with a slots-first focus and Rolla Originals',
+ 'VIP program with daily rewards tailored for dedicated players',
+ 'Massive game library rivaling the largest sweepstakes platforms',
+ 'Ideal for players who want a slots-heavy experience with loyalty perks'
+ ]
+ },
+ 'zula': {
+ name: 'Zula Casino',
+ link: 'https://zulacasino.com/',
+ hasCode: true,
+ code: '',
+ reasons: [
+ 'Strong provider lineup with Pragmatic Play and Hacksaw Gaming',
+ 'Daily login bonus of 10,000 GC + 1 SC rewards consistent play',
+ '1,500+ games with 1x playthrough on Sweeps Coins',
+ 'Available in 46+ states with broad accessibility'
+ ]
+ },
+ 'americanluck': {
+ name: 'American Luck',
+ link: 'https://americanluck.com/',
+ hasCode: true,
+ code: '',
+ reasons: [
+ '40 progressive jackpot slots for players who want to chase big prizes',
+ 'Budget-friendly first purchase at just $4.99',
+ '1,500+ games from 26 providers with 1x playthrough',
+ 'Newest Blazesoft platform with a slots-focused experience'
+ ]
+ }
+ };
 
-  // Scoring matrix: each question maps answer index to platform score boosts
-  // Q1: What matters most? (bonus=0, playthrough=1, games=2, crypto=3)
-  // Q2: Play style? (originals=0, slots/table=1, sports=2, fish/arcade=3)
-  // Q3: State coverage? (45+=0, 35+=1, doesn't matter=2)
-  // Q4: Crypto redemptions? (yes=0, no=1, either=2)
-  // Q5: Track record? (longest=0, international=1, newest=2, doesn't matter=3)
-  // Q6: VIP importance? (very=0, nice=1, not=2)
+ // Scoring matrix: each question maps answer index to platform score boosts
+ // Q1: What matters most? (bonus=0, playthrough=1, games=2, crypto=3)
+ // Q2: Play style? (originals=0, slots/table=1, sports=2, fish/arcade=3)
+ // Q3: State coverage? (45+=0, 35+=1, doesn't matter=2)
+ // Q4: Crypto redemptions? (yes=0, no=1, either=2)
+ // Q5: Track record? (longest=0, international=1, newest=2, doesn't matter=3)
+ // Q6: VIP importance? (very=0, nice=1, not=2)
 
-  function calcScores(answers) {
-    var scores = {
-      shuffle: 0, stake: 0, legendz: 0, fortunecoins: 0,
-      wowvegas: 0, high5: 0, chumba: 0, pulsz: 0, rolla: 0,
-      zula: 0, americanluck: 0
-    };
+ function calcScores(answers) {
+ var scores = {
+ shuffle: 0, stake: 0, legendz: 0, fortunecoins: 0,
+ wowvegas: 0, high5: 0, chumba: 0, pulsz: 0, rolla: 0,
+ zula: 0, americanluck: 0
+ };
 
-    // Q1: What matters most
-    var a0 = answers[0];
-    if (a0 === 0) { scores.stake += 5; scores.legendz += 3; scores.pulsz += 2; }       // biggest bonus
-    if (a0 === 1) { scores.legendz += 5; scores.fortunecoins += 4; scores.wowvegas += 4; scores.chumba += 3; scores.high5 += 3; scores.zula += 3; scores.americanluck += 3; } // lowest playthrough
-    if (a0 === 2) { scores.fortunecoins += 5; scores.wowvegas += 4; scores.high5 += 4; scores.rolla += 4; scores.stake += 3; scores.zula += 3; scores.americanluck += 3; } // largest library
-    if (a0 === 3) { scores.shuffle += 5; scores.stake += 3; }                           // crypto
+ // Q1: What matters most
+ var a0 = answers[0];
+ if (a0 === 0) { scores.stake += 5; scores.legendz += 3; scores.pulsz += 2; } // biggest bonus
+ if (a0 === 1) { scores.legendz += 5; scores.fortunecoins += 4; scores.wowvegas += 4; scores.chumba += 3; scores.high5 += 3; scores.zula += 3; scores.americanluck += 3; } // lowest playthrough
+ if (a0 === 2) { scores.fortunecoins += 5; scores.wowvegas += 4; scores.high5 += 4; scores.rolla += 4; scores.stake += 3; scores.zula += 3; scores.americanluck += 3; } // largest library
+ if (a0 === 3) { scores.shuffle += 5; scores.stake += 3; } // crypto
 
-    // Q2: Play style
-    var a1 = answers[1];
-    if (a1 === 0) { scores.shuffle += 5; scores.stake += 4; }                           // provably fair originals
-    if (a1 === 1) { scores.wowvegas += 4; scores.high5 += 4; scores.rolla += 5; scores.fortunecoins += 3; scores.chumba += 3; scores.pulsz += 3; scores.zula += 3; scores.americanluck += 4; } // slots & table
-    if (a1 === 2) { scores.legendz += 5; }                                              // sports
-    if (a1 === 3) { scores.fortunecoins += 3; scores.wowvegas += 4; scores.high5 += 2; scores.americanluck += 2; } // fish/arcade
+ // Q2: Play style
+ var a1 = answers[1];
+ if (a1 === 0) { scores.shuffle += 5; scores.stake += 4; } // provably fair originals
+ if (a1 === 1) { scores.wowvegas += 4; scores.high5 += 4; scores.rolla += 5; scores.fortunecoins += 3; scores.chumba += 3; scores.pulsz += 3; scores.zula += 3; scores.americanluck += 4; } // slots & table
+ if (a1 === 2) { scores.legendz += 5; } // sports
+ if (a1 === 3) { scores.fortunecoins += 3; scores.wowvegas += 4; scores.high5 += 2; scores.americanluck += 2; } // fish/arcade
 
-    // Q3: State coverage
-    var a2 = answers[2];
-    if (a2 === 0) { scores.fortunecoins += 4; scores.wowvegas += 3; scores.chumba += 2; scores.zula += 3; } // widest
-    if (a2 === 1) { scores.high5 += 2; scores.pulsz += 2; scores.stake += 2; scores.legendz += 2; }
-    // a2 === 2: doesn't matter, no boost
+ // Q3: State coverage
+ var a2 = answers[2];
+ if (a2 === 0) { scores.fortunecoins += 4; scores.wowvegas += 3; scores.chumba += 2; scores.zula += 3; } // widest
+ if (a2 === 1) { scores.high5 += 2; scores.pulsz += 2; scores.stake += 2; scores.legendz += 2; }
+ // a2 === 2: doesn't matter, no boost
 
-    // Q4: Crypto redemptions
-    var a3 = answers[3];
-    if (a3 === 0) { scores.shuffle += 5; scores.stake += 3; }                           // crypto essential
-    if (a3 === 1) { scores.fortunecoins += 2; scores.wowvegas += 2; scores.chumba += 2; scores.high5 += 2; scores.pulsz += 2; scores.rolla += 3; scores.zula += 2; scores.americanluck += 2; }
-    // a3 === 2: either, slight boost to crypto platforms
-    if (a3 === 2) { scores.shuffle += 1; scores.stake += 1; }
+ // Q4: Crypto redemptions
+ var a3 = answers[3];
+ if (a3 === 0) { scores.shuffle += 5; scores.stake += 3; } // crypto essential
+ if (a3 === 1) { scores.fortunecoins += 2; scores.wowvegas += 2; scores.chumba += 2; scores.high5 += 2; scores.pulsz += 2; scores.rolla += 3; scores.zula += 2; scores.americanluck += 2; }
+ // a3 === 2: either, slight boost to crypto platforms
+ if (a3 === 2) { scores.shuffle += 1; scores.stake += 1; }
 
-    // Q5: Track record
-    var a4 = answers[4];
-    if (a4 === 0) { scores.chumba += 5; scores.high5 += 2; }                            // longest history
-    if (a4 === 1) { scores.stake += 4; scores.shuffle += 3; scores.high5 += 2; }        // international brand
-    if (a4 === 2) { scores.legendz += 3; scores.shuffle += 2; scores.pulsz += 2; scores.fortunecoins += 2; scores.rolla += 2; scores.zula += 3; scores.americanluck += 4; } // newest/modern
-    // a4 === 3: doesn't matter
+ // Q5: Track record
+ var a4 = answers[4];
+ if (a4 === 0) { scores.chumba += 5; scores.high5 += 2; } // longest history
+ if (a4 === 1) { scores.stake += 4; scores.shuffle += 3; scores.high5 += 2; } // international brand
+ if (a4 === 2) { scores.legendz += 3; scores.shuffle += 2; scores.pulsz += 2; scores.fortunecoins += 2; scores.rolla += 2; scores.zula += 3; scores.americanluck += 4; } // newest/modern
+ // a4 === 3: doesn't matter
 
-    // Q6: VIP importance
-    var a5 = answers[5];
-    if (a5 === 0) { scores.pulsz += 5; scores.high5 += 4; scores.rolla += 4; scores.stake += 3; }         // very important
-    if (a5 === 1) { scores.pulsz += 2; scores.high5 += 2; scores.rolla += 2; scores.stake += 1; }         // nice to have
-    // a5 === 2: not important
+ // Q6: VIP importance
+ var a5 = answers[5];
+ if (a5 === 0) { scores.pulsz += 5; scores.high5 += 4; scores.rolla += 4; scores.stake += 3; } // very important
+ if (a5 === 1) { scores.pulsz += 2; scores.high5 += 2; scores.rolla += 2; scores.stake += 1; } // nice to have
+ // a5 === 2: not important
 
-    return scores;
-  }
+ return scores;
+ }
 
-  var answers = [];
-  var current = 0;
-  var totalSteps = 6;
-  var steps = document.querySelectorAll('.quiz-step');
-  var dots = document.querySelectorAll('.quiz-progress-dot');
-  var resultEl = document.getElementById('quizResult');
+ var answers = [];
+ var current = 0;
+ var totalSteps = 6;
+ var steps = document.querySelectorAll('.quiz-step');
+ var dots = document.querySelectorAll('.quiz-progress-dot');
+ var resultEl = document.getElementById('quizResult');
 
-  function updateProgress() {
-    dots.forEach(function(dot, i) {
-      dot.className = 'quiz-progress-dot';
-      if (i < current) dot.classList.add('done');
-      else if (i === current) dot.classList.add('active');
-    });
-  }
+ function updateProgress() {
+ dots.forEach(function(dot, i) {
+ dot.className = 'quiz-progress-dot';
+ if (i < current) dot.classList.add('done');
+ else if (i === current) dot.classList.add('active');
+ });
+ }
 
-  function showStep(idx) {
-    steps.forEach(function(s) { s.classList.remove('is-active'); });
-    resultEl.classList.remove('is-active');
-    if (idx < totalSteps) {
-      steps[idx].classList.add('is-active');
-    }
-    current = idx;
-    updateProgress();
-  }
+ function showStep(idx) {
+ steps.forEach(function(s) { s.classList.remove('is-active'); });
+ resultEl.classList.remove('is-active');
+ if (idx < totalSteps) {
+ steps[idx].classList.add('is-active');
+ }
+ current = idx;
+ updateProgress();
+ }
 
-  function showResult() {
-    steps.forEach(function(s) { s.classList.remove('is-active'); });
-    // Mark all dots as done
-    dots.forEach(function(dot) {
-      dot.className = 'quiz-progress-dot done';
-    });
+ function showResult() {
+ steps.forEach(function(s) { s.classList.remove('is-active'); });
+ // Mark all dots as done
+ dots.forEach(function(dot) {
+ dot.className = 'quiz-progress-dot done';
+ });
 
-    var scores = calcScores(answers);
+ var scores = calcScores(answers);
 
-    // Find winner
-    var best = null;
-    var bestScore = -1;
-    for (var key in scores) {
-      if (scores[key] > bestScore) {
-        bestScore = scores[key];
-        best = key;
-      }
-    }
+ // Find winner
+ var best = null;
+ var bestScore = -1;
+ for (var key in scores) {
+ if (scores[key] > bestScore) {
+ bestScore = scores[key];
+ best = key;
+ }
+ }
 
-    var maxPossible = 0;
-    // Calculate rough max possible score
-    for (var k in scores) {
-      if (scores[k] > maxPossible) maxPossible = scores[k];
-    }
-    // Normalize percentage into a 72-96 range for a polished feel
-    var pct = Math.min(96, Math.max(72, Math.round(72 + (bestScore / 25) * 24)));
+ var maxPossible = 0;
+ // Calculate rough max possible score
+ for (var k in scores) {
+ if (scores[k] > maxPossible) maxPossible = scores[k];
+ }
+ // Normalize percentage into a 72-96 range for a polished feel
+ var pct = Math.min(96, Math.max(72, Math.round(72 + (bestScore / 25) * 24)));
 
-    var platform = platforms[best];
+ var platform = platforms[best];
 
-    document.getElementById('resultTitle').textContent = 'Your #1 Match: ' + platform.name;
-    document.getElementById('resultDesc').textContent = 'Based on your answers, ' + platform.name + ' is the sweepstakes platform that best fits your play style.';
-    document.getElementById('resultPlatform').textContent = platform.name;
-    document.getElementById('resultCTA').href = platform.link;
-    document.getElementById('resultCTA').textContent = 'Visit ' + platform.name + ' \u2192';
+ document.getElementById('resultTitle').textContent = 'Your #1 Match: ' + platform.name;
+ document.getElementById('resultDesc').textContent = 'Based on your answers, ' + platform.name + ' is the sweepstakes platform that best fits your play style.';
+ document.getElementById('resultPlatform').textContent = platform.name;
+ document.getElementById('resultCTA').href = platform.link;
+ document.getElementById('resultCTA').textContent = 'Visit ' + platform.name + ' \u2192';
 
-    var badge = document.getElementById('resultBadge');
-    if (platform.hasCode) {
-      badge.textContent = platform.code;
-      badge.style.display = 'inline-block';
-    } else {
-      badge.style.display = 'none';
-    }
+ var badge = document.getElementById('resultBadge');
+ if (platform.hasCode) {
+ badge.textContent = platform.code;
+ badge.style.display = 'inline-block';
+ } else {
+ badge.style.display = 'none';
+ }
 
-    // Render reasons
-    var reasonsHTML = '';
-    var reasons = platform.reasons;
-    for (var r = 0; r < reasons.length; r++) {
-      reasonsHTML += '<div class="quiz-result-reason"><span>&#10003;</span><span>' + reasons[r] + '</span></div>';
-    }
-    document.getElementById('resultReasons').innerHTML = reasonsHTML;
+ // Render reasons
+ var reasonsHTML = '';
+ var reasons = platform.reasons;
+ for (var r = 0; r < reasons.length; r++) {
+ reasonsHTML += '<div class="quiz-result-reason"><span>&#10003;</span><span>' + reasons[r] + '</span></div>';
+ }
+ document.getElementById('resultReasons').innerHTML = reasonsHTML;
 
-    resultEl.classList.add('is-active');
+ resultEl.classList.add('is-active');
 
-    // Animate score
-    setTimeout(function() {
-      document.getElementById('scoreFill').style.width = pct + '%';
-      var el = document.getElementById('scorePct');
-      var c = 0;
-      var interval = setInterval(function() {
-        c += 2;
-        if (c >= pct) { c = pct; clearInterval(interval); }
-        el.textContent = c + '%';
-      }, 20);
-    }, 200);
+ // Animate score
+ setTimeout(function() {
+ document.getElementById('scoreFill').style.width = pct + '%';
+ var el = document.getElementById('scorePct');
+ var c = 0;
+ var interval = setInterval(function() {
+ c += 2;
+ if (c >= pct) { c = pct; clearInterval(interval); }
+ el.textContent = c + '%';
+ }, 20);
+ }, 200);
 
-    // Track in GA
-    if (typeof gtag === 'function') {
-      gtag('event', 'quiz_complete', { event_category: 'engagement', event_label: best, value: pct });
-    }
-  }
+ // Track in GA
+ if (typeof gtag === 'function') {
+ gtag('event', 'quiz_complete', { event_category: 'engagement', event_label: best, value: pct });
+ }
+ }
 
-  // Bind option clicks
-  steps.forEach(function(step, stepIdx) {
-    var opts = step.querySelectorAll('.quiz-option');
-    opts.forEach(function(opt) {
-      opt.addEventListener('click', function() {
-        answers[stepIdx] = parseInt(this.getAttribute('data-value'));
-        // Highlight selected
-        opts.forEach(function(o) { o.classList.remove('selected'); });
-        this.classList.add('selected');
-        // Auto-advance after short delay
-        setTimeout(function() {
-          if (stepIdx < totalSteps - 1) {
-            showStep(stepIdx + 1);
-          } else {
-            showResult();
-          }
-        }, 300);
-      });
-    });
+ // Bind option clicks
+ steps.forEach(function(step, stepIdx) {
+ var opts = step.querySelectorAll('.quiz-option');
+ opts.forEach(function(opt) {
+ opt.addEventListener('click', function() {
+ answers[stepIdx] = parseInt(this.getAttribute('data-value'));
+ // Highlight selected
+ opts.forEach(function(o) { o.classList.remove('selected'); });
+ this.classList.add('selected');
+ // Auto-advance after short delay
+ setTimeout(function() {
+ if (stepIdx < totalSteps - 1) {
+ showStep(stepIdx + 1);
+ } else {
+ showResult();
+ }
+ }, 300);
+ });
+ });
 
-    // Back buttons
-    var backBtn = step.querySelector('[data-back]');
-    if (backBtn) {
-      backBtn.addEventListener('click', function() {
-        showStep(stepIdx - 1);
-      });
-    }
-  });
+ // Back buttons
+ var backBtn = step.querySelector('[data-back]');
+ if (backBtn) {
+ backBtn.addEventListener('click', function() {
+ showStep(stepIdx - 1);
+ });
+ }
+ });
 
-  // Retake
-  document.getElementById('quizRetake').addEventListener('click', function() {
-    answers = [];
-    // Clear all selections
-    document.querySelectorAll('.quiz-option.selected').forEach(function(o) {
-      o.classList.remove('selected');
-    });
-    // Reset score bar
-    document.getElementById('scoreFill').style.width = '0%';
-    document.getElementById('scorePct').textContent = '0%';
-    showStep(0);
-  });
+ // Retake
+ document.getElementById('quizRetake').addEventListener('click', function() {
+ answers = [];
+ // Clear all selections
+ document.querySelectorAll('.quiz-option.selected').forEach(function(o) {
+ o.classList.remove('selected');
+ });
+ // Reset score bar
+ document.getElementById('scoreFill').style.width = '0%';
+ document.getElementById('scorePct').textContent = '0%';
+ showStep(0);
+ });
 
 })();
 </script>
 <!-- SEARCH OVERLAY -->
 <div id="searchOverlay" class="search-overlay">
-  <div class="search-box">
-    <div class="search-input-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-      <input type="text" class="search-input" placeholder="Search guides, games, bonuses..." autocomplete="off">
-      <button class="search-close" aria-label="Close search"><span aria-hidden="true">&#x2715;</span></button>
-    </div>
-    <div class="search-results"></div>
-  </div>
+ <div class="search-box">
+ <div class="search-input-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+ <input type="text" class="search-input" placeholder="Search guides, games, bonuses..." autocomplete="off">
+ <button class="search-close" aria-label="Close search"><span aria-hidden="true">&#x2715;</span></button>
+ </div>
+ <div class="search-results"></div>
+ </div>
 </div>
 <script src="./app.min.js" defer></script>
 </body>
