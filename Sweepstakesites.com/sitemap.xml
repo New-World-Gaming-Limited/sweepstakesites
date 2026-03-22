@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sweepstakesites.com/about</loc>
@@ -59,11 +59,6 @@
     <loc>https://sweepstakesites.com/stake-us/bonus-guide</loc>
     <lastmod>2026-03-21</lastmod>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sweepstakesites.com/stake-us/bonuses</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://sweepstakesites.com/stake-us/compare-guide</loc>
@@ -296,16 +291,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-free-bonus</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-free-money-code</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://sweepstakesites.com/stake-us/stake-gambling-age-requirement</loc>
     <lastmod>2026-03-21</lastmod>
     <priority>0.6</priority>
@@ -349,11 +334,6 @@
     <loc>https://sweepstakesites.com/stake-us/stake-mines-strategy</loc>
     <lastmod>2026-03-21</lastmod>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-monthly-bonus-calculator</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sweepstakesites.com/stake-us/stake-originals-strategy</loc>
@@ -426,11 +406,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-us-how-it-works</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://sweepstakesites.com/stake-us/stake-us-credit-card</loc>
     <lastmod>2026-03-21</lastmod>
     <priority>0.6</priority>
@@ -441,22 +416,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-us-daily-dollar-strategy</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://sweepstakesites.com/stake-us/stake-us-deposit-methods</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-us-free-sc</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-us-free-spins</loc>
     <lastmod>2026-03-21</lastmod>
     <priority>0.6</priority>
   </url>
@@ -476,27 +436,12 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-us-promo-code-maxbet</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://sweepstakesites.com/stake-us/stake-pump-game</loc>
     <lastmod>2026-03-21</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-us-real-money</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://sweepstakesites.com/stake-us/stake-us-referral-code</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-us-reload-bonus</loc>
     <lastmod>2026-03-21</lastmod>
     <priority>0.6</priority>
   </url>
@@ -507,16 +452,6 @@
   </url>
   <url>
     <loc>https://sweepstakesites.com/stake-us/stake-us-best-slots</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-us-sweepstakes-rules</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-us-sweepstakes</loc>
     <lastmod>2026-03-21</lastmod>
     <priority>0.6</priority>
   </url>
@@ -552,11 +487,6 @@
   </url>
   <url>
     <loc>https://sweepstakesites.com/stake-us/vip-calculator</loc>
-    <lastmod>2026-03-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sweepstakesites.com/stake-us/stake-weekly-bonus-calculator</loc>
     <lastmod>2026-03-21</lastmod>
     <priority>0.8</priority>
   </url>
