@@ -63,7 +63,7 @@
 .btn--success{background:var(--color-success);color:#ffffff}
 .btn--success:hover{filter:brightness(1.1);transform:translateY(-1px)}
 .btn svg{width:16px;height:16px}
-.section{padding:clamp(var(--space-6),4vw,var(--space-12)) 0}
+.section{contain:content;padding:clamp(var(--space-6),4vw,var(--space-12)) 0}
 .page-hero + main > .section:first-child,.page-hero + .section{padding-top:clamp(var(--space-5),3vw,var(--space-8))}
 .section--alt{background:var(--color-surface-2)}
 .section-header{margin-bottom:var(--space-8)}
@@ -91,7 +91,7 @@
 .faq-question:hover{color:var(--color-primary)}
 .faq-chevron{flex-shrink:0;width:20px;height:20px;color:var(--color-text-faint);transition:transform 280ms cubic-bezier(0.16,1,0.3,1)}
 .faq-item.open .faq-chevron{transform:rotate(180deg)}
-.faq-answer{max-height:0;overflow:hidden;transition:max-height 360ms cubic-bezier(0.16,1,0.3,1)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 250ms cubic-bezier(0.16,1,0.3,1)}
 .faq-item.open .faq-answer{max-height:600px}
 .faq-answer-inner{padding-bottom:var(--space-5);color:var(--color-text-muted);font-size:var(--text-sm);line-height:1.7}
 .steps{display:grid;gap:var(--space-4)}
@@ -104,7 +104,7 @@
 .score-row{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3) 0;border-bottom:1px solid var(--color-border-light)}
 .score-label{width:140px;font-weight:600;font-size:var(--text-sm);flex-shrink:0}
 .score-bar-track{flex:1;height:8px;background:var(--color-surface-2);border-radius:var(--radius-full);overflow:hidden}
-.score-bar-fill{height:100%;background:var(--color-primary);border-radius:var(--radius-full);transform-origin:left center;transition:transform 0.8s ease;will-change:transform}
+.score-bar-fill{height:100%;background:var(--color-primary);border-radius:var(--radius-full);transform-origin:left center;transition:transform 0.8s ease;will-change:transform;will-change:transform}
 .score-value{font-weight:700;font-size:var(--text-sm);color:var(--color-primary);min-width:48px;text-align:right}
 .sidebar-promo{background:var(--color-surface);border:2px solid var(--color-primary);border-radius:var(--radius-xl);box-shadow:0 8px 32px rgba(22,65,180,0.15);padding:var(--space-5);color:var(--color-text)}
 [data-theme="dark"] .sidebar-promo{background:var(--color-surface);border-color:var(--color-primary);box-shadow:0 8px 32px rgba(91,138,245,0.15)}
