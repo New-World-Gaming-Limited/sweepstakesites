@@ -72,7 +72,16 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- Google tag (gtag.js) -->
-<script defer src="https://www.googletagmanager.com/gtag/js?id=G-QZ0LVR6BPT"></script>
+<script>
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    var s = document.createElement('script');
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QZ0LVR6BPT';
+    s.async = true;
+    document.head.appendChild(s);
+  }, 2000);
+});
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -197,6 +206,7 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
     <a href="../stake-us/index.html">Stake.us</a>
     <a href="../legendz/index.html">Legendz</a>
     <a href="../shuffle/index.html">Shuffle.us</a>
+    <a href="../brands.html" style="font-weight:700;color:var(--color-primary);font-size:var(--text-sm);">All 11 Brands</a>
   </div>
   <div class="mobile-nav-section">
     <span class="mobile-nav-heading">Reviews</span>
@@ -211,12 +221,14 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
     <a href="../stake-us/promo-code.html">Stake.us Promo Code</a>
     <a href="../legendz/promo-code.html">Legendz Promo Code</a>
     <a href="../shuffle/promo-code.html">Shuffle.us Promo Code</a>
+    <a href="../promo-codes.html" style="font-weight:700;color:var(--color-primary);font-size:var(--text-sm);">All 11 Promo Codes</a>
   </div>
   <div class="mobile-nav-section">
     <span class="mobile-nav-heading">Guides</span>
     <a href="../stake-us/news.html">Stake.us Guides</a>
     <a href="../legendz/guides.html">Legendz Guides</a>
     <a href="../shuffle/guides.html">Shuffle.us Guides</a>
+    <a href="../guides.html" style="font-weight:700;color:var(--color-primary);font-size:var(--text-sm);">All Guides</a>
   </div>
   <a href="../best-sweepstakes-sites.html" class="nav-cta-mobile">Best Sweepstakes Sites &rarr;</a>
 </nav>
