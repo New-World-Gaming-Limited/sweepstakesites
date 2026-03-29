@@ -44,23 +44,23 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <link href="./style.min.css" rel="stylesheet">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://sweepstakesites.com/"},{"@type":"ListItem","position":2,"name":"State Legality Map","item":"https://sweepstakesites.com/state-map"}]
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [{"@type":"ListItem","position":1,"name":"Home","item":"https://sweepstakesites.com/"},{"@type":"ListItem","position":2,"name":"State Legality Map","item":"https://sweepstakesites.com/state-map"}]
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Sweepstakes Casino Legality Map: All 50 States",
-  "url": "https://sweepstakesites.com/state-map",
-  "description": "Interactive map and 50-state matrix showing where sweepstakes casinos are legal, restricted, or banned across the United States.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "SweepstakeSites",
-    "url": "https://sweepstakesites.com"
-  }
+ "@context": "https://schema.org",
+ "@type": "WebPage",
+ "name": "Sweepstakes Casino Legality Map: All 50 States",
+ "url": "https://sweepstakesites.com/state-map",
+ "description": "Interactive map and 50-state matrix showing where sweepstakes casinos are legal, restricted, or banned across the United States.",
+ "publisher": {
+ "@type": "Organization",
+ "name": "SweepstakeSites",
+ "url": "https://sweepstakesites.com"
+ }
 }
 </script>
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
@@ -74,19 +74,19 @@ a,button,[role="button"],input{transition:color 200ms cubic-bezier(.16,1,.3,1),b
 <!-- Google tag (gtag.js) -->
 <script>
 window.addEventListener('load', function() {
-  setTimeout(function() {
-    var s = document.createElement('script');
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QZ0LVR6BPT';
-    s.async = true;
-    document.head.appendChild(s);
-  }, 2000);
+ setTimeout(function() {
+ var s = document.createElement('script');
+ s.src = 'https://www.googletagmanager.com/gtag/js?id=G-QZ0LVR6BPT';
+ s.async = true;
+ document.head.appendChild(s);
+ }, 2000);
 });
 </script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-QZ0LVR6BPT');
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-QZ0LVR6BPT');
 </script>
 <link rel="preconnect" href="https://www.googletagmanager.com">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
@@ -94,25 +94,25 @@ window.addEventListener('load', function() {
 <style>
 /* State Map Page Styles */
 .map-container {
-  max-width: 960px;
-  margin: 0 auto;
-  position: relative;
+ max-width: 960px;
+ margin: 0 auto;
+ position: relative;
 }
 .map-container svg {
-  width: 100%;
-  height: auto;
-  display: block;
+ width: 100%;
+ height: auto;
+ display: block;
 }
 .state-path {
-  stroke: var(--color-surface);
-  stroke-width: 1;
-  cursor: pointer;
-  transition: opacity 0.15s ease, stroke-width 0.15s ease;
+ stroke: var(--color-surface);
+ stroke-width: 1;
+ cursor: pointer;
+ transition: opacity 0.15s ease, stroke-width 0.15s ease;
 }
 .state-path:hover {
-  opacity: 0.8;
-  stroke-width: 2;
-  stroke: var(--color-text);
+ opacity: 0.8;
+ stroke-width: 2;
+ stroke: var(--color-text);
 }
 .state-path[data-status="available"] { fill: #16a34a; }
 .state-path[data-status="banned"] { fill: #dc2626; }
@@ -124,125 +124,125 @@ window.addEventListener('load', function() {
 [data-theme="dark"] .state-path[data-status="restricted"] { fill: #f59e0b; }
 
 .map-tooltip {
-  position: fixed;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-2) var(--space-3);
-  font-size: var(--text-sm);
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.15s;
-  z-index: 200;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  max-width: 220px;
+ position: fixed;
+ background: var(--color-surface);
+ border: 1px solid var(--color-border);
+ border-radius: var(--radius-md);
+ padding: var(--space-2) var(--space-3);
+ font-size: var(--text-sm);
+ pointer-events: none;
+ opacity: 0;
+ transition: opacity 0.15s;
+ z-index: 200;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ max-width: 220px;
 }
 .map-tooltip.visible { opacity: 1; }
 .map-tooltip .tooltip-state { font-weight: 700; margin-bottom: 2px; }
 .map-tooltip .tooltip-status { font-size: var(--text-xs); }
 
 .map-legend {
-  display: flex;
-  gap: var(--space-4);
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: var(--space-4);
-  font-size: var(--text-sm);
+ display: flex;
+ gap: var(--space-4);
+ justify-content: center;
+ flex-wrap: wrap;
+ margin-top: var(--space-4);
+ font-size: var(--text-sm);
 }
 .map-legend-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
+ display: flex;
+ align-items: center;
+ gap: var(--space-2);
 }
 .map-legend-swatch {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  flex-shrink: 0;
+ width: 16px;
+ height: 16px;
+ border-radius: 3px;
+ flex-shrink: 0;
 }
 
 .map-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-4);
-  margin-top: var(--space-6);
-  text-align: center;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: var(--space-4);
+ margin-top: var(--space-6);
+ text-align: center;
 }
 .map-stat {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-lg);
-  padding: var(--space-4);
+ background: var(--color-surface);
+ border: 1px solid var(--color-border-light);
+ border-radius: var(--radius-lg);
+ padding: var(--space-4);
 }
 .map-stat-number {
-  font-size: var(--text-xl);
-  font-weight: 800;
-  font-family: var(--font-display);
-  line-height: 1;
+ font-size: var(--text-xl);
+ font-weight: 800;
+ font-family: var(--font-display);
+ line-height: 1;
 }
 .map-stat-number.green { color: #16a34a; }
 .map-stat-number.red { color: #dc2626; }
 .map-stat-number.yellow { color: #d97706; }
 .map-stat-label {
-  font-size: var(--text-xs);
-  color: var(--color-text-muted);
-  margin-top: var(--space-1);
+ font-size: var(--text-xs);
+ color: var(--color-text-muted);
+ margin-top: var(--space-1);
 }
 
 /* Filter buttons */
 .filter-bar {
-  display: flex;
-  gap: var(--space-2);
-  flex-wrap: wrap;
-  margin-bottom: var(--space-4);
+ display: flex;
+ gap: var(--space-2);
+ flex-wrap: wrap;
+ margin-bottom: var(--space-4);
 }
 .filter-btn {
-  padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-full);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  color: var(--color-text);
-  cursor: pointer;
-  transition: all 0.15s ease;
+ padding: var(--space-2) var(--space-4);
+ border-radius: var(--radius-full);
+ font-size: var(--text-sm);
+ font-weight: 600;
+ border: 1px solid var(--color-border);
+ background: var(--color-surface);
+ color: var(--color-text);
+ cursor: pointer;
+ transition: all 0.15s ease;
 }
 .filter-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
 .filter-btn.active { background: var(--color-primary); color: #fff; border-color: var(--color-primary); }
 
 /* Table */
 .state-matrix-wrap {
-  overflow-x: auto;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  background: var(--color-surface);
+ overflow-x: auto;
+ border: 1px solid var(--color-border);
+ border-radius: var(--radius-lg);
+ background: var(--color-surface);
 }
 .state-matrix {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: var(--text-sm);
+ width: 100%;
+ border-collapse: collapse;
+ font-size: var(--text-sm);
 }
 .state-matrix th {
-  text-align: left;
-  padding: var(--space-3) var(--space-4);
-  font-weight: 700;
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-text-muted);
-  background: var(--color-surface-alt);
-  border-bottom: 2px solid var(--color-border);
-  white-space: nowrap;
-  cursor: pointer;
-  user-select: none;
+ text-align: left;
+ padding: var(--space-3) var(--space-4);
+ font-weight: 700;
+ font-size: var(--text-xs);
+ text-transform: uppercase;
+ letter-spacing: 0.05em;
+ color: var(--color-text-muted);
+ background: var(--color-surface-alt);
+ border-bottom: 2px solid var(--color-border);
+ white-space: nowrap;
+ cursor: pointer;
+ user-select: none;
 }
 .state-matrix th:hover { color: var(--color-primary); }
 .state-matrix th .sort-arrow { opacity: 0.4; margin-left: 4px; }
 .state-matrix th.sorted .sort-arrow { opacity: 1; }
 .state-matrix td {
-  padding: var(--space-3) var(--space-4);
-  border-bottom: 1px solid var(--color-border-light);
-  vertical-align: middle;
+ padding: var(--space-3) var(--space-4);
+ border-bottom: 1px solid var(--color-border-light);
+ vertical-align: middle;
 }
 .state-matrix tr:last-child td { border-bottom: none; }
 .state-matrix tr:hover { background: var(--color-primary-surface); }
@@ -253,14 +253,14 @@ window.addEventListener('load', function() {
 .state-name-cell a:hover { text-decoration: underline; }
 
 .status-badge {
-  display: inline-block;
-  padding: 2px 10px;
-  border-radius: var(--radius-full);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  white-space: nowrap;
+ display: inline-block;
+ padding: 2px 10px;
+ border-radius: var(--radius-full);
+ font-size: var(--text-xs);
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 0.03em;
+ white-space: nowrap;
 }
 .status-badge--available { background: rgba(22,163,74,0.12); color: #16a34a; }
 .status-badge--banned { background: rgba(220,38,38,0.12); color: #dc2626; }
@@ -275,234 +275,234 @@ window.addEventListener('load', function() {
 .legislation-col { font-size: var(--text-xs); max-width: 200px; }
 
 .state-page-link {
-  color: var(--color-primary);
-  text-decoration: none;
-  font-size: var(--text-xs);
-  font-weight: 600;
-  white-space: nowrap;
+ color: var(--color-primary);
+ text-decoration: none;
+ font-size: var(--text-xs);
+ font-weight: 600;
+ white-space: nowrap;
 }
 .state-page-link:hover { text-decoration: underline; }
 
 /* Changelog */
 .changelog-list {
-  list-style: none;
-  padding: 0;
+ list-style: none;
+ padding: 0;
 }
 .changelog-item {
-  display: flex;
-  gap: var(--space-4);
-  padding: var(--space-4) 0;
-  border-bottom: 1px solid var(--color-border-light);
-  align-items: flex-start;
+ display: flex;
+ gap: var(--space-4);
+ padding: var(--space-4) 0;
+ border-bottom: 1px solid var(--color-border-light);
+ align-items: flex-start;
 }
 .changelog-item:last-child { border-bottom: none; }
 .changelog-date {
-  font-size: var(--text-xs);
-  font-weight: 700;
-  color: var(--color-text-muted);
-  white-space: nowrap;
-  min-width: 90px;
-  padding-top: 2px;
+ font-size: var(--text-xs);
+ font-weight: 700;
+ color: var(--color-text-muted);
+ white-space: nowrap;
+ min-width: 90px;
+ padding-top: 2px;
 }
 .changelog-text { font-size: var(--text-sm); }
 .changelog-text strong { color: var(--color-text); }
 
 /* FAQ */
 .faq-item {
-  border-bottom: 1px solid var(--color-border-light);
-  padding: var(--space-4) 0;
+ border-bottom: 1px solid var(--color-border-light);
+ padding: var(--space-4) 0;
 }
 .faq-item:last-child { border-bottom: none; }
 .faq-question {
-  font-weight: 700;
-  font-size: var(--text-base);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--space-3);
+ font-weight: 700;
+ font-size: var(--text-base);
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ gap: var(--space-3);
 }
 .faq-question::after {
-  content: '+';
-  font-size: var(--text-lg);
-  color: var(--color-text-muted);
-  flex-shrink: 0;
-  transition: transform 0.2s;
+ content: '+';
+ font-size: var(--text-lg);
+ color: var(--color-text-muted);
+ flex-shrink: 0;
+ transition: transform 0.2s;
 }
 .faq-item.open .faq-question::after { content: '-'; }
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  line-height: 1.7;
+ max-height: 0;
+ overflow: hidden;
+ transition: max-height 0.3s ease;
+ font-size: var(--text-sm);
+ color: var(--color-text-muted);
+ line-height: 1.7;
 }
 .faq-item.open .faq-answer { max-height: 500px; }
 .faq-answer p { margin-top: var(--space-3); }
 
 .sources-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: var(--space-2);
-  font-size: var(--text-sm);
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+ gap: var(--space-2);
+ font-size: var(--text-sm);
 }
 .sources-grid a {
-  color: var(--color-primary);
-  text-decoration: none;
-  padding: var(--space-2);
-  border-radius: var(--radius-sm);
-  display: block;
+ color: var(--color-primary);
+ text-decoration: none;
+ padding: var(--space-2);
+ border-radius: var(--radius-sm);
+ display: block;
 }
 .sources-grid a:hover { background: var(--color-primary-surface); text-decoration: underline; }
 
 @media (max-width: 640px) {
-  .map-stats { grid-template-columns: 1fr; gap: var(--space-2); }
-  .state-matrix th, .state-matrix td { padding: var(--space-2) var(--space-3); }
-  .restricted-col, .legislation-col { display: none; }
+ .map-stats { grid-template-columns: 1fr; gap: var(--space-2); }
+ .state-matrix th, .state-matrix td { padding: var(--space-2) var(--space-3); }
+ .restricted-col, .legislation-col { display: none; }
 }
 </style>
 </head>
 <body>
 
 <div class="disclosure-bar">
-  This site contains promotional content. <a href="./affiliate-disclosure.html">Affiliate Disclosure</a> &middot; 21+ &middot; No purchase necessary &middot; Void where prohibited
+ This site contains promotional content. <a href="./affiliate-disclosure.html">Affiliate Disclosure</a> &middot; 21+ &middot; No purchase necessary &middot; Void where prohibited
 </div>
 <header class="site-header">
-  <div class="container">
-    <a href="./index.html" class="site-logo">
-      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#2DD4BF"/><text x="16" y="24" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="24" fill="#fff" text-anchor="middle">S</text></svg>
-      SweepstakeSites
-    </a>
-    <nav class="nav-desktop" aria-label="Main navigation">
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger">Brands <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
-        <div class="nav-dropdown-menu">
-          <a href="./stake-us/index.html">Stake.us</a>
-          <a href="./legendz/index.html">Legendz</a>
-          <a href="./shuffle/index.html">Shuffle.us</a>
-          <div class="nav-dropdown-divider"></div>
-          <a href="./brands.html">All 11 Brands</a>
-          <a href="./compare.html">Compare Side-by-Side</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger">Reviews <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
-        <div class="nav-dropdown-menu">
-          <a href="./stake-us/review.html">Stake.us Review</a>
-          <a href="./legendz/review.html">Legendz Review</a>
-          <a href="./shuffle/review.html">Shuffle.us Review</a>
-          <div class="nav-dropdown-divider"></div>
-          <a href="./reviews.html">All 11 Reviews</a>
-          <a href="./compare.html">Compare Side-by-Side</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger">Promo Codes <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
-        <div class="nav-dropdown-menu">
-          <a href="./stake-us/promo-code.html">Stake.us Promo Code</a>
-          <a href="./legendz/promo-code.html">Legendz Promo Code</a>
-          <a href="./shuffle/promo-code.html">Shuffle.us Promo Code</a>
-          <div class="nav-dropdown-divider"></div>
-          <a href="./promo-codes.html">All 11 Promo Codes</a>
-        </div>
-      </div>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger">Guides <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
-        <div class="nav-dropdown-menu nav-dropdown-menu--wide">
-          <div class="nav-dropdown-col">
-            <span class="nav-dropdown-heading">Stake.us</span>
-            <a href="./stake-us/bonus-guide.html">Bonus Guide</a>
-            <a href="./stake-us/games-guide.html">Games Guide</a>
-            <a href="./stake-us/stake-us-vip-program.html">VIP Program</a>
-            <a href="./stake-us/payments.html">Payments</a>
-            <a href="./stake-us/news.html">All Stake.us Guides</a>
-          </div>
-          <div class="nav-dropdown-col">
-            <span class="nav-dropdown-heading">Legendz</span>
-            <a href="./legendz/legendz-bonus-guide.html">Bonus Guide</a>
-            <a href="./legendz/legendz-games.html">Games</a>
-            <a href="./legendz/legendz-sportsbook.html">Sportsbook</a>
-            <a href="./legendz/legendz-payments.html">Payments</a>
-            <a href="./legendz/guides.html">All Legendz Guides</a>
-          </div>
-          <div class="nav-dropdown-col">
-            <span class="nav-dropdown-heading">Shuffle.us</span>
-            <a href="./shuffle/shuffle-bonus-guide.html">Bonus Guide</a>
-            <a href="./shuffle/shuffle-games.html">Games</a>
-            <a href="./shuffle/shuffle-originals.html">Originals</a>
-            <a href="./shuffle/shuffle-payments.html">Payments</a>
-            <a href="./shuffle/guides.html">All Shuffle.us Guides</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <div class="nav-actions">
-      <button class="search-btn" aria-label="Search site">
+ <div class="container">
+ <a href="./index.html" class="site-logo">
+ <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#2DD4BF"/><text x="16" y="24" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="24" fill="#fff" text-anchor="middle">S</text></svg>
+ SweepstakeSites
+ </a>
+ <nav class="nav-desktop" aria-label="Main navigation">
+ <div class="nav-dropdown">
+ <button class="nav-dropdown-trigger">Brands <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
+ <div class="nav-dropdown-menu">
+ <a href="./stake-us/index.html">Stake.us</a>
+ <a href="./legendz/index.html">Legendz</a>
+ <a href="./shuffle/index.html">Shuffle.us</a>
+ <div class="nav-dropdown-divider"></div>
+ <a href="./brands.html">All 11 Brands</a>
+ <a href="./compare.html">Compare Side-by-Side</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown-trigger">Reviews <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
+ <div class="nav-dropdown-menu">
+ <a href="./stake-us/review.html">Stake.us Review</a>
+ <a href="./legendz/review.html">Legendz Review</a>
+ <a href="./shuffle/review.html">Shuffle.us Review</a>
+ <div class="nav-dropdown-divider"></div>
+ <a href="./reviews.html">All 11 Reviews</a>
+ <a href="./compare.html">Compare Side-by-Side</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown-trigger">Promo Codes <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
+ <div class="nav-dropdown-menu">
+ <a href="./stake-us/promo-code.html">Stake.us Promo Code</a>
+ <a href="./legendz/promo-code.html">Legendz Promo Code</a>
+ <a href="./shuffle/promo-code.html">Shuffle.us Promo Code</a>
+ <div class="nav-dropdown-divider"></div>
+ <a href="./promo-codes.html">All 11 Promo Codes</a>
+ </div>
+ </div>
+ <div class="nav-dropdown">
+ <button class="nav-dropdown-trigger">Guides <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4l3 3 3-3"/></svg></button>
+ <div class="nav-dropdown-menu nav-dropdown-menu--wide">
+ <div class="nav-dropdown-col">
+ <span class="nav-dropdown-heading">Stake.us</span>
+ <a href="./stake-us/bonus-guide.html">Bonus Guide</a>
+ <a href="./stake-us/games-guide.html">Games Guide</a>
+ <a href="./stake-us/stake-us-vip-program.html">VIP Program</a>
+ <a href="./stake-us/payments.html">Payments</a>
+ <a href="./stake-us/news.html">All Stake.us Guides</a>
+ </div>
+ <div class="nav-dropdown-col">
+ <span class="nav-dropdown-heading">Legendz</span>
+ <a href="./legendz/legendz-bonus-guide.html">Bonus Guide</a>
+ <a href="./legendz/legendz-games.html">Games</a>
+ <a href="./legendz/legendz-sportsbook.html">Sportsbook</a>
+ <a href="./legendz/legendz-payments.html">Payments</a>
+ <a href="./legendz/guides.html">All Legendz Guides</a>
+ </div>
+ <div class="nav-dropdown-col">
+ <span class="nav-dropdown-heading">Shuffle.us</span>
+ <a href="./shuffle/shuffle-bonus-guide.html">Bonus Guide</a>
+ <a href="./shuffle/shuffle-games.html">Games</a>
+ <a href="./shuffle/shuffle-originals.html">Originals</a>
+ <a href="./shuffle/shuffle-payments.html">Payments</a>
+ <a href="./shuffle/guides.html">All Shuffle.us Guides</a>
+ </div>
+ </div>
+ </div>
+ </nav>
+ <div class="nav-actions">
+ <button class="search-btn" aria-label="Search site">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
 </button>
 <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <a href="./best-sweepstakes-sites.html" class="header-cta">Best Sweepstakes Sites</a>
-      <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
-    </div>
-  </div>
+ <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+ </button>
+ <a href="./best-sweepstakes-sites.html" class="header-cta">Best Sweepstakes Sites</a>
+ <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+ </button>
+ </div>
+ </div>
 </header>
 <nav class="mobile-nav" aria-label="Mobile navigation">
-  <div class="mobile-nav-section">
-    <span class="mobile-nav-heading">Brands</span>
-    <a href="./stake-us/index.html">Stake.us</a>
-    <a href="./legendz/index.html">Legendz</a>
-    <a href="./shuffle/index.html">Shuffle.us</a>
-    <a href="./brands.html" style="font-weight:700;color:var(--color-primary);font-size:var(--text-sm);">All 11 Brands</a>
-  </div>
-  <div class="mobile-nav-section">
-    <span class="mobile-nav-heading">Reviews</span>
-    <a href="./stake-us/review.html">Stake.us Review</a>
-    <a href="./legendz/review.html">Legendz Review</a>
-    <a href="./shuffle/review.html">Shuffle.us Review</a>
-    <a href="./reviews.html">All 11 Reviews</a>
-    <a href="./compare.html">Compare Side-by-Side</a>
-  </div>
-  <div class="mobile-nav-section">
-    <span class="mobile-nav-heading">Promo Codes</span>
-    <a href="./stake-us/promo-code.html">Stake.us Promo Code</a>
-    <a href="./legendz/promo-code.html">Legendz Promo Code</a>
-    <a href="./shuffle/promo-code.html">Shuffle.us Promo Code</a>
-    <a href="./promo-codes.html" style="font-weight:700;color:var(--color-primary);font-size:var(--text-sm);">All 11 Promo Codes</a>
-  </div>
-  <div class="mobile-nav-section">
-    <span class="mobile-nav-heading">Guides</span>
-    <a href="./stake-us/news.html">Stake.us Guides</a>
-    <a href="./legendz/guides.html">Legendz Guides</a>
-    <a href="./shuffle/guides.html">Shuffle.us Guides</a>
-    <a href="./guides.html" style="font-weight:700;color:var(--color-primary);font-size:var(--text-sm);">All Guides</a>
-  </div>
-  <a href="./best-sweepstakes-sites.html" class="nav-cta-mobile">Best Sweepstakes Sites &rarr;</a>
+ <div class="mobile-nav-section">
+ <span class="mobile-nav-heading">Brands</span>
+ <a href="./stake-us/index.html">Stake.us</a>
+ <a href="./legendz/index.html">Legendz</a>
+ <a href="./shuffle/index.html">Shuffle.us</a>
+ <a href="./brands.html" style="font-weight:700;color:var(--color-primary);font-size:var(--text-sm);">All 11 Brands</a>
+ </div>
+ <div class="mobile-nav-section">
+ <span class="mobile-nav-heading">Reviews</span>
+ <a href="./stake-us/review.html">Stake.us Review</a>
+ <a href="./legendz/review.html">Legendz Review</a>
+ <a href="./shuffle/review.html">Shuffle.us Review</a>
+ <a href="./reviews.html">All 11 Reviews</a>
+ <a href="./compare.html">Compare Side-by-Side</a>
+ </div>
+ <div class="mobile-nav-section">
+ <span class="mobile-nav-heading">Promo Codes</span>
+ <a href="./stake-us/promo-code.html">Stake.us Promo Code</a>
+ <a href="./legendz/promo-code.html">Legendz Promo Code</a>
+ <a href="./shuffle/promo-code.html">Shuffle.us Promo Code</a>
+ <a href="./promo-codes.html" style="font-weight:700;color:var(--color-primary);font-size:var(--text-sm);">All 11 Promo Codes</a>
+ </div>
+ <div class="mobile-nav-section">
+ <span class="mobile-nav-heading">Guides</span>
+ <a href="./stake-us/news.html">Stake.us Guides</a>
+ <a href="./legendz/guides.html">Legendz Guides</a>
+ <a href="./shuffle/guides.html">Shuffle.us Guides</a>
+ <a href="./guides.html" style="font-weight:700;color:var(--color-primary);font-size:var(--text-sm);">All Guides</a>
+ </div>
+ <a href="./best-sweepstakes-sites.html" class="nav-cta-mobile">Best Sweepstakes Sites &rarr;</a>
 </nav>
 
 <section class="page-hero">
-  <div class="container">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./index.html">Home</a> &rsaquo; <span>State Legality Map</span></nav>
-    <h1>Sweepstakes Casino Legality by State</h1>
-    <p style="color:var(--color-text-muted);margin-top:var(--space-2);max-width:680px;">The regulatory landscape for sweepstakes casinos in the United States continues to evolve. This page tracks the legal status of social casino platforms across all 50 states, updated as new legislation takes effect.</p>
-  </div>
+ <div class="container">
+ <nav class="breadcrumb" aria-label="Breadcrumb"><a href="./index.html">Home</a> &rsaquo; <span>State Legality Map</span></nav>
+ <h1>Sweepstakes Casino Legality by State</h1>
+ <p style="color:var(--color-text-muted);margin-top:var(--space-2);max-width:680px;">The regulatory landscape for sweepstakes casinos in the United States continues to evolve. This page tracks the legal status of social casino platforms across all 50 states, updated as new legislation takes effect.</p>
+ </div>
 </section>
 
 <main>
 
 <!-- INTERACTIVE MAP -->
 <section class="section">
-  <div class="container">
-    <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-2);">Interactive Legality Map</h2>
-    <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);">Hover over any state for details. Click a state to jump to its row in the matrix below.</p>
-    
-    <div class="map-container">
-      <svg viewBox="-60 0 1020 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="United States map showing sweepstakes casino legality by state">
-        <path d="M647.959,492.438L651.817,491.506L651.888,491.008L652.913,491.779L652.335,492.308L651.583,492.052L648.984,492.646ZM641.604,383.982L641.533,383.709L655.888,382.587L666.466,381.851L685.217,380.022L689.237,379.66L689.948,382.444L693.257,393.954L702.455,427.024L703.084,427.374L702.891,428.116L703.856,428.881L704.506,431.76L705.338,433.078L706.678,434.289L707.094,435.862L707.775,436.486L707.308,438.848L708.668,439.24L709.551,439.934L708.942,441.021L707.511,442.077L706.719,443.187L707.074,444.262L707.135,445.953L706.851,447.669L705.917,450.091L706.627,452.453L706.597,453.32L708.079,454.863L708.607,457.143L708.221,458.33L708.424,459.155L708.099,460.764L708.323,462.295L707.896,462.77L708.272,464.788L709.856,466.397L710.78,468.754L693.623,470.837L681.542,472.09L669.542,473.105L660.71,473.959L660.954,474.69L660.273,477.005L662.04,478.667L662.497,479.599L665.075,480.928L665.42,481.908L664.618,484.733L665.37,485.879L666.273,486.407L665.248,486.983L664.893,488.455L664.07,489.173L664.669,489.476L663.715,490.064L661.075,490.996L657.583,491.815L655.157,491.969L655.614,491.203L656.487,491.631L658.913,490.895L659.075,490.224L657.157,488.425L655.908,487.802L655.228,486.081L655.675,484.899L655.38,483.136L654.832,482.234L653.39,481.73L652.426,482.721L652.649,483.445L651.928,485.849L652.05,488.859L651.593,490.188L650.527,490.361L650.527,489.648L649.055,488.989L647.99,489.357L647.654,488.966L646.467,489.494L645.106,478.263L642.721,459.464L642.193,455.024L642.477,443.882L643.025,413.151L643.421,396.055L643.685,386.19L642.578,385.584Z" data-state="AL" data-name="Alabama" data-status="available" class="state-path"/>
+ <div class="container">
+ <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-2);">Interactive Legality Map</h2>
+ <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);">Hover over any state for details. Click a state to jump to its row in the matrix below.</p>
+ 
+ <div class="map-container">
+ <svg viewBox="-60 0 1020 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="United States map showing sweepstakes casino legality by state">
+ <path d="M647.959,492.438L651.817,491.506L651.888,491.008L652.913,491.779L652.335,492.308L651.583,492.052L648.984,492.646ZM641.604,383.982L641.533,383.709L655.888,382.587L666.466,381.851L685.217,380.022L689.237,379.66L689.948,382.444L693.257,393.954L702.455,427.024L703.084,427.374L702.891,428.116L703.856,428.881L704.506,431.76L705.338,433.078L706.678,434.289L707.094,435.862L707.775,436.486L707.308,438.848L708.668,439.24L709.551,439.934L708.942,441.021L707.511,442.077L706.719,443.187L707.074,444.262L707.135,445.953L706.851,447.669L705.917,450.091L706.627,452.453L706.597,453.32L708.079,454.863L708.607,457.143L708.221,458.33L708.424,459.155L708.099,460.764L708.323,462.295L707.896,462.77L708.272,464.788L709.856,466.397L710.78,468.754L693.623,470.837L681.542,472.09L669.542,473.105L660.71,473.959L660.954,474.69L660.273,477.005L662.04,478.667L662.497,479.599L665.075,480.928L665.42,481.908L664.618,484.733L665.37,485.879L666.273,486.407L665.248,486.983L664.893,488.455L664.07,489.173L664.669,489.476L663.715,490.064L661.075,490.996L657.583,491.815L655.157,491.969L655.614,491.203L656.487,491.631L658.913,490.895L659.075,490.224L657.157,488.425L655.908,487.802L655.228,486.081L655.675,484.899L655.38,483.136L654.832,482.234L653.39,481.73L652.426,482.721L652.649,483.445L651.928,485.849L652.05,488.859L651.593,490.188L650.527,490.361L650.527,489.648L649.055,488.989L647.99,489.357L647.654,488.966L646.467,489.494L645.106,478.263L642.721,459.464L642.193,455.024L642.477,443.882L643.025,413.151L643.421,396.055L643.685,386.19L642.578,385.584Z" data-state="AL" data-name="Alabama" data-status="available" class="state-path"/>
 <path d="M104.168,551.602L104.645,550.278L105.092,550.462ZM99.102,569.885L99.528,569.274L100.148,569.683L100.127,568.662L101.762,567.439L102.422,566.555L102.178,565.854L103.447,565.237L102.919,567.511L103.488,566.953L104.412,567.944L105.031,567.487L104.686,569.066L103.711,568.555L103.924,569.232L102.523,568.917L102.3,569.867L100.94,570.496ZM95.082,582.006L96.28,581.436L96.879,582.291L95.65,582.416ZM93.336,575.435L93.996,574.295L95.711,573.102L96.747,573.197L97.143,574.355L97.265,573.185L96.94,571.897L97.843,571.274L98.473,571.737L99.518,571.601L98.97,570.686L100.503,571.452L99.731,570.722L101.396,570.906L101.335,571.624L102.077,571.506L103.092,570.633L103.863,572.337L103.244,572.111L103.173,573.53L104.503,573.328L103.752,574.919L102.016,574.295L102.645,575.263L101.731,576.213L100.249,576.907L101.528,577.127L100.046,577.744L99.691,578.427L99.234,577.721L99.457,576.824L98.026,579.442L97.092,580.19L96.026,580.392L97.325,578.831L96.767,578.73L97.498,577.115L95.376,579.59L94.402,578.427L94.381,576.901L93.275,576.053ZM93.133,582.849L94.341,581.537L94.96,581.911L93.437,583.093ZM88.879,587.61L89.6,586.939L89.569,588.132ZM71.793,593.659L71.885,592.762L72.392,593.498ZM71.042,591.67L71.722,591.219L71.631,592.905L71.001,592.786ZM68.189,593.487L68.991,592.578L68.616,592.026L69.245,591.427L70.331,591.706L70.037,592.341ZM65.753,590.145L66.484,589.545L68.169,590.109L68.017,590.904L67.225,590.091L67.093,591.789L66.413,591.076L65.885,591.629ZM67.509,564.151L67.712,563.272L69.326,562.536L68.331,564.305ZM60.87,591.207L61.266,590.762L62.332,591.486L61.55,591.795ZM58.281,592.394L59.215,592.246L58.697,593.255ZM66.149,523.917L67.265,523.721L67.296,524.32ZM55.966,595.92L56.037,595.576L58.078,596.68L57.54,596.989ZM44.606,596.995L45.946,596.935L45.804,597.386ZM42.677,595.463L42.962,595.131L43.906,595.98L43.114,596.65ZM40.627,595.944L41.774,595.57L42.525,596.674L40.728,596.769ZM44.19,547.471L46.2,547.934L47.185,547.109L48.535,547.144L49.51,546.663L49.611,547.607L50.403,547.583L50.87,548.533L50.961,551.204L49.164,551.258L48.352,552.012L47.652,551.062L46.85,550.931L44.393,548.67ZM31.266,600.788L33.307,600.182L33.754,600.42L35.855,598.467L36.677,599.054L36.86,598.538L35.804,598.146L35.368,597.493L36.058,596.674L37.946,596.484L37.794,597.191L38.485,597.547L39.175,596.757L39.814,597.493L37.977,598.9L40.119,598.182L40.048,598.799L39.124,599.375L37.774,599.607L36.596,600.853L34.779,600.616L33.855,601.15L32.231,601.518ZM50.708,504.548L52.86,503.663L55.489,502.328L59.134,500.737L61.245,500.048L63.865,499.549L65.682,499.739L65.712,500.844L64.92,502.838L65.245,503.924L67.154,504.215L68.524,504.15L69.611,504.785L70.463,504.488L71.377,505.052L72.504,503.449L74.27,503.687L73.925,502.838L72.717,502.221L71.448,502.488L71.722,501.194L70.687,499.419L70.027,499.235L69.712,498.238L70.737,497.632L71.539,499.033L71.235,500.066L72.605,501.876L73.418,501.651L71.895,499.573L72.321,498.309L73.235,497.597L72.423,496.985L70.22,497.294L66.545,495.596L66.656,494.575L66.23,492.278L62.931,487.903L61.418,486.888L60.829,485.725L59.357,484.407L60.382,484.199L60.961,483.255L61.509,480.756L64.017,481.373L67.174,481.314L69.458,479.984L70.463,478.827L71.052,476.488L71.661,474.992L73.996,472.214L75.255,471.383L76.829,471.822L78.189,471.342L79.935,470.083L81.61,468.397L82.93,467.875L84.24,468.665L86.656,468.118L87.62,467.388L89.336,465.061L90.077,465.032L92.503,466.053L92.686,466.646L91.427,467.655L91.519,468.629L92.29,468.754L92.656,467.857L93.559,467.198L93.955,466.284L95.041,467.228L95.143,468.783L96.188,469.24L96.96,468.326L98.696,468.029L101.407,468.742L100.767,469.81L100.919,470.427L102.828,470.79L102.432,471.775L104.422,472.119L104.929,471.454L106.381,471.377L106.543,471.763L108.919,470.766L110.807,471.532L111.274,471.336L112.056,472.196L112.421,471.822L113.944,472.843L115.406,473.045L116.127,472.731L118.949,472.564L120.31,473.449L121.629,473.841L122.533,473.633L124.35,472.173L126.035,471.656L131.629,474.292L132.888,474.44L147.283,547.061L149.212,547.34L149.314,546.616L151.375,547.204L152.227,545.749L154.532,545.096L154.573,547.269L155.395,547.874L156.816,548.231L157.385,549.24L162.339,552.356L163.618,554.778L165.557,552.22L166.511,551.917L166.714,550.878L166.308,549.501L166.978,549.317L166.501,548.331L167.933,547.405L169.435,545.856L171.679,547.162L171.841,548.29L172.572,549.252L173.648,549.204L175.394,550.445L176.308,551.644L178.227,552.136L180.754,553.84L180.541,554.261L182.247,555.686L183.008,556.695L184.226,557.609L186.328,559.758L188.297,561.515L188.125,562.59L189.546,562.477L189.688,563.907L190.917,564.074L191.597,565.552L192.612,565.101L195.201,565.926L196.561,565.759L198.216,566.234L198.663,566.911L200.064,566.591L200.947,567.968L200.845,569.268L201.454,570.615L202.906,572.645L202.399,575.863L201.424,577.928L200.744,577.305L200.277,577.75L198.439,575.014L199.109,573.916L198.46,572.123L197.576,570.58L196.825,570.223L198.104,571.891L198.449,574.23L198.135,575.079L196.876,575.174L195.424,574.717L194.358,573.678L194.592,572.669L194.064,570.686L194.054,572.562L193.617,573.15L193.891,574.04L192.754,573.672L192.297,572.877L192.541,571.695L192.054,570.063L192.206,568.781L191.587,570.146L192.033,570.817L191.11,571.79L190.236,570.514L189.211,570.473L188.907,569.689L189.353,568.579L190.165,568.223L189.577,567.214L190.419,567.166L188.48,566.347L188.226,565.391L187.14,565.077L185.739,563.907L183.242,563.498L183.069,562.061L182.318,560.447L181.516,560.31L181.394,559.61L183.617,559.954L181.617,559.004L180.978,559.076L178.978,557.455L178.409,555.793L178.267,556.535L176.217,556.755L175.019,555.081L172.805,552.789L171.516,550.29L170.278,549.56L170.004,550.112L171.384,551.187L171.77,552.398L173.354,554.535L174.653,557.698L173.313,557.413L172.684,556.529L171.831,556.535L170.826,557.212L170.298,555.389L169.171,554.072L168.684,554.724L167.526,554.333L167.059,553.395L166.724,554.101L165.76,553.787L165.689,554.315L167.039,554.398L168.379,555.306L168.968,555.312L170.288,557.366L169.07,558.387L168.41,558.405L167.983,559.319L166.643,558.245L165.973,558.423L163.76,557.378L161.953,556.25L161.77,555.573L160.004,554.481L158.491,554.22L157.161,553.561L154.958,552.991L152.979,552.142L153.314,551.24L153.933,551.347L153.263,549.323L153.354,547.928L152.786,549.821L150.958,551.299L148.593,551.383L146.309,550.736L146.766,549.661L145.507,550.201L141.669,549.904L140.593,549.999L135.314,551.632L133.994,553.448L134.421,552.225L135.182,551.305L135.822,551.199L134.664,550.403L132.279,550.267L132.888,549.827L131.964,549.602L132.33,548.468L130.837,549.732L128.807,548.682L128.005,548.937L128.786,547.815L127.365,548.895L127.548,549.72L125.264,550.629L125.406,548.996L126.025,549.091L128.441,547.773L127.913,546.865L126.919,547.708L127.355,546.699L125.66,547.411L124.827,547.008L126.726,545.945L125.335,546.402L124.472,545.316L124.837,543.98L123.629,545.589L123.132,544.17L122.827,545.69L122.127,546.2L121.629,545.607L120.817,546.806L119.244,547.12L119.792,544.853L118.969,544.966L118.411,547.441L119.426,547.56L118.746,549.732L119.609,548.699L120.279,549.851L119.7,551.561L121.051,552.872L120.259,553.899L119.416,554.024L118.919,552.415L118.655,554.006L117.924,554.285L115.965,553.923L114.888,555.027L115.203,554.048L114.685,552.872L114.645,554.505L113.528,554.345L113.67,556.814L112.472,555.68L112.909,556.612L111.345,558.719L111,558.838L110.452,557.378L110.34,558.696L109.782,558.731L108.807,560.381L107.579,560.548L107.153,560.008L106.442,560.975L105.802,561.023L104.848,560.292L105.173,558.951L106.635,558.393L108.675,555.924L108.158,555.995L106.655,557.2L105.153,556.173L105.741,554.054L106.858,552.451L107.295,549.875L106.696,548.533L108.147,547.857L110.543,545.809L111.305,546.865L112.066,547.12L112.899,546.242L115.477,546.77L112.99,545.838L111.64,544.811L112.949,542.9L113.944,542.342L113.223,542.021L112.279,542.947L111.944,544.141L110.107,544.194L109.406,543.814L108.016,544.823L107.518,545.898L106.33,546.23L105.142,547.524L105.549,548.48L104.99,548.486L103.254,550.35L103.569,551.24L101.65,553.027L102.32,553.834L101.396,555.395L99.792,555.544L100.635,555.823L100.452,556.903L97.63,558.108L97.762,558.969L96.199,559.527L96.026,562.299L96.412,561.865L97.681,562.02L99.122,562.702L99.589,563.516L99.122,564.483L97.995,565.534L97.092,565.575L96.432,566.507L96.676,567.41L95.793,569.321L94.727,569.938L93.671,569.95L91.975,570.734L92.046,571.44L91.082,571.701L91.153,572.55L89.874,572.093L89.305,573.898L87.986,573.743L88.057,574.741L87.255,574.438L85.752,575.845L86.686,575.518L86.646,576.741L85.641,578.29L84.219,578.397L82.768,579.887L82.037,579.098L80.646,581.033L80.412,580.493L79.6,581.252L79.722,582.06L78.697,581.62L77.732,581.858L76.961,582.938L78.534,583.93L76.89,584.962L76.676,585.805L76.077,584.82L76.027,585.93L75.164,585.514L74.879,586.037L72.22,586.464L71.945,587.954L70.971,588.631L71.702,586.755L70.605,586.435L69.631,587.301L68.057,588.103L67.316,589.052L65.885,588.494L64.108,589.658L62.87,589.48L63.743,587.533L62.616,587.503L61.936,589.26L60.951,590.519L60.321,590.275L60.596,591.261L59.672,590.762L59.215,591.783L58.24,591.403L58.261,589.8L57.804,589.325L57.306,589.937L57.834,590.673L57.712,591.985L56.423,592.169L55.57,590.572L54.829,591.023L55.58,591.925L53.895,592.828L54.728,593.154L55.164,594.128L53.987,593.261L52.718,594.175L50.454,593.771L49.225,594.3L49.043,594.798L47.642,595.166L46.738,594.81L46.464,593.492L47.672,593L48.576,591.623L51.814,590.613L53.449,590.774L54.23,592.24L54.525,590.305L56.525,590.127L58.108,588.18L59.804,586.506L61.976,585.164L64.88,584.529L66.463,584.559L65.793,586.12L66.321,586.85L66.504,585.687L67.803,585.989L68.697,586.862L68.991,586.363L67.479,585.01L68.595,582.974L71.296,580.849L72.565,580.338L75.204,578.753L76.402,579.27L76.483,577.75L77.854,575.863L79.235,574.99L80.94,573.447L81.691,569.012L82.493,568.662L81.915,567.801L82.402,566.009L84.128,564.448L84.351,563.148L83.925,563.195L79.62,564.976L78.067,563.492L78.392,561.824L77.174,562.821L76.697,564.133L77.225,565.872L76.372,566.555L75.702,566.234L74.575,563.439L73.286,561.984L72.463,563.118L71.945,562.216L70.9,561.581L71.012,560.655L69.123,561.753L66.595,562.827L66.392,563.421L64.727,564.145L64.068,563.231L64.87,562.37L64.991,560.827L64.179,558.31L64.707,557.491L65.804,556.737L64.656,552.956L63.804,551.062L63.316,551.199L63.123,552.326L62.311,552.291L60.687,553.11L58.352,553.306L56.616,552.718L56.545,551.187L55.855,550.658L54.91,548.735L53.946,548.231L53.428,547.382L54.22,546.752L52.626,546.652L54.443,545.203L54.494,543.986L53.895,543.09L54.697,542.906L53.824,541.398L53.388,542.116L52.697,541.926L52.697,540.502L51.824,539.807L51.794,539.119L52.525,538.608L52.017,538.05L51.073,538.222L51.286,537.243L52.555,537.201L51.753,535.89L53.428,535.949L53.205,534.655L53.723,533.628L57.469,529.865L57.459,529.063L58.717,526.736L59.611,525.959L60.667,525.745L62.047,526.321L63.326,527.918L64.332,527.864L65.844,526.718L67.489,524.861L68.311,525.282L69.864,525.466L71.489,525.193L73.011,523.198L72.626,520.628L72.666,519.465L71.824,518.076L71.022,517.791L71.509,516.966L72.758,517.346L73.57,516.568L73.712,515.731L72.514,513.974L71.763,515.072L70.798,514.841L69.012,515.494L67.611,516.515L66.545,518.022L66.504,516.615L65.58,515.369L65.062,515.707L65.905,516.71L65.134,516.669L64.068,515.767L61.276,515.488L59.124,516.028L55.225,514.134L54.626,512.81L55.063,511.873L54.311,510.715L53.905,509.391L54.677,509.747L55.875,508.661L55.306,508.05L52.423,506.874L50.748,505.195ZM24.881,603.043L26.607,601.749L26.8,600.883L27.713,600.354L28.891,600.705L28.586,600.046L29.256,599.054L30.972,598.692L31.886,599.25L31.429,600.248L29.195,600.93L28.008,602.183L24.586,603.287ZM28.454,573.263L29.642,573.607L29.185,574.1ZM20.404,602.111L21.571,602.005L21.703,602.859L20.485,602.592ZM26.84,568.342L28.048,568.152L27.338,568.805ZM16.039,603.026L17.165,602.515L17.125,603.287L16.14,603.536ZM34.444,517.797L35.277,516.081L35.51,516.995L37.683,518.462L39.408,517.862L40.535,518.847L40.464,519.839L42.048,521.24L44.819,522.445L43.946,523.472L42.149,523.02L40.84,524.457L40.434,523.204L38.972,521.145L37.51,519.714L36.718,519.429L35.226,519.993L34.414,519.281ZM7.044,603.032L8.049,602.557L8.567,602.907L7.958,603.477ZM23.429,539.879L24.221,539.267L24.109,540.033L26.18,542.253L24.383,541.351ZM-0.022,602.284L1.064,602.842L2.008,602.747L3.125,603.554L5.003,604.124L2.8,604.011L0.323,603.014ZM-6.245,601.156L-4.611,601.435L-0.997,601.298L-1.037,600.461L0.009,599.933L0.709,600.918L-0.57,601.595L-0.184,602.272L-1.981,602.533L-3.545,602.212ZM-10.174,599.393L-9.22,600.034L-9.798,600.758L-10.367,600.42ZM-10.996,601.221L-9.636,600.966L-9.666,601.512L-10.783,601.773ZM-15.037,601.441L-13.595,600.378L-13.128,599.298L-12.042,599.476L-12.539,600.544L-11.128,600.788L-11.463,601.761L-12.306,601.423L-14.194,601.874ZM-18.143,599.642L-15.565,599.707L-15.209,598.894L-14.56,599.345L-15.372,600.473L-16.153,600.598L-16.61,599.986ZM-20.052,597.458L-18.702,597.677L-18.326,598.847L-19.473,600.034L-20.001,598.989L-19.301,599.102ZM-30.224,592.501L-29.28,592.555L-28.945,593.142L-29.97,593.564ZM-35.188,593.338L-33.99,594.05L-33.117,596.193L-34.001,594.674ZM-40.752,588.589L-39.117,588.5L-38.407,587.711L-38.092,588.251L-40.508,589.319ZM-55.807,576.587L-54.284,576.492L-54.406,577.774ZM-57.634,570.894L-56.65,570.769L-54.67,571.921L-53.939,573.791L-54.67,573.156L-55.157,573.435L-56.396,573.067L-56.893,571.322ZM197.394,577.43L198.216,576.729L198.734,577.21L198.216,577.91ZM196.48,577.032L196.622,576.076L196.155,575.049L197.089,575.34L197.647,576.818ZM194.663,574.895L194.805,574.444L195.769,575.002L195.8,576.486ZM187.587,570.022L187.759,569.618L188.622,570.663ZM187.099,569.125L187.434,568.17L188.876,568.241L188.998,569.179L188.186,569.737ZM186.226,576.901L186.226,576.058L187.566,575.536L188.237,576.041L187.983,576.943L187.018,577.928L186.947,576.919ZM184.907,573.096L185.526,571.209L184.886,571.037L184.957,569.843L186.795,569.547L188.643,571.428L190.003,571.802L191.049,572.621L192.734,574.479L191.373,574.236L191.211,575.049L191.993,574.569L193.404,575.34L193.607,576.492L194.399,575.874L194.683,576.432L194.51,578.13L195.048,577.59L195.779,579.329L195.698,580.113L194.45,580.392L193.414,580.22L193.942,579.448L192.51,578.973L192.135,577.424L191.546,577.887L191.83,578.943L190.988,578.819L190.5,577.596L189.607,577.542L191.475,579.899L192.054,579.347L192.967,580.404L192.247,580.273L192.937,581.217L192.043,581.336L190.145,579.81L189.211,577.857L188.247,578.255L188.003,577.489L189.394,576.284L188.206,575.346L185.82,574.301L186.318,573.726L186.135,572.265L185.485,573.506ZM182.694,574.23L183.709,574.04L183.242,574.741ZM180.318,567.154L180.714,566.306L181.668,566.116L182.379,566.875L182.095,565.665L181.404,565.314L181.912,564.584L184.409,564.59L185.353,564.258L186.673,565.516L188.724,566.674L187.8,567.73L186.369,567.879L186.308,568.615L185.303,568.549L184.389,569.226L183.932,568.52L183.993,572.325L183.445,573.197L182.663,572.485L181.973,570.758L181.963,569.291L181.394,569.268ZM174.552,555.947L175.77,556.671L176.115,557.455L176.623,557.069L178.237,556.873L178.399,557.508L180.156,559.212L180.765,560.56L179.628,559.283L178.734,558.915L179.293,559.877L180.491,560.72L181.364,562.584L179.557,565.866L179.12,565.973L178.491,564.56L178.866,563.07L177.993,562.328L177.019,560.886L176.876,560.037L175.161,557.342ZM173.882,564.774L174.572,562.91L176.338,563.599L177.242,563.409L177.638,564.632L179.689,568.336L180.744,571.868L180.826,572.663L180.084,572.313L177.536,569.392L175.475,568.454L176.085,568.371L176.044,566.988L175.303,566.591L175.486,565.261L174.755,565.599ZM173.496,565.89L173.648,564.976L174.846,565.742L174.887,567.41L174.014,567.772L174.156,566.674ZM169.1,561.432L168.856,560.257L169.476,559.497L169.08,558.589L169.943,559.182L170.938,558.66L171.526,557.793L173.191,558.583L175.323,558.678L175.78,559.592L175.029,560.114L175.902,560.435L177.14,562.691L176.095,563.249L173.709,562.245L174.146,563.682L173.8,564.756L172.978,564.655L171.648,563.51L171.191,563.599L170.156,561.96ZM120.807,555.087L121.193,553.953L122.634,552.249L123.589,550.041L124.259,550.937L122.391,553.793L122.868,554.143ZM120.391,551.448L120.837,549.542L121.629,548.628L121.589,550.332L121.172,552.089Z" data-state="AK" data-name="Alaska" data-status="available" class="state-path"/>
 <path d="M145.07,407.049L145.73,406.74L147.091,407.096L148.826,406.901L148.887,406.123L150.299,405.143L150.684,403.76L150.167,400.816L148.644,400.62L147.405,400.08L146.979,398.614L147.791,397.332L148.329,394.856L147.466,393.936L148.319,392.737L148.024,391.681L149.903,391.497L150.156,390.879L151.669,389.431L152.39,389.098L152.847,386.225L153.547,385.952L153.608,382.444L154.187,382.094L153.882,380.479L156.116,378.746L156.836,377.031L158.715,376.68L160.085,376.128L162.176,374.567L162.765,373.629L162.258,372.46L161.435,371.914L159.811,369.634L158.907,369.278L159.334,367.687L158.715,366.12L158.897,365.717L158.491,363.247L157.263,361.751L156.948,360.083L156.248,359.074L156.847,356.183L157.689,354.652L157.09,354.029L158.4,353.536L158.715,352.794L158.958,349.06L158.775,347.054L158.227,345.077L159.202,342.442L158.735,341.403L158.725,339.996L159.09,339.034L159.019,337.847L159.496,336.802L160.136,336.464L159.303,334.683L159.699,332.802L159.506,331.383L159.933,331.062L162.176,330.908L163.06,330.587L164.136,330.813L164.166,331.312L166.582,331.478L167.466,333.241L167.252,333.591L168.4,334.832L169.953,334.915L172.166,331.686L172.602,331.454L173.476,327.026L174.531,321.048L176.024,313.302L184.704,314.958L202.713,318.211L222.631,321.571L238.814,324.07L239.331,324.295L254.316,326.521L264.64,327.964L259.483,365.058L257.646,378.497L252.854,412.937L251.392,423.616L246.824,456.252L228.652,453.635L219.88,452.317L208.155,450.494L176.298,432.075L171.729,429.457L142.319,411.721L142.908,410.521L142.948,408.99L143.923,408.432Z" data-state="AZ" data-name="Arizona" data-status="restricted" class="state-path"/>
 <path d="M277.097,237.161L285.899,238.378L301.086,240.259L320.852,242.569L324.831,243.103L333.146,243.999L347.846,245.412L350.892,245.626L361.419,246.546L370.83,247.311L382.18,248.16L395.327,249.045L393.865,271.869L392.159,300.421L391.134,316.626L390.555,326.64L389.652,340.696L377.906,339.859L372.475,339.355L348.547,337.568L336.719,336.494L334.577,336.239L315.278,334.303L303.35,333.009L303.238,332.819L292.467,331.549L278.792,329.857L264.64,327.964L265.808,319.428L266.366,315.902L268.356,301.513L268.376,298.955L269.787,288.869L271.199,279.674L275.513,248.511L275.94,245.816Z" data-state="CO" data-name="Colorado" data-status="available" class="state-path"/>
@@ -553,637 +553,637 @@ window.addEventListener('load', function() {
 <path d="M857.557,117.824L865.262,115.794L873.658,113.983L886.145,110.522L885.749,111.312L886.856,112.743L886.267,114.037L886.257,115.835L885.627,116.773L886.866,118.649L887.526,119.118L887.85,120.602L887.292,120.988L887.901,122.086L887.008,122.947L886.399,124.591L884.906,125.689L885.069,126.294L883.729,126.805L881.83,127.933L881.566,129.161L882.064,129.797L882.054,130.942L883.14,132.978L882.358,135.454L882.856,136.196L882.023,138.796L882.236,140.737L881.069,142.642L881.242,144.951L880.582,145.794L880.632,147.266L881.079,147.973L881.231,150.602L881.79,151.629L881.465,152.994L881.739,155.559L882.277,156.052L882.104,157.625L882.703,158.515L882.45,159.483L881.607,160.1L881.668,161.732L882.257,163.382L884.064,164.849L870.998,167.645L870.277,166.505L870.288,165.668L868.359,156.236L867.069,150.294L865.942,149.124L865.648,148.293L864.552,148.632L864.44,149.943L863.902,149.724L863.608,148.584L864.105,145.278L863.161,144.292L863.171,143.07L862.308,141.9L861.77,139.828L861.252,139.532L861.212,136.124L861.983,134.694L862.014,133.976L861.13,131.898L861.425,130.515L860.867,128.96L859.212,127.28L858.653,123.849L858.785,122.347L857.912,121.777L858.125,119.866Z" data-state="VT" data-name="Vermont" data-status="restricted" class="state-path"/>
 <path d="M637.523,497.395L638.548,498.558L638.995,499.995L638.873,502.512L638.152,504.031L638.69,501.117L638.518,499.389ZM628.508,497.917L631.3,495.382L630.701,496.944L631.828,498.042L630.802,499.092L630.548,498.19L628.64,498.344ZM623.726,510.169L624.944,509.89L624.305,510.757ZM609.544,520.759L610.173,520.272L611.016,521.424L610.417,521.726ZM605.95,521.299L608.742,521.798L607.392,522.017ZM602.184,522.379L603.93,521.91L604.143,522.225L602.255,522.73ZM576.55,511.475L578.286,510.454L579.86,510.507L582.59,512.015L581.596,512.757L581.575,513.541L580.042,513.861L576.327,511.896ZM535.018,434.681L547.597,434.402L569.423,433.874L574.54,433.702L589.382,433.084L588.56,434.812L589.778,435.399L590.133,434.806L589.991,433.612L590.915,433.642L591.321,435.619L589.991,436.693L589.687,437.447L589.829,439.02L591.778,439.323L591.362,440.136L590.062,441.353L590.773,442.588L592.052,442.018L592.458,441.098L592.925,441.62L591.534,443.205L593.352,444.469L593.159,444.808L591.169,443.929L590.935,444.909L592.641,445.953L593.301,445.526L593.859,446.173L593.352,446.594L593.555,447.776L595.362,448.221L594.631,449.117L593.819,449.022L594.001,450.014L593.575,450.922L593.027,450.441L590.357,451.474L590.458,452.94L592.56,453.023L592.55,451.783L593.423,452.228L592.874,453.599L591.778,454.792L591.179,454.181L590.57,454.596L592.255,455.493L590.164,456.87L590.367,457.843L588.763,459.404L587.423,459.511L587.007,461.381L588.956,461.357L588.743,461.862L587.22,462.028L586.448,462.752L586.479,464.83L585.93,465.061L584.59,464.349L584.245,465.091L584.895,465.685L586.083,465.376L586.397,465.993L585.616,466.712L584.367,466.967L584.499,468.938L585.352,470L585.25,470.712L584.529,470.623L583.91,469.222L583.301,470.024L584.753,471.923L584.58,472.784L583.524,473.158L582.225,473.087L582.205,473.829L583.332,475.052L582.692,476.102L583.859,477.497L583.951,478.204L582.59,479.165L593.758,478.631L605.818,477.948L619.066,477.076L619.554,477.236L619.077,478.405L618.366,481.89L617.879,482.489L618.011,483.451L617.645,484.935L618.336,485.505L618.752,487.214L619.686,488.336L621.229,489.47L621.3,490.509L622.447,491.951L622.264,493.139L622.863,494.468L623.858,495.477L624.752,495.406L623.574,496.172L622.965,496.083L621.858,497.252L621.797,497.988L620.955,498.35L621.229,499.116L619.209,498.902L618.498,499.834L618.955,501.14L620.204,501.253L621.107,500.707L620.894,501.87L621.94,502.701L623.767,502.286L624.102,500.487L623.919,499.698L625.564,498.534L625.736,497.65L627.949,498.469L626.812,499.199L626.853,499.864L627.929,500.125L628.234,501.295L629.239,500.956L629.96,499.3L631.066,499.704L630.894,500.79L629.929,500.873L629.168,501.781L630.751,501.615L630.528,502.203L628.041,502.963L629.401,504.007L630.173,503.527L629.706,504.714L628.071,504.102L627.32,505.23L627.34,507.165L626.721,507.314L626.183,505.664L625.442,505.699L625.361,507.48L622.802,507.777L624.102,508.436L624.132,509.071L622.457,508.216L623.371,509.273L622.549,509.605L623.513,510.899L624.924,511.024L625.787,511.861L626.295,513.38L628.812,513.078L630.051,513.653L630.163,513.072L631.696,514.734L632.427,513.826L634.274,515.85L634.843,517.215L636.091,516.574L636.589,517.34L634.924,517.767L634.812,518.402L635.959,518.396L635.492,519.447L634.68,519.037L633.97,520.444L634.152,521.798L632.599,521.21L632.569,520.456L631.848,519.88L629.797,522.718L628.751,523.584L630.071,520.693L630.711,520.242L630.589,519.192L631.229,518.687L631.086,517.702L630.335,517.298L629.817,518.972L628.65,519.091L627.066,517.221L624.559,516.55L623.848,515.725L619.797,515.345L619.006,515.666L615.726,518.675L612.59,521.109L612.315,520.135L611.442,519.868L611.676,518.996L610.752,517.108L609.808,516.295L608.833,517.957L608.935,516.467L608.112,515.428L607.26,516.722L606.295,516.509L605.778,516.966L604.904,516.604L605.128,517.731L604.326,518.657L604.102,519.708L603.524,519.619L603.219,520.747L602.63,520.533L601.189,521.519L600.976,522.753L599.869,522.498L599.971,521.614L597.859,519.773L597.108,520.07L595.23,519.756L594.499,519.156L593.098,519.103L591.504,518.58L590.336,517.482L591.169,517.156L591.636,516.004L593.077,517.191L593.534,516.722L593.585,518.052L594.6,518.343L594.275,516.325L592.539,515.155L592.499,514.336L591.717,514.253L591.159,515.072L590.245,515.381L590.296,514.579L589.626,514.746L590.418,513.398L589.646,512.65L587.656,513.725L586.885,512.193L586.205,512.395L585.656,510.121L583.778,510.187L584.174,509.522L584.215,507.854L581.92,507.64L579.667,508.691L579.129,508.584L579.118,507.599L579.626,506.779L580.093,507.07L580.002,505.913L578.844,505.806L577.91,506.287L577.24,505.913L577.129,506.702L574.479,508.186L574.053,507.569L572.814,507.937L573.474,509.118L574.773,509.225L574.144,509.837L574.753,511.03L576.185,510.567L575.606,511.22L576.083,511.588L573.789,511.801L571.982,512.828L570.581,513.066L564.784,512.051L562.266,511.309L558.144,509.48L556.469,508.905L553.576,508.216L551.241,508.18L550.246,508.495L547.708,508.412L542.48,509.29L540.612,510.371L538.886,507.498L540.206,506.423L541.465,503.538L543.059,502.054L542.48,501.283L543.312,500.072L542.642,498.528L542.724,496.605L541.688,495.744L541.81,494.522L542.967,493.275L542.602,491.512L542.084,491.043L542.307,490.254L543.221,489.648L543.14,488.716L544.317,487.452L544.328,486.383L545.546,484.466L545.241,483.03L546.013,481.848L545.17,480.459L546.145,479.925L545.536,478.595L545.434,476.233L544.439,476.5L544.003,474.351L542.673,473.496L543.119,472.345L542.358,470.594L541.404,469.911L541.84,469.092L540.023,467.982L539.597,466.979L540.226,464.99L539.688,463.637L539.83,462.996L538.805,461.927L538.104,460.313L536.785,459.582L535.962,458.128L535.495,457.944Z" data-state="LA" data-name="Louisiana" data-status="restricted" class="state-path"/>
 <path d="M910.51,182.799L911.637,182.882L912.784,186.396L911.84,187.584L910.987,185.731L910.469,183.98L910.114,184.224L910.977,187.21L910.022,187.441L910.043,188.141L909.058,188.266L909.637,185.352L909.545,184.372ZM908.439,188.415L908.134,186.23L908.54,186.129L908.956,187.75ZM906.713,195.983L906.967,194.303L907.769,195.906ZM901.738,193.496L902.104,192.831L901.556,191.377L902.205,191.092L901.007,185.755L898.784,178.021L905.484,176.008L906.215,178.78L906.875,178.484L907.748,181.042L908.987,181.374L909.83,182.14L909.89,183.037L909.281,184.028L908.794,182.603L906.713,181.238L907.292,183.44L906.317,183.624L907.109,183.992L907.637,185.589L906.967,185.981L907.728,186.859L908.073,188.236L907.606,190.747L905.363,191.59L903.962,192.653L901.87,193.793Z" data-state="RI" data-name="Rhode Island" data-status="restricted" class="state-path"/>
-      </svg>
-      <div class="map-tooltip" id="mapTooltip">
-        <div class="tooltip-state" id="tooltipState"></div>
-        <div class="tooltip-status" id="tooltipStatus"></div>
-      </div>
-    </div>
+ </svg>
+ <div class="map-tooltip" id="mapTooltip">
+ <div class="tooltip-state" id="tooltipState"></div>
+ <div class="tooltip-status" id="tooltipStatus"></div>
+ </div>
+ </div>
 
-    <div class="map-legend">
-      <div class="map-legend-item">
-        <div class="map-legend-swatch" style="background:#16a34a;"></div>
-        <span>Available (32 states + DC)</span>
-      </div>
-      <div class="map-legend-item">
-        <div class="map-legend-swatch" style="background:#d97706;"></div>
-        <span>Restricted (11 states)</span>
-      </div>
-      <div class="map-legend-item">
-        <div class="map-legend-swatch" style="background:#dc2626;"></div>
-        <span>Banned (7 states)</span>
-      </div>
-    </div>
+ <div class="map-legend">
+ <div class="map-legend-item">
+ <div class="map-legend-swatch" style="background:#16a34a;"></div>
+ <span>Available (32 states + DC)</span>
+ </div>
+ <div class="map-legend-item">
+ <div class="map-legend-swatch" style="background:#d97706;"></div>
+ <span>Restricted (11 states)</span>
+ </div>
+ <div class="map-legend-item">
+ <div class="map-legend-swatch" style="background:#dc2626;"></div>
+ <span>Banned (7 states)</span>
+ </div>
+ </div>
 
-    <div class="map-stats">
-      <div class="map-stat">
-        <div class="map-stat-number green">32 + DC</div>
-        <div class="map-stat-label">States where most platforms operate</div>
-      </div>
-      <div class="map-stat">
-        <div class="map-stat-number yellow">11</div>
-        <div class="map-stat-label">States with restrictions on some platforms</div>
-      </div>
-      <div class="map-stat">
-        <div class="map-stat-number red">7</div>
-        <div class="map-stat-label">States where sweepstakes casinos are banned</div>
-      </div>
-    </div>
-  </div>
+ <div class="map-stats">
+ <div class="map-stat">
+ <div class="map-stat-number green">32 + DC</div>
+ <div class="map-stat-label">States where most platforms operate</div>
+ </div>
+ <div class="map-stat">
+ <div class="map-stat-number yellow">11</div>
+ <div class="map-stat-label">States with restrictions on some platforms</div>
+ </div>
+ <div class="map-stat">
+ <div class="map-stat-number red">7</div>
+ <div class="map-stat-label">States where sweepstakes casinos are banned</div>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- STATE MATRIX TABLE -->
 <section class="section section--alt" id="state-matrix">
-  <div class="container">
-    <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-2);">50-State Legality Matrix</h2>
-    <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);">Platform counts reflect how many of the 21 major sweepstakes casino platforms currently accept players from each state. Click any column header to sort.</p>
+ <div class="container">
+ <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-2);">50-State Legality Matrix</h2>
+ <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);">Platform counts reflect how many of the 21 major sweepstakes casino platforms currently accept players from each state. Click any column header to sort.</p>
 
-    <div class="filter-bar">
-      <button class="filter-btn active" data-filter="all">Show All (51)</button>
-      <button class="filter-btn" data-filter="available">Available (33)</button>
-      <button class="filter-btn" data-filter="restricted">Restricted (11)</button>
-      <button class="filter-btn" data-filter="banned">Banned (7)</button>
-    </div>
+ <div class="filter-bar">
+ <button class="filter-btn active" data-filter="all">Show All (51)</button>
+ <button class="filter-btn" data-filter="available">Available (33)</button>
+ <button class="filter-btn" data-filter="restricted">Restricted (11)</button>
+ <button class="filter-btn" data-filter="banned">Banned (7)</button>
+ </div>
 
-    <div class="state-matrix-wrap">
-      <table class="state-matrix" id="stateTable">
-        <thead>
-          <tr>
-            <th data-sort="name">State <span class="sort-arrow">&#9650;</span></th>
-            <th data-sort="status">Status <span class="sort-arrow">&#9650;</span></th>
-            <th data-sort="platforms">Platforms <span class="sort-arrow">&#9650;</span></th>
-            <th class="restricted-col" data-sort="restricted">Key Restrictions <span class="sort-arrow">&#9650;</span></th>
-            <th data-sort="age">Age <span class="sort-arrow">&#9650;</span></th>
-            <th class="legislation-col" data-sort="legislation">Key Legislation <span class="sort-arrow">&#9650;</span></th>
-            <th>Guide</th>
-          </tr>
-        </thead>
-        <tbody>
+ <div class="state-matrix-wrap">
+ <table class="state-matrix" id="stateTable">
+ <thead>
+ <tr>
+ <th data-sort="name">State <span class="sort-arrow">&#9650;</span></th>
+ <th data-sort="status">Status <span class="sort-arrow">&#9650;</span></th>
+ <th data-sort="platforms">Platforms <span class="sort-arrow">&#9650;</span></th>
+ <th class="restricted-col" data-sort="restricted">Key Restrictions <span class="sort-arrow">&#9650;</span></th>
+ <th data-sort="age">Age <span class="sort-arrow">&#9650;</span></th>
+ <th class="legislation-col" data-sort="legislation">Key Legislation <span class="sort-arrow">&#9650;</span></th>
+ <th>Guide</th>
+ </tr>
+ </thead>
+ <tbody>
 <tr data-status="available" data-state="AL" id="state-row-AL">
-  <td class="state-name-cell">Alabama</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Alabama</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="AK" id="state-row-AK">
-  <td class="state-name-cell">Alaska</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">16 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Alaska</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">16 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="restricted" data-state="AZ" id="state-row-AZ">
-  <td class="state-name-cell">Arizona</td>
-  <td><span class="status-badge status-badge--restricted">Restricted</span></td>
-  <td class="platforms-count">11 / 21</td>
-  <td class="restricted-col"><a href="./stake-us/review.html" style="color:var(--color-primary);">Stake.us</a>, <a href="./legendz/review.html" style="color:var(--color-primary);">Legendz</a>, <a href="./pulsz/review.html" style="color:var(--color-primary);">Pulsz</a></td>
-  <td>21+</td>
-  <td class="legislation-col">ARS 13-3301 interpretation</td>
-  <td></td>
+ <td class="state-name-cell">Arizona</td>
+ <td><span class="status-badge status-badge--restricted">Restricted</span></td>
+ <td class="platforms-count">11 / 21</td>
+ <td class="restricted-col"><a href="./stake-us/review.html" style="color:var(--color-primary);">Stake.us</a>, <a href="./legendz/review.html" style="color:var(--color-primary);">Legendz</a>, <a href="./pulsz/review.html" style="color:var(--color-primary);">Pulsz</a></td>
+ <td>21+</td>
+ <td class="legislation-col">ARS 13-3301 interpretation</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="AR" id="state-row-AR">
-  <td class="state-name-cell">Arkansas</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">16 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Arkansas</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">16 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="banned" data-state="CA" id="state-row-CA">
-  <td class="state-name-cell"><a href="./states/ca.html">California</a></td>
-  <td><span class="status-badge status-badge--banned">Banned</span></td>
-  <td class="platforms-count">0 / 21</td>
-  <td class="restricted-col">All platforms</td>
-  <td>N/A</td>
-  <td class="legislation-col">AB 831 (eff. Jan 2026)</td>
-  <td><a href="./states/ca.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/ca.html">California</a></td>
+ <td><span class="status-badge status-badge--banned">Banned</span></td>
+ <td class="platforms-count">0 / 21</td>
+ <td class="restricted-col">All platforms</td>
+ <td>N/A</td>
+ <td class="legislation-col">AB 831 (eff. Jan 2026)</td>
+ <td><a href="./states/ca.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="CO" id="state-row-CO">
-  <td class="state-name-cell">Colorado</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">18 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Colorado</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">18 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="restricted" data-state="CT" id="state-row-CT">
-  <td class="state-name-cell">Connecticut</td>
-  <td><span class="status-badge status-badge--restricted">Restricted</span></td>
-  <td class="platforms-count">10 / 21</td>
-  <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, LuckyBird</td>
-  <td>21+</td>
-  <td class="legislation-col">CT iGaming framework</td>
-  <td></td>
+ <td class="state-name-cell">Connecticut</td>
+ <td><span class="status-badge status-badge--restricted">Restricted</span></td>
+ <td class="platforms-count">10 / 21</td>
+ <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, LuckyBird</td>
+ <td>21+</td>
+ <td class="legislation-col">CT iGaming framework</td>
+ <td></td>
 </tr>
 <tr data-status="restricted" data-state="DE" id="state-row-DE">
-  <td class="state-name-cell">Delaware</td>
-  <td><span class="status-badge status-badge--restricted">Restricted</span></td>
-  <td class="platforms-count">9 / 21</td>
-  <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./global-poker/index.html" style="color:var(--color-primary);">Global Poker</a>, LuckyBird</td>
-  <td>21+</td>
-  <td class="legislation-col">DE Gaming Competitiveness Act</td>
-  <td></td>
+ <td class="state-name-cell">Delaware</td>
+ <td><span class="status-badge status-badge--restricted">Restricted</span></td>
+ <td class="platforms-count">9 / 21</td>
+ <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./global-poker/index.html" style="color:var(--color-primary);">Global Poker</a>, LuckyBird</td>
+ <td>21+</td>
+ <td class="legislation-col">DE Gaming Competitiveness Act</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="DC" id="state-row-DC">
-  <td class="state-name-cell">District of Columbia</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">15 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">District of Columbia</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">15 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="FL" id="state-row-FL">
-  <td class="state-name-cell"><a href="./states/fl.html">Florida</a></td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">18 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td><a href="./states/fl.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/fl.html">Florida</a></td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">18 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td><a href="./states/fl.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="GA" id="state-row-GA">
-  <td class="state-name-cell"><a href="./states/ga.html">Georgia</a></td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td><a href="./states/ga.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/ga.html">Georgia</a></td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td><a href="./states/ga.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="HI" id="state-row-HI">
-  <td class="state-name-cell">Hawaii</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">15 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Hawaii</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">15 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="banned" data-state="ID" id="state-row-ID">
-  <td class="state-name-cell"><a href="./states/id.html">Idaho</a></td>
-  <td><span class="status-badge status-badge--banned">Banned</span></td>
-  <td class="platforms-count">0 / 21</td>
-  <td class="restricted-col">All platforms</td>
-  <td>N/A</td>
-  <td class="legislation-col">Idaho Code 18-3801</td>
-  <td><a href="./states/id.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/id.html">Idaho</a></td>
+ <td><span class="status-badge status-badge--banned">Banned</span></td>
+ <td class="platforms-count">0 / 21</td>
+ <td class="restricted-col">All platforms</td>
+ <td>N/A</td>
+ <td class="legislation-col">Idaho Code 18-3801</td>
+ <td><a href="./states/id.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="IL" id="state-row-IL">
-  <td class="state-name-cell"><a href="./states/il.html">Illinois</a></td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">Active 2026 legislation pending</td>
-  <td><a href="./states/il.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/il.html">Illinois</a></td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">Active 2026 legislation pending</td>
+ <td><a href="./states/il.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="IN" id="state-row-IN">
-  <td class="state-name-cell">Indiana</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Indiana</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="IA" id="state-row-IA">
-  <td class="state-name-cell">Iowa</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">16 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Iowa</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">16 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="KS" id="state-row-KS">
-  <td class="state-name-cell">Kansas</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">16 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Kansas</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">16 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="restricted" data-state="KY" id="state-row-KY">
-  <td class="state-name-cell">Kentucky</td>
-  <td><span class="status-badge status-badge--restricted">Restricted</span></td>
-  <td class="platforms-count">10 / 21</td>
-  <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./pulsz/review.html" style="color:var(--color-primary);">Pulsz</a>, LuckyBird</td>
-  <td>21+</td>
-  <td class="legislation-col">KY sweepstakes machine laws</td>
-  <td></td>
+ <td class="state-name-cell">Kentucky</td>
+ <td><span class="status-badge status-badge--restricted">Restricted</span></td>
+ <td class="platforms-count">10 / 21</td>
+ <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./pulsz/review.html" style="color:var(--color-primary);">Pulsz</a>, LuckyBird</td>
+ <td>21+</td>
+ <td class="legislation-col">KY sweepstakes machine laws</td>
+ <td></td>
 </tr>
 <tr data-status="restricted" data-state="LA" id="state-row-LA">
-  <td class="state-name-cell">Louisiana</td>
-  <td><span class="status-badge status-badge--restricted">Restricted</span></td>
-  <td class="platforms-count">9 / 21</td>
-  <td class="restricted-col"><a href="./stake-us/review.html" style="color:var(--color-primary);">Stake.us</a>, <a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./global-poker/index.html" style="color:var(--color-primary);">Global Poker</a></td>
-  <td>21+</td>
-  <td class="legislation-col">LA RS 27:301 et seq.</td>
-  <td></td>
+ <td class="state-name-cell">Louisiana</td>
+ <td><span class="status-badge status-badge--restricted">Restricted</span></td>
+ <td class="platforms-count">9 / 21</td>
+ <td class="restricted-col"><a href="./stake-us/review.html" style="color:var(--color-primary);">Stake.us</a>, <a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./global-poker/index.html" style="color:var(--color-primary);">Global Poker</a></td>
+ <td>21+</td>
+ <td class="legislation-col">LA RS 27:301 et seq.</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="ME" id="state-row-ME">
-  <td class="state-name-cell">Maine</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">16 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Maine</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">16 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="banned" data-state="MD" id="state-row-MD">
-  <td class="state-name-cell"><a href="./states/md.html" style="color:var(--color-primary);font-weight:600;">Maryland</a></td>
-  <td><span class="status-badge status-badge--banned" style="background:#d97706;">Ban Advancing</span></td>
-  <td class="platforms-count">10 / 21</td>
-  <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./pulsz/review.html" style="color:var(--color-primary);">Pulsz</a>, LuckyBird</td>
-  <td>21+</td>
-  <td class="legislation-col">HB 295 (passed House 105-24, Mar 2026), HB 1226 (passed House 134-2)</td>
-  <td></td>
+ <td class="state-name-cell"><a href="./states/md.html" style="color:var(--color-primary);font-weight:600;">Maryland</a></td>
+ <td><span class="status-badge status-badge--banned" style="background:#d97706;">Ban Advancing</span></td>
+ <td class="platforms-count">10 / 21</td>
+ <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./pulsz/review.html" style="color:var(--color-primary);">Pulsz</a>, LuckyBird</td>
+ <td>21+</td>
+ <td class="legislation-col">HB 295 (passed House 105-24, Mar 2026), HB 1226 (passed House 134-2)</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="MA" id="state-row-MA">
-  <td class="state-name-cell">Massachusetts</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">15 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Massachusetts</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">15 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="restricted" data-state="MI" id="state-row-MI">
-  <td class="state-name-cell"><a href="./states/mi.html">Michigan</a></td>
-  <td><span class="status-badge status-badge--restricted">Restricted</span></td>
-  <td class="platforms-count">8 / 21</td>
-  <td class="restricted-col"><a href="./stake-us/review.html" style="color:var(--color-primary);">Stake.us</a>, <a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./pulsz/review.html" style="color:var(--color-primary);">Pulsz</a>, <a href="./global-poker/index.html" style="color:var(--color-primary);">Global Poker</a></td>
-  <td>21+</td>
-  <td class="legislation-col">MI Lawful Internet Gaming Act</td>
-  <td><a href="./states/mi.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/mi.html">Michigan</a></td>
+ <td><span class="status-badge status-badge--restricted">Restricted</span></td>
+ <td class="platforms-count">8 / 21</td>
+ <td class="restricted-col"><a href="./stake-us/review.html" style="color:var(--color-primary);">Stake.us</a>, <a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./pulsz/review.html" style="color:var(--color-primary);">Pulsz</a>, <a href="./global-poker/index.html" style="color:var(--color-primary);">Global Poker</a></td>
+ <td>21+</td>
+ <td class="legislation-col">MI Lawful Internet Gaming Act</td>
+ <td><a href="./states/mi.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="MN" id="state-row-MN">
-  <td class="state-name-cell">Minnesota</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Minnesota</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="MS" id="state-row-MS">
-  <td class="state-name-cell">Mississippi</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">16 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Mississippi</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">16 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="MO" id="state-row-MO">
-  <td class="state-name-cell">Missouri</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Missouri</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="banned" data-state="MT" id="state-row-MT">
-  <td class="state-name-cell"><a href="./states/mt.html">Montana</a></td>
-  <td><span class="status-badge status-badge--banned">Banned</span></td>
-  <td class="platforms-count">0 / 21</td>
-  <td class="restricted-col">All platforms</td>
-  <td>N/A</td>
-  <td class="legislation-col">SB 555 (eff. Oct 2025)</td>
-  <td><a href="./states/mt.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/mt.html">Montana</a></td>
+ <td><span class="status-badge status-badge--banned">Banned</span></td>
+ <td class="platforms-count">0 / 21</td>
+ <td class="restricted-col">All platforms</td>
+ <td>N/A</td>
+ <td class="legislation-col">SB 555 (eff. Oct 2025)</td>
+ <td><a href="./states/mt.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="NE" id="state-row-NE">
-  <td class="state-name-cell">Nebraska</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">16 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Nebraska</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">16 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="banned" data-state="NV" id="state-row-NV">
-  <td class="state-name-cell"><a href="./states/nv.html">Nevada</a></td>
-  <td><span class="status-badge status-badge--banned">Banned</span></td>
-  <td class="platforms-count">0 / 21</td>
-  <td class="restricted-col">All platforms</td>
-  <td>N/A</td>
-  <td class="legislation-col">SB 256 (eff. Oct 2025)</td>
-  <td><a href="./states/nv.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/nv.html">Nevada</a></td>
+ <td><span class="status-badge status-badge--banned">Banned</span></td>
+ <td class="platforms-count">0 / 21</td>
+ <td class="restricted-col">All platforms</td>
+ <td>N/A</td>
+ <td class="legislation-col">SB 256 (eff. Oct 2025)</td>
+ <td><a href="./states/nv.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="NH" id="state-row-NH">
-  <td class="state-name-cell">New Hampshire</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">16 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">New Hampshire</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">16 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="banned" data-state="NJ" id="state-row-NJ">
-  <td class="state-name-cell"><a href="./states/nj.html">New Jersey</a></td>
-  <td><span class="status-badge status-badge--banned">Banned</span></td>
-  <td class="platforms-count">0 / 21</td>
-  <td class="restricted-col">All platforms</td>
-  <td>N/A</td>
-  <td class="legislation-col">NJ iGaming exclusivity laws</td>
-  <td><a href="./states/nj.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/nj.html">New Jersey</a></td>
+ <td><span class="status-badge status-badge--banned">Banned</span></td>
+ <td class="platforms-count">0 / 21</td>
+ <td class="restricted-col">All platforms</td>
+ <td>N/A</td>
+ <td class="legislation-col">NJ iGaming exclusivity laws</td>
+ <td><a href="./states/nj.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="NM" id="state-row-NM">
-  <td class="state-name-cell">New Mexico</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">16 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">New Mexico</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">16 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="banned" data-state="NY" id="state-row-NY">
-  <td class="state-name-cell"><a href="./states/ny.html">New York</a></td>
-  <td><span class="status-badge status-badge--banned">Banned</span></td>
-  <td class="platforms-count">0 / 21</td>
-  <td class="restricted-col">All platforms</td>
-  <td>N/A</td>
-  <td class="legislation-col">PML 912 (enforcement 2025-26)</td>
-  <td><a href="./states/ny.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/ny.html">New York</a></td>
+ <td><span class="status-badge status-badge--banned">Banned</span></td>
+ <td class="platforms-count">0 / 21</td>
+ <td class="restricted-col">All platforms</td>
+ <td>N/A</td>
+ <td class="legislation-col">PML 912 (enforcement 2025-26)</td>
+ <td><a href="./states/ny.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="NC" id="state-row-NC">
-  <td class="state-name-cell">North Carolina</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">North Carolina</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="ND" id="state-row-ND">
-  <td class="state-name-cell">North Dakota</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">15 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">North Dakota</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">15 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="OH" id="state-row-OH">
-  <td class="state-name-cell"><a href="./states/oh.html">Ohio</a></td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td><a href="./states/oh.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/oh.html">Ohio</a></td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td><a href="./states/oh.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="OK" id="state-row-OK">
-  <td class="state-name-cell">Oklahoma</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">16 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Oklahoma</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">16 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="OR" id="state-row-OR">
-  <td class="state-name-cell">Oregon</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Oregon</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="PA" id="state-row-PA">
-  <td class="state-name-cell"><a href="./states/pa.html">Pennsylvania</a></td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td><a href="./states/pa.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/pa.html">Pennsylvania</a></td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td><a href="./states/pa.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="restricted" data-state="RI" id="state-row-RI">
-  <td class="state-name-cell">Rhode Island</td>
-  <td><span class="status-badge status-badge--restricted">Restricted</span></td>
-  <td class="platforms-count">9 / 21</td>
-  <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./global-poker/index.html" style="color:var(--color-primary);">Global Poker</a>, LuckyBird</td>
-  <td>21+</td>
-  <td class="legislation-col">RI iGaming regulations</td>
-  <td></td>
+ <td class="state-name-cell">Rhode Island</td>
+ <td><span class="status-badge status-badge--restricted">Restricted</span></td>
+ <td class="platforms-count">9 / 21</td>
+ <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./global-poker/index.html" style="color:var(--color-primary);">Global Poker</a>, LuckyBird</td>
+ <td>21+</td>
+ <td class="legislation-col">RI iGaming regulations</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="SC" id="state-row-SC">
-  <td class="state-name-cell">South Carolina</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">South Carolina</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="SD" id="state-row-SD">
-  <td class="state-name-cell">South Dakota</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">15 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">South Dakota</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">15 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="restricted" data-state="TN" id="state-row-TN">
-  <td class="state-name-cell"><a href="./states/tn.html">Tennessee</a></td>
-  <td><span class="status-badge status-badge--restricted">Restricted</span></td>
-  <td class="platforms-count">10 / 21</td>
-  <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./pulsz/review.html" style="color:var(--color-primary);">Pulsz</a>, LuckyBird</td>
-  <td>21+</td>
-  <td class="legislation-col">TN sweepstakes device laws</td>
-  <td><a href="./states/tn.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/tn.html">Tennessee</a></td>
+ <td><span class="status-badge status-badge--restricted">Restricted</span></td>
+ <td class="platforms-count">10 / 21</td>
+ <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./pulsz/review.html" style="color:var(--color-primary);">Pulsz</a>, LuckyBird</td>
+ <td>21+</td>
+ <td class="legislation-col">TN sweepstakes device laws</td>
+ <td><a href="./states/tn.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="TX" id="state-row-TX">
-  <td class="state-name-cell"><a href="./states/tx.html">Texas</a></td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">18 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td><a href="./states/tx.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/tx.html">Texas</a></td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">18 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td><a href="./states/tx.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="available" data-state="UT" id="state-row-UT">
-  <td class="state-name-cell">Utah</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">15 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Utah</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">15 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="restricted" data-state="VT" id="state-row-VT">
-  <td class="state-name-cell">Vermont</td>
-  <td><span class="status-badge status-badge--restricted">Restricted</span></td>
-  <td class="platforms-count">11 / 21</td>
-  <td class="restricted-col"><a href="./stake-us/review.html" style="color:var(--color-primary);">Stake.us</a>, <a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a></td>
-  <td>21+</td>
-  <td class="legislation-col">VT consumer protection rules</td>
-  <td></td>
+ <td class="state-name-cell">Vermont</td>
+ <td><span class="status-badge status-badge--restricted">Restricted</span></td>
+ <td class="platforms-count">11 / 21</td>
+ <td class="restricted-col"><a href="./stake-us/review.html" style="color:var(--color-primary);">Stake.us</a>, <a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a></td>
+ <td>21+</td>
+ <td class="legislation-col">VT consumer protection rules</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="VA" id="state-row-VA">
-  <td class="state-name-cell">Virginia</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Virginia</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="banned" data-state="WA" id="state-row-WA">
-  <td class="state-name-cell"><a href="./states/wa.html">Washington</a></td>
-  <td><span class="status-badge status-badge--banned">Banned</span></td>
-  <td class="platforms-count">0 / 21</td>
-  <td class="restricted-col">All platforms</td>
-  <td>N/A</td>
-  <td class="legislation-col">RCW 9.46 strict interpretation</td>
-  <td><a href="./states/wa.html" class="state-page-link">View guide</a></td>
+ <td class="state-name-cell"><a href="./states/wa.html">Washington</a></td>
+ <td><span class="status-badge status-badge--banned">Banned</span></td>
+ <td class="platforms-count">0 / 21</td>
+ <td class="restricted-col">All platforms</td>
+ <td>N/A</td>
+ <td class="legislation-col">RCW 9.46 strict interpretation</td>
+ <td><a href="./states/wa.html" class="state-page-link">View guide</a></td>
 </tr>
 <tr data-status="restricted" data-state="WV" id="state-row-WV">
-  <td class="state-name-cell">West Virginia</td>
-  <td><span class="status-badge status-badge--restricted">Restricted</span></td>
-  <td class="platforms-count">10 / 21</td>
-  <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./global-poker/index.html" style="color:var(--color-primary);">Global Poker</a>, LuckyBird</td>
-  <td>21+</td>
-  <td class="legislation-col">WV iGaming framework</td>
-  <td></td>
+ <td class="state-name-cell">West Virginia</td>
+ <td><span class="status-badge status-badge--restricted">Restricted</span></td>
+ <td class="platforms-count">10 / 21</td>
+ <td class="restricted-col"><a href="./chumba/review.html" style="color:var(--color-primary);">Chumba</a>, <a href="./global-poker/index.html" style="color:var(--color-primary);">Global Poker</a>, LuckyBird</td>
+ <td>21+</td>
+ <td class="legislation-col">WV iGaming framework</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="WI" id="state-row-WI">
-  <td class="state-name-cell">Wisconsin</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">17 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Wisconsin</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">17 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
 <tr data-status="available" data-state="WY" id="state-row-WY">
-  <td class="state-name-cell">Wyoming</td>
-  <td><span class="status-badge status-badge--available">Available</span></td>
-  <td class="platforms-count">16 / 21</td>
-  <td class="restricted-col">None</td>
-  <td>21+</td>
-  <td class="legislation-col">-</td>
-  <td></td>
+ <td class="state-name-cell">Wyoming</td>
+ <td><span class="status-badge status-badge--available">Available</span></td>
+ <td class="platforms-count">16 / 21</td>
+ <td class="restricted-col">None</td>
+ <td>21+</td>
+ <td class="legislation-col">-</td>
+ <td></td>
 </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+ </tbody>
+ </table>
+ </div>
+ </div>
 </section>
 
 <!-- LEGAL CHANGELOG -->
 <section class="section">
-  <div class="container container--default">
-    <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-4);">Legal Changelog</h2>
-    <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);">Recent legislative developments affecting sweepstakes casino availability across US states.</p>
-    <ul class="changelog-list">
-      <li class="changelog-item">
-        <span class="changelog-date">Jan 2026</span>
-        <div class="changelog-text"><strong>California AB 831 takes effect.</strong> Sweepstakes casino platforms officially prohibited from accepting California players. Bill signed October 2025 by Gov. Newsom with a January 2026 effective date. Applies to all online sweepstakes-model gaming platforms.</div>
-      </li>
-      <li class="changelog-item">
-        <span class="changelog-date">Oct 2025</span>
-        <div class="changelog-text"><strong>Montana SB 555 takes effect.</strong> Montana bans online sweepstakes casino operations statewide. Platforms that previously accepted MT players have exited the market.</div>
-      </li>
-      <li class="changelog-item">
-        <span class="changelog-date">Oct 2025</span>
-        <div class="changelog-text"><strong>Nevada SB 256 takes effect.</strong> Nevada formally prohibits sweepstakes casino platforms, reinforcing its existing regulated gaming framework. All major platforms now block NV registrations.</div>
-      </li>
-      <li class="changelog-item">
-        <span class="changelog-date">2025-2026</span>
-        <div class="changelog-text"><strong>New York PML 912 enforcement ramps up.</strong> New York's Penal Law Section 912 is being actively enforced against sweepstakes casino operators. Platforms have progressively withdrawn from the NY market throughout 2025.</div>
-      </li>
-      <li class="changelog-item">
-        <span class="changelog-date">2026</span>
-        <div class="changelog-text"><strong>Illinois active legislation.</strong> Illinois lawmakers have introduced bills targeting sweepstakes casino regulation. The outcome could move IL from "available" to "restricted" depending on final provisions. Monitoring ongoing.</div>
-      </li>
-    </ul>
-  </div>
+ <div class="container container--default">
+ <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-4);">Legal Changelog</h2>
+ <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);">Recent legislative developments affecting sweepstakes casino availability across US states.</p>
+ <ul class="changelog-list">
+ <li class="changelog-item">
+ <span class="changelog-date">Jan 2026</span>
+ <div class="changelog-text"><strong>California AB 831 takes effect.</strong> Sweepstakes casino platforms officially prohibited from accepting California players. Bill signed October 2025 by Gov. Newsom with a January 2026 effective date. Applies to all online sweepstakes-model gaming platforms.</div>
+ </li>
+ <li class="changelog-item">
+ <span class="changelog-date">Oct 2025</span>
+ <div class="changelog-text"><strong>Montana SB 555 takes effect.</strong> Montana bans online sweepstakes casino operations statewide. Platforms that previously accepted MT players have exited the market.</div>
+ </li>
+ <li class="changelog-item">
+ <span class="changelog-date">Oct 2025</span>
+ <div class="changelog-text"><strong>Nevada SB 256 takes effect.</strong> Nevada formally prohibits sweepstakes casino platforms, reinforcing its existing regulated gaming framework. All major platforms now block NV registrations.</div>
+ </li>
+ <li class="changelog-item">
+ <span class="changelog-date">2025-2026</span>
+ <div class="changelog-text"><strong>New York PML 912 enforcement ramps up.</strong> New York's Penal Law Section 912 is being actively enforced against sweepstakes casino operators. Platforms have progressively withdrawn from the NY market throughout 2025.</div>
+ </li>
+ <li class="changelog-item">
+ <span class="changelog-date">2026</span>
+ <div class="changelog-text"><strong>Illinois active legislation.</strong> Illinois lawmakers have introduced bills targeting sweepstakes casino regulation. The outcome could move IL from "available" to "restricted" depending on final provisions. Monitoring ongoing.</div>
+ </li>
+ </ul>
+ </div>
 </section>
 
 <!-- FAQ -->
 <section class="section section--alt">
-  <div class="container container--default">
-    <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-4);">Frequently Asked Questions</h2>
-    
-    <div class="faq-item">
-      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Are sweepstakes casinos legal in the United States?</div>
-      <div class="faq-answer">
-        <p>Sweepstakes casinos operate legally in most US states under a sweepstakes promotional model. Unlike traditional online casinos, sweepstakes platforms use virtual currencies (Gold Coins for entertainment, Sweeps Coins that can be redeemed for prizes). No purchase is necessary to play. However, seven states have enacted legislation that specifically bans or effectively prohibits these platforms: California, Washington, Idaho, Montana, Nevada, New Jersey, and New York.</p>
-      </div>
-    </div>
-    
-    <div class="faq-item">
-      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Why are sweepstakes casinos banned in some states?</div>
-      <div class="faq-answer">
-        <p>States ban sweepstakes casinos for different reasons. Nevada and New Jersey have established regulated online gambling frameworks and view sweepstakes platforms as unregulated competition. Washington State has broadly written gambling statutes that encompass sweepstakes models. California's AB 831 was passed after lobbying from tribal gaming interests. Idaho and Montana have conservative gambling laws that do not accommodate the sweepstakes model. New York treats sweepstakes casino operations as a violation of its Penal Law.</p>
-      </div>
-    </div>
-    
-    <div class="faq-item">
-      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">What does "restricted" mean for a state?</div>
-      <div class="faq-answer">
-        <p>A "restricted" classification means sweepstakes casinos are not fully banned, but some platforms choose not to accept players from that state. This can happen because of unclear regulations, specific state-level gaming laws that create compliance risks, or individual platform risk assessments. In restricted states, you may find that 8 to 12 of the 21 major platforms are available, while others have voluntarily withdrawn or never entered the market.</p>
-      </div>
-    </div>
-    
-    <div class="faq-item">
-      <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Do I need to be 21 to play at a sweepstakes casino?</div>
-      <div class="faq-answer">
-        <p>Most sweepstakes casino platforms require players to be at least 21 years old, although the legal minimum in some states is 18. The 21+ requirement is a platform-level policy adopted by the majority of operators to ensure compliance across all jurisdictions. Always check the specific terms and conditions of each platform, as age requirements can vary.</p>
-      </div>
-    </div>
-  </div>
+ <div class="container container--default">
+ <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-4);">Frequently Asked Questions</h2>
+ 
+ <div class="faq-item">
+ <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Are sweepstakes casinos legal in the United States?</div>
+ <div class="faq-answer">
+ <p>Sweepstakes casinos operate legally in most US states under a sweepstakes promotional model. Unlike traditional online casinos, sweepstakes platforms use virtual currencies (Gold Coins for entertainment, Sweeps Coins that can be redeemed for prizes). No purchase is necessary to play. However, seven states have enacted legislation that specifically bans or effectively prohibits these platforms: California, Washington, Idaho, Montana, Nevada, New Jersey, and New York.</p>
+ </div>
+ </div>
+ 
+ <div class="faq-item">
+ <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Why are sweepstakes casinos banned in some states?</div>
+ <div class="faq-answer">
+ <p>States ban sweepstakes casinos for different reasons. Nevada and New Jersey have established regulated online gambling frameworks and view sweepstakes platforms as unregulated competition. Washington State has broadly written gambling statutes that encompass sweepstakes models. California's AB 831 was passed after lobbying from tribal gaming interests. Idaho and Montana have conservative gambling laws that do not accommodate the sweepstakes model. New York treats sweepstakes casino operations as a violation of its Penal Law.</p>
+ </div>
+ </div>
+ 
+ <div class="faq-item">
+ <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">What does "restricted" mean for a state?</div>
+ <div class="faq-answer">
+ <p>A "restricted" classification means sweepstakes casinos are not fully banned, but some platforms choose not to accept players from that state. This can happen because of unclear regulations, specific state-level gaming laws that create compliance risks, or individual platform risk assessments. In restricted states, you may find that 8 to 12 of the 21 major platforms are available, while others have voluntarily withdrawn or never entered the market.</p>
+ </div>
+ </div>
+ 
+ <div class="faq-item">
+ <div class="faq-question" onclick="this.parentElement.classList.toggle('open')">Do I need to be 21 to play at a sweepstakes casino?</div>
+ <div class="faq-answer">
+ <p>Most sweepstakes casino platforms require players to be at least 21 years old, although the legal minimum in some states is 18. The 21+ requirement is a platform-level policy adopted by the majority of operators to ensure compliance across all jurisdictions. Always check the specific terms and conditions of each platform, as age requirements can vary.</p>
+ </div>
+ </div>
+ </div>
 </section>
 
 <!-- SOURCES -->
 <section class="section">
-  <div class="container container--default">
-    <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-4);">Sources &amp; State Guides</h2>
-    <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);">We maintain dedicated guides for 15 states with the most relevant regulatory developments. External legal sources are also referenced for accuracy.</p>
-    
-    <h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-3);">Individual State Guides</h3>
-    <div class="sources-grid" style="margin-bottom:var(--space-6);">
-      <a href="./states/ca.html">California</a>
-      <a href="./states/fl.html">Florida</a>
-      <a href="./states/ga.html">Georgia</a>
-      <a href="./states/id.html">Idaho</a>
-      <a href="./states/il.html">Illinois</a>
-      <a href="./states/mi.html">Michigan</a>
-      <a href="./states/mt.html">Montana</a>
-      <a href="./states/nj.html">New Jersey</a>
-      <a href="./states/nv.html">Nevada</a>
-      <a href="./states/ny.html">New York</a>
-      <a href="./states/oh.html">Ohio</a>
-      <a href="./states/pa.html">Pennsylvania</a>
-      <a href="./states/tn.html">Tennessee</a>
-      <a href="./states/tx.html">Texas</a>
-      <a href="./states/wa.html">Washington</a>
-    </div>
+ <div class="container container--default">
+ <h2 style="font-family:var(--font-display);font-size:var(--text-xl);font-weight:800;margin-bottom:var(--space-4);">Sources &amp; State Guides</h2>
+ <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-4);">We maintain dedicated guides for 15 states with the most relevant regulatory developments. External legal sources are also referenced for accuracy.</p>
+ 
+ <h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-3);">Individual State Guides</h3>
+ <div class="sources-grid" style="margin-bottom:var(--space-6);">
+ <a href="./states/ca.html">California</a>
+ <a href="./states/fl.html">Florida</a>
+ <a href="./states/ga.html">Georgia</a>
+ <a href="./states/id.html">Idaho</a>
+ <a href="./states/il.html">Illinois</a>
+ <a href="./states/mi.html">Michigan</a>
+ <a href="./states/mt.html">Montana</a>
+ <a href="./states/nj.html">New Jersey</a>
+ <a href="./states/nv.html">Nevada</a>
+ <a href="./states/ny.html">New York</a>
+ <a href="./states/oh.html">Ohio</a>
+ <a href="./states/pa.html">Pennsylvania</a>
+ <a href="./states/tn.html">Tennessee</a>
+ <a href="./states/tx.html">Texas</a>
+ <a href="./states/wa.html">Washington</a>
+ </div>
 
-    <h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-3);">External Legal Sources</h3>
-    <div class="sources-grid">
-      <a href="https://www.ncsl.org/research/financial-services-and-commerce/internet-gambling.aspx" target="_blank" rel="noopener noreferrer">NCSL: Internet Gambling</a>
-      <a href="https://www.americangaming.org/" target="_blank" rel="noopener noreferrer">American Gaming Association</a>
-      <a href="https://leginfo.legislature.ca.gov/" target="_blank" rel="noopener noreferrer">California Legislature</a>
-      <a href="https://leg.mt.gov/" target="_blank" rel="noopener noreferrer">Montana Legislature</a>
-      <a href="https://www.leg.state.nv.us/" target="_blank" rel="noopener noreferrer">Nevada Legislature</a>
-      <a href="https://www.nysenate.gov/" target="_blank" rel="noopener noreferrer">New York Senate</a>
-    </div>
-  </div>
+ <h3 style="font-size:var(--text-base);font-weight:700;margin-bottom:var(--space-3);">External Legal Sources</h3>
+ <div class="sources-grid">
+ <a href="https://www.ncsl.org/research/financial-services-and-commerce/internet-gambling.aspx" target="_blank" rel="noopener noreferrer">NCSL: Internet Gambling</a>
+ <a href="https://www.americangaming.org/" target="_blank" rel="noopener noreferrer">American Gaming Association</a>
+ <a href="https://leginfo.legislature.ca.gov/" target="_blank" rel="noopener noreferrer">California Legislature</a>
+ <a href="https://leg.mt.gov/" target="_blank" rel="noopener noreferrer">Montana Legislature</a>
+ <a href="https://www.leg.state.nv.us/" target="_blank" rel="noopener noreferrer">Nevada Legislature</a>
+ <a href="https://www.nysenate.gov/" target="_blank" rel="noopener noreferrer">New York Senate</a>
+ </div>
+ </div>
 </section>
 
 </main>
@@ -1271,162 +1271,162 @@ window.addEventListener('load', function() {
 </footer>
 <!-- SEARCH OVERLAY -->
 <div id="searchOverlay" class="search-overlay">
-  <div class="search-box">
-    <div class="search-input-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-      <input type="text" class="search-input" placeholder="Search guides, games, bonuses..." autocomplete="off">
-      <button class="search-close" aria-label="Close search"><span aria-hidden="true">&#x2715;</span></button>
-    </div>
-    <div class="search-results"></div>
-  </div>
+ <div class="search-box">
+ <div class="search-input-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+ <input type="text" class="search-input" placeholder="Search guides, games, bonuses..." autocomplete="off">
+ <button class="search-close" aria-label="Close search"><span aria-hidden="true">&#x2715;</span></button>
+ </div>
+ <div class="search-results"></div>
+ </div>
 </div>
 <script src="./app.min.js" defer></script>
 
 <!-- State Map Interactivity -->
 <script>
 (function() {
-  'use strict';
+ 'use strict';
 
-  // Tooltip
-  var tooltip = document.getElementById('mapTooltip');
-  var tooltipState = document.getElementById('tooltipState');
-  var tooltipStatus = document.getElementById('tooltipStatus');
-  
-  var statusLabels = {
-    'available': 'Available - Most platforms operate here',
-    'banned': 'Banned - Sweepstakes casinos prohibited',
-    'restricted': 'Restricted - Some platforms unavailable'
-  };
-  
-  var statusColors = {
-    'available': '#16a34a',
-    'banned': '#dc2626',
-    'restricted': '#d97706'
-  };
+ // Tooltip
+ var tooltip = document.getElementById('mapTooltip');
+ var tooltipState = document.getElementById('tooltipState');
+ var tooltipStatus = document.getElementById('tooltipStatus');
+ 
+ var statusLabels = {
+ 'available': 'Available - Most platforms operate here',
+ 'banned': 'Banned - Sweepstakes casinos prohibited',
+ 'restricted': 'Restricted - Some platforms unavailable'
+ };
+ 
+ var statusColors = {
+ 'available': '#16a34a',
+ 'banned': '#dc2626',
+ 'restricted': '#d97706'
+ };
 
-  // Map hover
-  document.querySelectorAll('.state-path').forEach(function(path) {
-    path.addEventListener('mouseenter', function(e) {
-      var name = this.getAttribute('data-name');
-      var status = this.getAttribute('data-status');
-      tooltipState.textContent = name;
-      tooltipStatus.textContent = statusLabels[status] || status;
-      tooltipStatus.style.color = statusColors[status] || 'inherit';
-      tooltip.classList.add('visible');
-    });
-    
-    path.addEventListener('mousemove', function(e) {
-      var x = e.clientX + 12;
-      var y = e.clientY - 40;
-      // Keep tooltip on screen
-      if (x + 220 > window.innerWidth) x = e.clientX - 230;
-      if (y < 10) y = e.clientY + 20;
-      tooltip.style.left = x + 'px';
-      tooltip.style.top = y + 'px';
-    });
-    
-    path.addEventListener('mouseleave', function() {
-      tooltip.classList.remove('visible');
-    });
-    
-    // Click to scroll to table row
-    path.addEventListener('click', function() {
-      var stateCode = this.getAttribute('data-state');
-      var row = document.getElementById('state-row-' + stateCode);
-      if (row) {
-        // Remove any active filter so the row is visible
-        var status = row.getAttribute('data-status');
-        showFilter('all');
-        // Highlight the row
-        document.querySelectorAll('.state-matrix tr.highlight').forEach(function(r) {
-          r.classList.remove('highlight');
-        });
-        row.style.background = 'rgba(29,78,216,0.12)';
-        row.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        setTimeout(function() {
-          row.style.background = '';
-        }, 2500);
-      }
-    });
-  });
+ // Map hover
+ document.querySelectorAll('.state-path').forEach(function(path) {
+ path.addEventListener('mouseenter', function(e) {
+ var name = this.getAttribute('data-name');
+ var status = this.getAttribute('data-status');
+ tooltipState.textContent = name;
+ tooltipStatus.textContent = statusLabels[status] || status;
+ tooltipStatus.style.color = statusColors[status] || 'inherit';
+ tooltip.classList.add('visible');
+ });
+ 
+ path.addEventListener('mousemove', function(e) {
+ var x = e.clientX + 12;
+ var y = e.clientY - 40;
+ // Keep tooltip on screen
+ if (x + 220 > window.innerWidth) x = e.clientX - 230;
+ if (y < 10) y = e.clientY + 20;
+ tooltip.style.left = x + 'px';
+ tooltip.style.top = y + 'px';
+ });
+ 
+ path.addEventListener('mouseleave', function() {
+ tooltip.classList.remove('visible');
+ });
+ 
+ // Click to scroll to table row
+ path.addEventListener('click', function() {
+ var stateCode = this.getAttribute('data-state');
+ var row = document.getElementById('state-row-' + stateCode);
+ if (row) {
+ // Remove any active filter so the row is visible
+ var status = row.getAttribute('data-status');
+ showFilter('all');
+ // Highlight the row
+ document.querySelectorAll('.state-matrix tr.highlight').forEach(function(r) {
+ r.classList.remove('highlight');
+ });
+ row.style.background = 'rgba(29,78,216,0.12)';
+ row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+ setTimeout(function() {
+ row.style.background = '';
+ }, 2500);
+ }
+ });
+ });
 
-  // Filter buttons
-  var filterBtns = document.querySelectorAll('.filter-btn');
-  
-  function showFilter(filter) {
-    filterBtns.forEach(function(btn) {
-      btn.classList.toggle('active', btn.getAttribute('data-filter') === filter);
-    });
-    
-    document.querySelectorAll('#stateTable tbody tr').forEach(function(row) {
-      if (filter === 'all') {
-        row.classList.remove('hidden');
-      } else {
-        row.classList.toggle('hidden', row.getAttribute('data-status') !== filter);
-      }
-    });
-  }
-  
-  filterBtns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      showFilter(this.getAttribute('data-filter'));
-    });
-  });
+ // Filter buttons
+ var filterBtns = document.querySelectorAll('.filter-btn');
+ 
+ function showFilter(filter) {
+ filterBtns.forEach(function(btn) {
+ btn.classList.toggle('active', btn.getAttribute('data-filter') === filter);
+ });
+ 
+ document.querySelectorAll('#stateTable tbody tr').forEach(function(row) {
+ if (filter === 'all') {
+ row.classList.remove('hidden');
+ } else {
+ row.classList.toggle('hidden', row.getAttribute('data-status') !== filter);
+ }
+ });
+ }
+ 
+ filterBtns.forEach(function(btn) {
+ btn.addEventListener('click', function() {
+ showFilter(this.getAttribute('data-filter'));
+ });
+ });
 
-  // Table sorting
-  var table = document.getElementById('stateTable');
-  var headers = table.querySelectorAll('th[data-sort]');
-  var currentSort = { col: 'name', asc: true };
-  
-  var statusOrder = { 'available': 0, 'restricted': 1, 'banned': 2 };
-  
-  function sortTable(col, asc) {
-    var tbody = table.querySelector('tbody');
-    var rows = Array.from(tbody.querySelectorAll('tr'));
-    
-    rows.sort(function(a, b) {
-      var valA, valB;
-      
-      switch(col) {
-        case 'name':
-          valA = a.querySelector('.state-name-cell').textContent.trim();
-          valB = b.querySelector('.state-name-cell').textContent.trim();
-          return asc ? valA.localeCompare(valB) : valB.localeCompare(valA);
-        case 'status':
-          valA = statusOrder[a.getAttribute('data-status')] || 0;
-          valB = statusOrder[b.getAttribute('data-status')] || 0;
-          return asc ? valA - valB : valB - valA;
-        case 'platforms':
-          valA = parseInt(a.querySelector('.platforms-count').textContent);
-          valB = parseInt(b.querySelector('.platforms-count').textContent);
-          return asc ? valA - valB : valB - valA;
-        case 'age':
-          valA = a.cells[4].textContent.trim();
-          valB = b.cells[4].textContent.trim();
-          return asc ? valA.localeCompare(valB) : valB.localeCompare(valA);
-        default:
-          return 0;
-      }
-    });
-    
-    rows.forEach(function(row) { tbody.appendChild(row); });
-  }
-  
-  headers.forEach(function(th) {
-    th.addEventListener('click', function() {
-      var col = this.getAttribute('data-sort');
-      var asc = (currentSort.col === col) ? !currentSort.asc : true;
-      currentSort = { col: col, asc: asc };
-      
-      headers.forEach(function(h) {
-        h.classList.remove('sorted');
-        h.querySelector('.sort-arrow').innerHTML = '&#9650;';
-      });
-      this.classList.add('sorted');
-      this.querySelector('.sort-arrow').innerHTML = asc ? '&#9650;' : '&#9660;';
-      
-      sortTable(col, asc);
-    });
-  });
+ // Table sorting
+ var table = document.getElementById('stateTable');
+ var headers = table.querySelectorAll('th[data-sort]');
+ var currentSort = { col: 'name', asc: true };
+ 
+ var statusOrder = { 'available': 0, 'restricted': 1, 'banned': 2 };
+ 
+ function sortTable(col, asc) {
+ var tbody = table.querySelector('tbody');
+ var rows = Array.from(tbody.querySelectorAll('tr'));
+ 
+ rows.sort(function(a, b) {
+ var valA, valB;
+ 
+ switch(col) {
+ case 'name':
+ valA = a.querySelector('.state-name-cell').textContent.trim();
+ valB = b.querySelector('.state-name-cell').textContent.trim();
+ return asc ? valA.localeCompare(valB) : valB.localeCompare(valA);
+ case 'status':
+ valA = statusOrder[a.getAttribute('data-status')] || 0;
+ valB = statusOrder[b.getAttribute('data-status')] || 0;
+ return asc ? valA - valB : valB - valA;
+ case 'platforms':
+ valA = parseInt(a.querySelector('.platforms-count').textContent);
+ valB = parseInt(b.querySelector('.platforms-count').textContent);
+ return asc ? valA - valB : valB - valA;
+ case 'age':
+ valA = a.cells[4].textContent.trim();
+ valB = b.cells[4].textContent.trim();
+ return asc ? valA.localeCompare(valB) : valB.localeCompare(valA);
+ default:
+ return 0;
+ }
+ });
+ 
+ rows.forEach(function(row) { tbody.appendChild(row); });
+ }
+ 
+ headers.forEach(function(th) {
+ th.addEventListener('click', function() {
+ var col = this.getAttribute('data-sort');
+ var asc = (currentSort.col === col) ? !currentSort.asc : true;
+ currentSort = { col: col, asc: asc };
+ 
+ headers.forEach(function(h) {
+ h.classList.remove('sorted');
+ h.querySelector('.sort-arrow').innerHTML = '&#9650;';
+ });
+ this.classList.add('sorted');
+ this.querySelector('.sort-arrow').innerHTML = asc ? '&#9650;' : '&#9660;';
+ 
+ sortTable(col, asc);
+ });
+ });
 
 })();
 </script>
