@@ -292,7 +292,7 @@
   display: none;
   padding: var(--space-2) var(--space-5);
   background: var(--color-primary);
-  color: var(--color-text-inverse) !important;
+  color: #ffffff !important;
   border-radius: var(--radius-full);
   font-weight: 700;
   font-size: var(--text-xs);
