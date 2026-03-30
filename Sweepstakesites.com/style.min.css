@@ -104,7 +104,7 @@
 .score-row{display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3) 0;border-bottom:1px solid var(--color-border-light)}
 .score-label{width:140px;font-weight:600;font-size:var(--text-sm);flex-shrink:0}
 .score-bar-track{flex:1;height:8px;background:var(--color-surface-2);border-radius:var(--radius-full);overflow:hidden}
-.score-bar-fill{height:100%;background:var(--color-primary);border-radius:var(--radius-full);transform-origin:left center;transition:transform 0.8s ease;will-change:transform;will-change:transform}
+.score-bar-fill{height:100%;background:var(--color-primary);border-radius:var(--radius-full);width:calc(var(--bar-width,80) * 1%);transform:none;transition:width 0.8s ease}
 .score-value{font-weight:700;font-size:var(--text-sm);color:var(--color-primary);min-width:48px;text-align:right}
 .sidebar-promo{background:var(--color-surface);border:2px solid var(--color-primary);border-radius:var(--radius-xl);box-shadow:0 8px 32px rgba(22,65,180,0.15);padding:var(--space-5);color:var(--color-text)}
 [data-theme="dark"] .sidebar-promo{background:var(--color-surface);border-color:var(--color-primary);box-shadow:0 8px 32px rgba(91,138,245,0.15)}

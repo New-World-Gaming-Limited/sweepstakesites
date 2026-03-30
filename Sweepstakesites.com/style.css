@@ -718,10 +718,9 @@
   height: 100%;
   background: var(--color-primary);
   border-radius: var(--radius-full);
-  transform-origin: left center;
-  transition: transform 0.8s ease;
-  will-change: transform;
-  will-change: transform;
+  width: calc(var(--bar-width, 80) * 1%);
+  transform: none;
+  transition: width 0.8s ease;
 }
 .score-value {
   font-weight: 700;
