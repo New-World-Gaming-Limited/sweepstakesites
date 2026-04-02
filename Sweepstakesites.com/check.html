@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exit Link Audit — sweepstakesites.com | Brand MCP Check</title>
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            background: #0d1117;
+            color: #e6edf3;
+            padding: 24px;
+            line-height: 1.5;
+        }
+        .header {
+            max-width: 1400px;
+            margin: 0 auto 32px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            color: #8b949e;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+        .alert {
+            background: #1c1917;
+            border: 1px solid #854d0e;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+        .alert strong { color: #fbbf24; }
+        .stats {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .stat {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 16px 20px;
+            min-width: 180px;
+        }
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #58a6ff;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #8b949e;
+            margin-top: 4px;
+        }
+        table {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        thead th {
+            background: #161b22;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #8b949e;
+            border-bottom: 2px solid #30363d;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        tbody td {
+            padding: 16px;
+            border-bottom: 1px solid #21262d;
+            vertical-align: top;
+        }
+        tbody tr:hover {
+            background: #161b22;
+        }
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .mcp-info {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            font-size: 13px;
+        }
+        .mcp-info code {
+            background: #21262d;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Exit Link Audit — sweepstakesites.com</h1>
+        <p class="subtitle">Brand MCP alignment check | Generated April 2, 2026</p>
+        
+        <div class="alert">
+            <strong>⚠ Brand MCP (siteid=95) has only 1 brand configured (wild.io).</strong><br>
+            The 21 sweepstakes casino brands on the site are not yet loaded into the MCP database for this site ID. 
+            The current exit links use direct affiliate URLs (getstake.it, m.legendz.com/redirect) and direct brand homepage URLs — these are working correctly but are not tracked through the MCP/sweepstakes.global tracking system.
+            <br><br>
+            <strong>Action needed:</strong> Add all 21 brands to the Brand MCP database under siteid=95 with sweepstakes.global tracking URLs, then update exit links site-wide.
+        </div>
+        
+        <div class="mcp-info">
+            <strong>MCP Query Parameters:</strong> 
+            <code>siteid=95</code> 
+            <code>countrycode=AD</code> 
+            <code>languageid=1</code> 
+            <code>channelid=5</code> → <strong>0 brands</strong><br>
+            <code>siteid=95</code> 
+            <code>countrycode=AD</code> 
+            <code>languageid=1</code> 
+            <code>channelid=1</code> → <strong>1 brand</strong> (wild.io)<br>
+            <br>
+            <strong>MCP Endpoint:</strong> <code>https://brandbonus-mcp2-a54b.gaming-media-enterprise-account.workers.dev/mcp</code><br>
+            <strong>Site Name in MCP:</strong> Sweepstakes.global<br>
+            <strong>Tracking domain:</strong> <code>https://www.sweepstakes.global/link/[id]/95/</code>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">21</div>
+                <div class="stat-label">Brands on Site</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Affiliate Partners</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" style="color:#dc2626;">0 / 21</div>
+                <div class="stat-label">Matched in MCP</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" style="color:#16a34a;">21 / 21</div>
+                <div class="stat-label">Exit Links Working</div>
+            </div>
+        </div>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th style="width:140px;">Brand</th>
+                <th style="width:300px;">Click URL / Redirect / Code</th>
+                <th style="width:140px;text-align:center;">MCP Status</th>
+                <th>Destination on Load</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Stake.us<br>
+                <span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">AFFILIATE</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet" target="_blank" rel="noopener">https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://stake.us/?c=Maxbet&offer=maxbet&deep_link_value=stake-us%3A%2F%2F%3Fc%3DMaxbet%26offer%3Dmaxbet" target="_blank" rel="noopener" style="color:#8b5cf6;">https://stake.us/?c=Maxbet&offer=maxbet&deep_link_value=stake-us%3A%2F%2F%3Fc%3DMaxbet%26offer%3Dmaxbet</a>
+                <br><br>
+                <strong>Code:</strong> <code style="background:#FFD700;color:#000;padding:2px 6px;border-radius:4px;font-weight:700;">MAXBET</code>
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.getstake.it%2Fi%2FMaxbet%2Fio%2Fmaxbet%2Fu%2FMaxbet%2Fuo%2Fmaxbet&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Stake.us landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>Stake.us - The Leading Social Casino. Fun & Free to Play</strong><br>
+                    The page displays a dark blue splash screen with the white Stake.us logo centered. While the DOM contains full site content (games, login, etc.), the visual viewport is currently covered by this loadi...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Legendz<br>
+                <span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">AFFILIATE</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://m.legendz.com/redirect.aspx?mid=37&sid=1136&cid=&pid=&affid=34&promo=MAXBET" target="_blank" rel="noopener">https://m.legendz.com/redirect.aspx?mid=37&sid=1136&cid=&pid=&affid=34&promo=MAXBET</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://www.legendz.com/en-US/?register=me&btag=34_37ga1136cidpidvar1var2var3var4var5affid34tid&promo=MAXBET" target="_blank" rel="noopener" style="color:#8b5cf6;">https://www.legendz.com/en-US/?register=me&btag=34_37ga1136cidpidvar1var2var3var4var5affid34tid&promo=MAXBET</a>
+                <br><br>
+                <strong>Code:</strong> <code style="background:#FFD700;color:#000;padding:2px 6px;border-radius:4px;font-weight:700;">MAXBET</code>
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fm.legendz.com%2Fredirect.aspx%3Fmid%3D37%26sid%3D1136%26cid%3D%26pid%3D%26affid%3D34%26promo%3DMAXBET&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Legendz landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>Legendz.com</strong><br>
+                    The page displays the Legendz.com homepage with a 'Sign Up' registration modal overlaid on the right side. A 'Welcome to the World of Legendz' banner is visible, along with various casino-style game t...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Shuffle.us<br>
+                <span style="background:#16a34a;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">AFFILIATE</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://shuffle.us?r=MAXBET" target="_blank" rel="noopener">https://shuffle.us?r=MAXBET</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://shuffle.us?r=MAXBET" target="_blank" rel="noopener" style="color:#8b5cf6;">https://shuffle.us?r=MAXBET</a>
+                <br><br>
+                <strong>Code:</strong> <code style="background:#FFD700;color:#000;padding:2px 6px;border-radius:4px;font-weight:700;">MAXBET</code>
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fshuffle.us%3Fr%3DMAXBET&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Shuffle.us landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>Shuffle.us | The #1 Free to Play Social Casino in the U.S</strong><br>
+                    The page displays a dark-themed social casino interface. At the top, there's a navigation bar with the Shuffle.us logo, Login, and Register buttons. A sidebar on the left lists various game categories...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Rolla<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://www.rolla.com" target="_blank" rel="noopener">https://www.rolla.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://www.rolla.com" target="_blank" rel="noopener" style="color:#8b5cf6;">https://www.rolla.com</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.rolla.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Rolla landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>Rolla | The Best Free-Play Social Casino</strong><br>
+                    The page displays a promotional offer for a free $10 coin pack at Rolla, a social casino. It includes 'SIGN UP AND CLAIM BONUS' and 'LOGIN' buttons over a dark red background with casino-themed graphi...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Chumba Casino<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://www.chumbacasino.com" target="_blank" rel="noopener">https://www.chumbacasino.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://www.chumbacasino.com/" target="_blank" rel="noopener" style="color:#8b5cf6;">https://www.chumbacasino.com/</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.chumbacasino.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Chumba Casino landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>Chumba Casino | Online Social Casino — Free Slot Games</strong><br>
+                    The landing page features a vibrant purple promotional banner for a "Free Daily Bonus" with images of Tiffany Stratton and Drew McIntyre. Below the navigation menu (Games, Promotions, Help Center, Log...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Crown Coins<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://crowncoinscasino.com" target="_blank" rel="noopener">https://crowncoinscasino.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://crowncoinscasino.com/" target="_blank" rel="noopener" style="color:#8b5cf6;">https://crowncoinscasino.com/</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fcrowncoinscasino.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Crown Coins landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>CrownCoinsCasino</strong><br>
+                    The page is a vibrant social casino landing page with a purple theme. It features a large banner stating '#1 Social Casino in America' with a 'CLAIM WELCOME BONUS' button. Top games like 'Coins of Oly...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                WOW Vegas<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://www.wowvegas.com" target="_blank" rel="noopener">https://www.wowvegas.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://www.wowvegas.com" target="_blank" rel="noopener" style="color:#8b5cf6;">https://www.wowvegas.com</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.wowvegas.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="WOW Vegas landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>WOW Vegas | The Best Free-Play Social Casino</strong><br>
+                    The landing page features Paris Hilton in a pink outfit with a cowboy hat. The text 'SPIN & WIN With Paris' is prominent, along with a 'Claim Welcome Offer' button. There are 'Login' and 'Sign Up' but...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                McLuck<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://www.mcluck.com" target="_blank" rel="noopener">https://www.mcluck.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://www.mcluck.com/" target="_blank" rel="noopener" style="color:#8b5cf6;">https://www.mcluck.com/</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.mcluck.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="McLuck landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>McLuck Social Casino: Free to Play in the USA</strong><br>
+                    The page loaded a promotional landing page for McLuck Social Casino. It features a prominent "GET YOUR 150% EXTRA" headline, a slot machine graphic with falling gold coins, and buttons for "Join Now",...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Fortune Coins<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://fortunecoins.com" target="_blank" rel="noopener">https://fortunecoins.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://fortunecoins.com" target="_blank" rel="noopener" style="color:#8b5cf6;">https://fortunecoins.com</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Ffortunecoins.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Fortune Coins landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>Fortune Coins: Top Social Casino in the U.S. and Canada</strong><br>
+                    The page loads a vibrant social casino landing page featuring a 'Free Welcome Bonus!' headline. It displays various slot game tiles like 'Blue Bird', 'Bloody Pesos', and 'Divine Wine'. A prominent coo...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                High 5 Casino<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://high5casino.com" target="_blank" rel="noopener">https://high5casino.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://high5casino.com/" target="_blank" rel="noopener" style="color:#8b5cf6;">https://high5casino.com/</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fhigh5casino.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="High 5 Casino landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>High 5 Casino | Online Social Casino | Always Free To Play</strong><br>
+                    The page loads a promotional landing for High 5 Casino featuring a man holding a $25,000 check with the text 'PLAY. WIN. REDEEM. REAL PRIZES!'. A cookie consent banner is visible at the bottom, and 'S...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Pulsz<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://www.pulsz.com" target="_blank" rel="noopener">https://www.pulsz.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://www.pulsz.com" target="_blank" rel="noopener" style="color:#8b5cf6;">https://www.pulsz.com</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.pulsz.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Pulsz landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>pulsz.com</strong><br>
+                    The page displays a promotional offer for 'GET 200%+ EXTRA GOLD COINS' with a 'JOIN. SPIN. WIN.' button. A cookie consent overlay is present in the center of the screen with options to 'Accept All', '...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                RealPrize<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://realprize.com" target="_blank" rel="noopener">https://realprize.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://realprize.com/" target="_blank" rel="noopener" style="color:#8b5cf6;">https://realprize.com/</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Frealprize.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="RealPrize landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>Real Prize | Best American Free To Play Social Casino</strong><br>
+                    The page features a vibrant landing screen for a social casino, displaying two people celebrating in a casino-like setting. It includes the "Real Prize" logo, "LOGIN" and "SIGN UP" buttons in the head...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Zula Casino<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://zulacasino.com" target="_blank" rel="noopener">https://zulacasino.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://zulacasino.com" target="_blank" rel="noopener" style="color:#8b5cf6;">https://zulacasino.com</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fzulacasino.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Zula Casino landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>Play and Win at Zula Casino: The Hottest New Social Casino in the U.S.</strong><br>
+                    The page features a vibrant background with fireworks and the text "THE BEST FREE-TO-PLAY SOCIAL CASINO". It shows two models in formal wear and various slot game thumbnails at the bottom. A cookie co...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Jackpota<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://www.jackpota.com" target="_blank" rel="noopener">https://www.jackpota.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://www.jackpota.com/" target="_blank" rel="noopener" style="color:#8b5cf6;">https://www.jackpota.com/</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.jackpota.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Jackpota landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>Jackpota | The best Free-Play Social Casino in the USA</strong><br>
+                    The homepage of Jackpota, a social casino, featuring a banner for a "100% MORE COINS +75 FREE SPINS" offer, various slot game tiles, and a notification subscription pop-up.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Sweep Las Vegas<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://sweeplasvegas.com" target="_blank" rel="noopener">https://sweeplasvegas.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://sweeplasvegas.com" target="_blank" rel="noopener" style="color:#8b5cf6;">https://sweeplasvegas.com</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fsweeplasvegas.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Sweep Las Vegas landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟡 <strong>Sweep Las Vegas</strong><br>
+                    Cloudflare security verification page — "Performing security verification". Real users would pass through to the casino lobby.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                American Luck<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://americanluck.com" target="_blank" rel="noopener">https://americanluck.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://americanluck.com/" target="_blank" rel="noopener" style="color:#8b5cf6;">https://americanluck.com/</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Famericanluck.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="American Luck landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>The Best Social Casino in the U.S. | American Luck</strong><br>
+                    The page displays the American Luck homepage with a banner stating '#1 SOCIAL CASINO IN THE UNITED STATES' and a 'WE VALUE YOUR PRIVACY' cookie consent overlay. No geo-block, age gate, or error page i...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Global Poker<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://globalpoker.com" target="_blank" rel="noopener">https://globalpoker.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://globalpoker.com/" target="_blank" rel="noopener" style="color:#8b5cf6;">https://globalpoker.com/</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fglobalpoker.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Global Poker landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>Play Free Online Poker - Poker Games Online | Global Poker</strong><br>
+                    The landing page for Global Poker is displayed, featuring a dark theme with a large promotional banner for 'THE HYDRA'. The banner includes the text 'HEADS WILL ROLL' and a 'PLAY NOW' button. Top navi...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Hello Millions<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://www.hellomillions.com" target="_blank" rel="noopener">https://www.hellomillions.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://www.hellomillions.com" target="_blank" rel="noopener" style="color:#8b5cf6;">https://www.hellomillions.com</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.hellomillions.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Hello Millions landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>Social Casino With Free Daily Coins | HelloMillions</strong><br>
+                    The page features a dark theme with a vibrant promotional banner showing a rabbit superhero and the text 'GET YOUR 150% EXTRA'. Below the banner, there are categories like 'Social Casino', 'Recommende...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                MegaBonanza<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://www.megabonanza.com" target="_blank" rel="noopener">https://www.megabonanza.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://www.megabonanza.com/" target="_blank" rel="noopener" style="color:#8b5cf6;">https://www.megabonanza.com/</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fwww.megabonanza.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="MegaBonanza landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>MegaBonanza - Ultimate Social Casino Experience</strong><br>
+                    The website features a dark-themed lobby for a social casino. A large promotional banner at the top center offers "150% EXTRA COINS" with a "Start Playing" button. The page displays various slot game ...
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                NoLimitCoins<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://nolimitcoins.com" target="_blank" rel="noopener">https://nolimitcoins.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://nolimitcoins.com" target="_blank" rel="noopener" style="color:#8b5cf6;">https://nolimitcoins.com</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Fnolimitcoins.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="NoLimitCoins landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>NoLimitCoins</strong><br>
+                    Welcome Bonus promo (free EXTRA coins + 300% boost) and Lucky Wheel. Shows latest winners, game categories (Lobby, All Games, Providers, Live Club, etc.). Dark-themed casino lobby.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-weight:600;white-space:nowrap;">
+                Lone Star<br>
+                <span style="background:#6b7280;color:#fff;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">NON-AFF</span>
+            </td>
+            <td style="font-size:12px;word-break:break-all;max-width:300px;">
+                <a href="https://lonestarcasino.com" target="_blank" rel="noopener">https://lonestarcasino.com</a>
+                <br><br>
+                <strong>Redirects to:</strong><br>
+                <a href="https://lonestarcasino.com/" target="_blank" rel="noopener" style="color:#8b5cf6;">https://lonestarcasino.com/</a>
+                <br><br>
+                <strong>Code:</strong> —
+            </td>
+            <td style="text-align:center;">
+                <span style="background:#dc2626;color:#fff;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;">NOT IN MCP</span>
+                <br><br>
+                <span style="font-size:11px;color:#9CA3AF;">siteid=95 has 0 matching brands</span>
+            </td>
+            <td style="max-width:420px;">
+                <div style="border:1px solid #30363d;border-radius:8px;overflow:hidden;margin-bottom:8px;">
+                    <img src="https://api.microlink.io/?url=https%3A%2F%2Flonestarcasino.com&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=800" alt="Lone Star landing page" style="width:100%;display:block;" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                    <div style="display:none;padding:16px;background:#1c2333;font-size:12px;color:#8b949e;">Screenshot unavailable</div>
+                </div>
+                <div style="font-size:11px;color:#8b949e;">
+                    🟢 <strong>LoneStar Casino Free Social Casino: 500+ Vegas-Style Games | LoneStarCasino</strong><br>
+                    The page displays a promotional landing for a social casino featuring a 'TOP FREE SOCIAL CASINO' headline, a 'CLAIM WELCOME OFFER' button, and links for 'Login' and 'REGISTER'. It includes imagery of ...
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    
+    <div style="max-width:1400px;margin:40px auto 0;padding:20px;background:#161b22;border:1px solid #30363d;border-radius:8px;font-size:13px;color:#8b949e;">
+        <strong>Notes:</strong><br>
+        • The 3 affiliate brands (Stake.us, Legendz, Shuffle.us) use tracked affiliate URLs with code MAXBET — these are working and redirecting correctly.<br>
+        • The 18 non-affiliate brands link directly to brand homepages — no tracking or promo codes.<br>
+        • To enable MCP tracking: add all 21 brands to the Brand MCP database under siteid=95, then replace exit links with <code>sweepstakes.global/link/[hash]/95/</code> tracking URLs.<br>
+        • Sweep Las Vegas shows Cloudflare verification (bot protection) — normal for automated checks, real users pass through.
+    </div>
+</body>
+</html>
