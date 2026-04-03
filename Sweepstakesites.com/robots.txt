@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://sweepstakesites.com/sitemap.xml
+
+# sweepstakesites.com
+# Operated by NWG Ltd
