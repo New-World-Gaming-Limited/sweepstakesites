@@ -271,7 +271,16 @@ window.addEventListener('load', function() {
  <div class="content-main prose">
 
  <figure style="margin:0 0 var(--space-4) 0;">
-<img src="../images/mcluck-screenshot-hero.webp" alt="McLuck Casino platform lobby showing featured games and categories" width="960" height="540" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:var(--radius-md);border:1px solid var(--color-border);">
+<div style="display:grid;grid-template-columns:1fr 160px;gap:var(--space-3);align-items:start;">
+<div>
+<img src="./images/screenshot-desktop.webp" alt="McLuck desktop view" style="width:100%;border-radius:var(--radius-md);border:1px solid var(--color-border);" width="1898" height="938" loading="eager" fetchpriority="high">
+<p style="font-size:var(--text-xs);color:var(--color-text-faint);text-align:center;margin-top:var(--space-1);">Desktop</p>
+</div>
+<div>
+<img src="./images/screenshot-mobile.webp" alt="McLuck mobile view" style="width:100%;border-radius:var(--radius-md);border:1px solid var(--color-border);" width="396" height="855" loading="lazy">
+<p style="font-size:var(--text-xs);color:var(--color-text-faint);text-align:center;margin-top:var(--space-1);">Mobile</p>
+</div>
+</div>
 <figcaption style="font-size:var(--text-xs);color:var(--color-text-muted);margin-top:var(--space-1);text-align:center;">The McLuck lobby as of <span class="dynamic-month-year">March 2026</span></figcaption>
 </figure>
 
