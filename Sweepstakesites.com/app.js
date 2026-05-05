@@ -85,9 +85,24 @@ document.querySelectorAll('.faq-question').forEach(btn => {
   });
 })();
 
-// --- SCORE BAR ANIMATION (CSS width via custom property) ---
-// Bars now use CSS: width: calc(var(--bar-width, 80) * 1%)
-// No JS needed for the fill. Bars render correctly without JS.
+// --- SCORE BAR ANIMATION (composited: uses scaleX) ---
+(function(){
+  const bars = document.querySelectorAll('.score-bar-fill');
+  if (!bars.length) return;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const width = entry.target.getAttribute('data-width');
+        entry.target.style.transform = 'scaleX(' + (width / 100) + ')';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  bars.forEach(bar => {
+    bar.style.transform = 'scaleX(0)';
+    observer.observe(bar);
+  });
+})();
 
 // --- COPY PROMO CODE + REDIRECT ---
 var AFFILIATE_URL = 'https://www.getstake.it/i/Maxbet/io/maxbet/u/Maxbet/uo/maxbet';

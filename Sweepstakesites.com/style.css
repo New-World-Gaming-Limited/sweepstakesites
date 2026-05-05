@@ -292,7 +292,7 @@
   display: none;
   padding: var(--space-2) var(--space-5);
   background: var(--color-primary);
-  color: #ffffff !important;
+  color: var(--color-text-inverse) !important;
   border-radius: var(--radius-full);
   font-weight: 700;
   font-size: var(--text-xs);
@@ -718,9 +718,10 @@
   height: 100%;
   background: var(--color-primary);
   border-radius: var(--radius-full);
-  width: calc(var(--bar-width, 80) * 1%);
-  transform: none;
-  transition: width 0.8s ease;
+  transform-origin: left center;
+  transition: transform 0.8s ease;
+  will-change: transform;
+  will-change: transform;
 }
 .score-value {
   font-weight: 700;
